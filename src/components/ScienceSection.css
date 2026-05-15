@@ -1,0 +1,99 @@
+.scienceSection {
+  padding: 120px 0;
+  background: var(--color-soft-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.scienceHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.scienceTag {
+  color: var(--color-amethyst);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.scienceHeader h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scienceHeader p {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+}
+
+.scienceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.scienceCard {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.scienceIcon {
+  color: var(--color-amethyst);
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.scienceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.scienceCard p {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.scienceProof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 4rem;
+}
+
+.proofItem {
+  text-align: center;
+}
+
+.proofValue {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-amethyst);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.proofLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .scienceGrid, .scienceProof {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

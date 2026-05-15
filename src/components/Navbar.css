@@ -1,0 +1,187 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.navbar.menu-open {
+  background: white;
+  backdrop-filter: none;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-amethyst);
+  text-transform: uppercase;
+  z-index: 1001;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  transition: var(--transition-smooth);
+}
+
+.navLink:hover {
+  color: var(--color-amethyst);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 1001;
+}
+
+.cartButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-charcoal);
+  cursor: pointer;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--color-amethyst);
+  color: white;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.lang-switcher button {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.lang-switcher button.active {
+  color: var(--color-charcoal);
+  background: rgba(91, 58, 122, 0.05);
+  border-radius: 4px;
+}
+
+.mobileMenuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-charcoal);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Mobile Menu Styles */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  padding: 120px 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileMenuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobileMenuLinks a {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-charcoal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobileLangSwitcher {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mobileLangSwitcher button {
+  background: var(--color-soft-white);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.mobileLangSwitcher button.active {
+  background: var(--color-amethyst);
+  color: white;
+}
+
+.mobileMenuCta {
+  margin-top: auto;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .desktopOnly {
+    display: none;
+  }
+  
+  .mobileMenuToggle {
+    display: block;
+  }
+
+  .actions {
+    gap: 0.5rem;
+  }
+}
