@@ -4,10 +4,11 @@ import React from "react";
 import { Zap, Microscope, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import Button from "./Button";
 import "./ScienceSection.css";
 
 const ScienceSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="science" className="scienceSection">
@@ -49,6 +50,12 @@ const ScienceSection = () => {
             <span className="proofValue">{t.science.proof3.value}</span>
             <span className="proofLabel">{t.science.proof3.label}</span>
           </div>
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+          <Button variant="secondary" size="lg" href="/science">
+            {language === 'en' ? 'Explore Full Clinical Deep-dive' : 'Разгледайте пълния клиничен анализ'}
+          </Button>
         </div>
       </div>
     </section>

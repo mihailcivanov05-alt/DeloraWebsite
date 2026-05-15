@@ -6,6 +6,8 @@ export const translations = {
       howItWorks: "How it Works",
       science: "The Science",
       consultation: "Skin Consultation",
+      about: "Our Story",
+      faq: "FAQ",
       shop: "Shop Now"
     },
     hero: {
@@ -89,6 +91,8 @@ export const translations = {
       howItWorks: "Как работи",
       science: "Науката",
       consultation: "Консултация",
+      about: "Нашата история",
+      faq: "Често задавани въпроси",
       shop: "Купи сега"
     },
     hero: {

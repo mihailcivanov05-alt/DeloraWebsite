@@ -30,15 +30,16 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""} ${isMobileMenuOpen ? "menu-open" : ""}`}>
       <div className="container navbarContainer">
-        <Link href="#home" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
+        <Link href="/" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
           DELORA
         </Link>
 
         {/* Desktop Links */}
         <ul className="navLinks desktopOnly">
-          <li><a href="#how-it-works" className="navLink">{t.navbar.howItWorks}</a></li>
-          <li><a href="#science" className="navLink">{t.navbar.science}</a></li>
-          <li><a href="#consultation" className="navLink">{t.navbar.consultation}</a></li>
+          <li><Link href="/#how-it-works" className="navLink">{t.navbar.howItWorks}</Link></li>
+          <li><Link href="/science" className="navLink">{t.navbar.science}</Link></li>
+          <li><Link href="/faq" className="navLink">{t.navbar.faq}</Link></li>
+          <li><Link href="/about" className="navLink">{t.navbar.about}</Link></li>
         </ul>
 
         <div className="actions">
@@ -68,7 +69,7 @@ const Navbar = () => {
           </button>
 
           <div className="desktopOnly">
-            <Button variant="primary" size="sm" href="#consultation">
+            <Button variant="primary" size="sm" href="/#consultation">
               {t.navbar.shop}
             </Button>
           </div>
@@ -90,9 +91,10 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="mobileMenuLinks">
-              <a href="#how-it-works" onClick={toggleMobileMenu}>{t.navbar.howItWorks}</a>
-              <a href="#science" onClick={toggleMobileMenu}>{t.navbar.science}</a>
-              <a href="#consultation" onClick={toggleMobileMenu}>{t.navbar.consultation}</a>
+              <Link href="/#how-it-works" onClick={toggleMobileMenu}>{t.navbar.howItWorks}</Link>
+              <Link href="/science" onClick={toggleMobileMenu}>{t.navbar.science}</Link>
+              <Link href="/faq" onClick={toggleMobileMenu}>{t.navbar.faq}</Link>
+              <Link href="/about" onClick={toggleMobileMenu}>{t.navbar.about}</Link>
               
               <div className="mobileLangSwitcher">
                 <button 
@@ -110,7 +112,7 @@ const Navbar = () => {
               </div>
 
               <div className="mobileMenuCta">
-                <Button variant="primary" size="lg" style={{ width: '100%' }} href="#consultation" onClick={toggleMobileMenu}>
+                <Button variant="primary" size="lg" style={{ width: '100%' }} href="/#consultation" onClick={toggleMobileMenu}>
                   {t.navbar.shop}
                 </Button>
               </div>
