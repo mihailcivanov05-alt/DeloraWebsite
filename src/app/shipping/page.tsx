@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import { Package, Clock, RefreshCw, Shield, Truck, Globe } from "lucide-react";
+import { Package, RefreshCw, Shield, Truck, Globe } from "lucide-react";
 import "./shipping.css";
 
 export const metadata = {

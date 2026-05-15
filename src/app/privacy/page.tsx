@@ -3,7 +3,7 @@ import "./legal.css";
 
 export const metadata = {
   title: "Privacy Policy | Delora",
-  description: "Delora's privacy policy — how we collect, use and protect your personal data.",
+  description: "Delora&apos;s privacy policy — how we collect, use and protect your personal data.",
 };
 
 export default function PrivacyPage() {
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
 
             <div className="legal-content">
               <div className="legal-intro">
-                Delora ("we", "us", "our") is committed to protecting your personal data. This policy explains what data we collect, how we use it, and what rights you have as a data subject under GDPR.
+                Delora (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed to protecting your personal data. This policy explains what data we collect, how we use it, and what rights you have as a data subject under GDPR.
               </div>
 
               <section id="collection">
@@ -91,7 +91,7 @@ export default function PrivacyPage() {
                 <ul>
                   <li><strong>Access:</strong> Request a copy of all personal data we hold about you</li>
                   <li><strong>Rectification:</strong> Correct inaccurate data</li>
-                  <li><strong>Erasure:</strong> Request deletion of your data ("right to be forgotten")</li>
+                  <li><strong>Erasure:</strong> Request deletion of your data (&quot;right to be forgotten&quot;)</li>
                   <li><strong>Restriction:</strong> Request we limit how we process your data</li>
                   <li><strong>Portability:</strong> Receive your data in a machine-readable format</li>
                   <li><strong>Objection:</strong> Object to processing for direct marketing at any time</li>
