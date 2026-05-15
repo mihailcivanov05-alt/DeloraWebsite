@@ -21,6 +21,15 @@ export const metadata: Metadata = {
   description: "Experience professional-grade hair removal at home with Delora. Luminous skin, effortlessly achieved.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+  themeColor: "#FAF9F6", // soft-white
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
