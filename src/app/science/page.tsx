@@ -38,7 +38,7 @@ export default function SciencePage() {
               </p>
               <p>
                 This is the same principle used in professional laser clinics,
-                now miniaturised into Delora's precision window.
+                now miniaturised into Delora&apos;s precision window.
               </p>
             </div>
             <div className="sci-split-visual">
@@ -109,7 +109,7 @@ export default function SciencePage() {
           <span className="sci-label">AI Safety System</span>
           <h2>SmartSkin™ Intelligence</h2>
           <p className="sci-section-sub">
-            Delora's built-in sensor reads your skin tone 80 times per second
+            Delora&apos;s built-in sensor reads your skin tone 80 times per second
             and automatically selects the optimal intensity for your Fitzpatrick
             type — ensuring you never receive too much or too little energy.
           </p>
@@ -117,7 +117,7 @@ export default function SciencePage() {
             {[
               { icon: Eye, title: "Skin Tone Detection", desc: "Reads melanin concentration to set safe energy levels before every flash." },
               { icon: Activity, title: "80Hz Sampling", desc: "Continuously adapts across body areas with different skin depths and tones." },
-              { icon: Shield, title: "Safety Interlock", desc: "Won't fire if the window isn't fully in contact with your skin, preventing accidental flashes." },
+              { icon: Shield, title: "Safety Interlock", desc: "Won&apos;t fire if the window isn&apos;t fully in contact with your skin, preventing accidental flashes." },
               { icon: Waves, title: "Flash Calibration", desc: "Modulates pulse duration and energy density for each zone — face vs. body vs. bikini." },
               { icon: Zap, title: "0.5s Flash Rate", desc: "Industry-fastest pulse interval. Full legs done in under 4 minutes." },
               { icon: Thermometer, title: "Thermal Guard", desc: "Auto-pauses if the sapphire window exceeds safe operating temperature." },
@@ -136,7 +136,7 @@ export default function SciencePage() {
       <section className="sci-section sci-dark">
         <div className="container sci-center">
           <span className="sci-label sci-label-light">Clinical Validation</span>
-          <h2 className="sci-light-text">Numbers Don't Lie</h2>
+          <h2 className="sci-light-text">Numbers Don&apos;t Lie</h2>
           <div className="sci-proof-grid">
             {[
               { val: "95%", lbl: "Hair reduction after 4 weeks" },

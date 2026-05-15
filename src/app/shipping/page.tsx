@@ -25,7 +25,7 @@ export default function ShippingPage() {
         <div className="container">
           <div className="ship-trust-grid">
             {[
-              { icon: RefreshCw, title: "90-Day Guarantee", desc: "Full refund if you complete the course and don't see results." },
+              { icon: RefreshCw, title: "90-Day Guarantee", desc: "Full refund if you complete the course and don&apos;t see results." },
               { icon: Shield, title: "2-Year Warranty", desc: "Complete hardware coverage against all manufacturing defects." },
               { icon: Truck, title: "Free Shipping", desc: "Free standard delivery on all orders over €150." },
               { icon: Package, title: "Tracked Delivery", desc: "Every order fully tracked from dispatch to your door." },
@@ -71,7 +71,7 @@ export default function ShippingPage() {
                 </div>
               ))}
             </div>
-            <p className="ship-note">Tracking information is sent via email within 24 hours of dispatch. Customs and import duties may apply for non-EU destinations and are the buyer's responsibility.</p>
+            <p className="ship-note">Tracking information is sent via email within 24 hours of dispatch. Customs and import duties may apply for non-EU destinations and are the buyer&apos;s responsibility.</p>
           </div>
         </div>
       </section>
@@ -82,20 +82,20 @@ export default function ShippingPage() {
           <div className="ship-content">
             <RefreshCw size={48} className="ship-section-icon" />
             <h2>Returns & Our 90-Day Guarantee</h2>
-            <p className="ship-intro">We are so confident in Delora's results that we offer an industry-leading 90-day satisfaction guarantee.</p>
+            <p className="ship-intro">We are so confident in Delora&apos;s results that we offer an industry-leading 90-day satisfaction guarantee.</p>
 
             <div className="ship-cards">
               <div className="ship-policy-card">
                 <h3>Satisfaction Guarantee</h3>
-                <p>Complete the full 8-session course (16 weeks) as directed. If you don't see a meaningful reduction in hair growth, contact us with your treatment log and we'll process a full refund — no questions, no hassle.</p>
+                <p>Complete the full 8-session course (16 weeks) as directed. If you don&apos;t see a meaningful reduction in hair growth, contact us with your treatment log and we&apos;ll process a full refund — no questions, no hassle.</p>
               </div>
               <div className="ship-policy-card">
                 <h3>Change of Mind Returns</h3>
-                <p>Changed your mind? Return your unused, unopened Delora in original packaging within 30 days of delivery for a full refund. Return shipping costs are the buyer's responsibility for change-of-mind returns.</p>
+                <p>Changed your mind? Return your unused, unopened Delora in original packaging within 30 days of delivery for a full refund. Return shipping costs are the buyer&apos;s responsibility for change-of-mind returns.</p>
               </div>
               <div className="ship-policy-card">
                 <h3>Faulty / Damaged Items</h3>
-                <p>If your Delora arrives damaged or develops a fault, we'll send a replacement immediately at no cost. Simply email hello@delora.com with a photo and your order number — we aim to resolve all cases within 24 hours.</p>
+                <p>If your Delora arrives damaged or develops a fault, we&apos;ll send a replacement immediately at no cost. Simply email hello@delora.com with a photo and your order number — we aim to resolve all cases within 24 hours.</p>
               </div>
             </div>
 
@@ -125,7 +125,7 @@ export default function ShippingPage() {
           <div className="ship-content ship-content-center">
             <Shield size={60} className="ship-warranty-icon" />
             <h2 className="ship-light-text">2-Year Warranty</h2>
-            <p className="ship-warranty-sub">Every Delora device is backed by our full 2-year manufacturer's warranty — one of the best in the category.</p>
+            <p className="ship-warranty-sub">Every Delora device is backed by our full 2-year manufacturer&apos;s warranty — one of the best in the category.</p>
 
             <div className="ship-warranty-grid">
               <div className="ship-warranty-card">

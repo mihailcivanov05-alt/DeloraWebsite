@@ -3,7 +3,7 @@ import "../privacy/legal.css";
 
 export const metadata = {
   title: "Terms & Conditions | Delora",
-  description: "Delora's terms and conditions of sale and use.",
+  description: "Delora&apos;s terms and conditions of sale and use.",
 };
 
 export default function TermsPage() {
@@ -45,7 +45,7 @@ export default function TermsPage() {
               <section id="products">
                 <h2>2. Products</h2>
                 <p>All products are sold for personal, non-commercial use. The Delora Elite IPL device is a cosmetic product intended for at-home hair removal. It is not a medical device for the treatment of medical conditions.</p>
-                <p>Product images are for illustrative purposes. While we make every effort to display colours accurately, we cannot guarantee that your device's display will accurately reflect the product.</p>
+                <p>Product images are for illustrative purposes. While we make every effort to display colours accurately, we cannot guarantee that your device&apos;s display will accurately reflect the product.</p>
                 <p>We reserve the right to discontinue any product at any time. All products are subject to availability.</p>
               </section>
 
@@ -60,7 +60,7 @@ export default function TermsPage() {
                 <h2>4. Payment</h2>
                 <p>All prices are displayed in EUR (€) inclusive of VAT where applicable. Prices do not include shipping, which is calculated at checkout.</p>
                 <p>We accept Visa, Mastercard, American Express, Apple Pay, Google Pay, and PayPal. All transactions are processed securely by Shopify Payments (Stripe). We do not store your card details.</p>
-                <p>For customers in Bulgaria, prices include Bulgarian VAT at the applicable rate. For EU customers outside Bulgaria, VAT is applied according to the destination country's rate.</p>
+                <p>For customers in Bulgaria, prices include Bulgarian VAT at the applicable rate. For EU customers outside Bulgaria, VAT is applied according to the destination country&apos;s rate.</p>
               </section>
 
               <section id="liability">

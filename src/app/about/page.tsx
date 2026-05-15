@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="about-hero">
         <div className="container">
           <span className="about-badge">Our Mission</span>
-          <h1>Beauty shouldn't require a clinic appointment.</h1>
+          <h1>Beauty shouldn&apos;t require a clinic appointment.</h1>
           <p>Delora was born from a simple idea: the same technology that removes hair permanently in dermatology clinics should be accessible to everyone, at home, without compromise on quality or safety.</p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function AboutPage() {
               <div className="about-stat-stack">
                 {[
                   { val: "€18,000", sub: "Average lifetime spend on hair removal" },
-                  { val: "72 days", sub: "Of a woman's life spent managing hair" },
+                  { val: "72 days", sub: "Of a woman&apos;s life spent managing hair" },
                   { val: "€150–400", sub: "Delora — once. For life." },
                 ].map((s) => (
                   <div key={s.val} className="about-stat">
@@ -66,17 +66,17 @@ export default function AboutPage() {
               {
                 n: "01",
                 title: "Clinical Efficacy, Not Marketing Claims",
-                body: "Every specification on Delora's website is backed by clinical testing. We do not use the word 'permanent' lightly — our results are validated to the same standard as in-clinic IPL studies."
+                body: "Every specification on Delora&apos;s website is backed by clinical testing. We do not use the word &apos;permanent&apos; lightly — our results are validated to the same standard as in-clinic IPL studies."
               },
               {
                 n: "02",
                 title: "Safety is Non-Negotiable",
-                body: "The SmartSkin sensor, Fitzpatrick scale assessment, and sapphire cooling system weren't added as features — they were the minimum viable safety standard we allowed ourselves to ship."
+                body: "The SmartSkin sensor, Fitzpatrick scale assessment, and sapphire cooling system weren&apos;t added as features — they were the minimum viable safety standard we allowed ourselves to ship."
               },
               {
                 n: "03",
                 title: "Luxury Without Inaccessibility",
-                body: "Premium design and premium results shouldn't mean premium pricing. Delora is designed to outlast, outperform, and out-value anything else in its class — at a fraction of clinic costs."
+                body: "Premium design and premium results shouldn&apos;t mean premium pricing. Delora is designed to outlast, outperform, and out-value anything else in its class — at a fraction of clinic costs."
               },
             ].map((v) => (
               <div key={v.n} className="about-value-card glass-panel">
