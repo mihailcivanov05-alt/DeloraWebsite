@@ -69,7 +69,7 @@ const SkinMatchQuiz = () => {
                   <h2 className="quizTitle">{t.quiz.title}</h2>
                 </div>
                 
-                <div className="progressBar">
+                <div className="progressBar" role="progressbar" aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100}>
                   <motion.div 
                     className="progressFill" 
                     initial={{ width: 0 }}
@@ -81,8 +81,8 @@ const SkinMatchQuiz = () => {
                 <div className="questionContainer">
                   <div className="questionMeta">
                     <h3 className="questionText">{t.quiz.questions[step].text}</h3>
-                    <div className="whyTooltip">
-                      <Info size={14} />
+                    <div className="whyTooltip" tabIndex={0} role="tooltip" aria-label={`Context: ${getContextTip()}`}>
+                      <Info size={14} aria-hidden="true" />
                       <span>{getContextTip()}</span>
                     </div>
                   </div>
@@ -94,24 +94,30 @@ const SkinMatchQuiz = () => {
                           key={i} 
                           className="optionCard" 
                           onClick={() => handleOptionClick(i)}
+                          onKeyDown={(e) => e.key === 'Enter' && handleOptionClick(i)}
+                          tabIndex={0}
+                          role="button"
+                          aria-label={`Select option: ${option}`}
                           whileHover={{ y: -5, scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
                           <div className="optionVisual">
-                            {step === 0 && React.createElement(CONCERN_ICONS[i], { size: 28, className: "optionIcon" })}
+                            {step === 0 && React.createElement(CONCERN_ICONS[i], { size: 28, className: "optionIcon", "aria-hidden": "true" })}
                             {step === 1 && (
                               <div 
                                 className="skinSwatch hairSwatch" 
                                 style={{ background: HAIR_COLORS[i] }} 
+                                aria-hidden="true"
                               />
                             )}
                             {step === 2 && (
                               <div 
                                 className="skinSwatch" 
                                 style={{ background: SKIN_COLORS[i] }} 
+                                aria-hidden="true"
                               />
                             )}
-                            {step === 3 && React.createElement(SENSITIVITY_ICONS[i], { size: 28, className: "optionIcon" })}
+                            {step === 3 && React.createElement(SENSITIVITY_ICONS[i], { size: 28, className: "optionIcon", "aria-hidden": "true" })}
                           </div>
                           <span className="optionLabel">{option}</span>
                         </motion.div>
@@ -147,7 +153,7 @@ const SkinMatchQuiz = () => {
                   <div className="scanningBar" />
                 </div>
                 <h3>{t.quiz.result.calculating}</h3>
-                <p className="calculatingSubtext">Matching your biology with Delora Elite technology...</p>
+                <p className="calculatingSubtext">{t.quiz_extra?.calculatingSubtext || 'Matching your biology with Delora Elite technology...'}</p>
               </motion.div>
             ) : (
               <motion.div 

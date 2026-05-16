@@ -22,6 +22,11 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
   }, []);
 
+  // Dynamically update <html lang> for screen readers and SEO
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang);
     localStorage.setItem('delora-lang', lang);

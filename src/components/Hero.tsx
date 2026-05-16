@@ -29,18 +29,22 @@ const Hero = () => {
           </p>
           
           <div className="hero-actions">
-            <Button variant="primary" size="lg" href="#tech-specs">{t.hero.cta}</Button>
+            <Button variant="primary" size="lg" href="#product">{t.hero.cta} — {t.hero.price}</Button>
             <Button variant="outline" size="lg" href="#consultation">{t.hero.secondaryCta}</Button>
           </div>
 
           <div className="hero-trust">
             <span className="trust-item">
-              <CheckCircle size={16} style={{ marginRight: '8px', verticalAlign: 'middle' }} /> 
+              <CheckCircle size={16} aria-hidden="true" style={{ marginRight: '8px', verticalAlign: 'middle' }} /> 
               {t.hero.trustItem1}
             </span>
             <span className="trust-item">
-              <CheckCircle size={16} style={{ marginRight: '8px', verticalAlign: 'middle' }} /> 
+              <CheckCircle size={16} aria-hidden="true" style={{ marginRight: '8px', verticalAlign: 'middle' }} /> 
               {t.hero.trustItem2}
+            </span>
+            <span className="trust-item">
+              <CheckCircle size={16} aria-hidden="true" style={{ marginRight: '8px', verticalAlign: 'middle' }} /> 
+              {t.hero.trustItem3}
             </span>
           </div>
         </motion.div>

@@ -21,17 +21,17 @@ const ScienceSection = () => {
 
         <div className="scienceGrid">
           <div className="scienceCard glass-panel">
-            <div className="scienceIcon"><Zap size={40} /></div>
+            <div className="scienceIcon"><Zap size={40} aria-hidden="true" /></div>
             <h3>{t.science.card1.title}</h3>
             <p>{t.science.card1.desc}</p>
           </div>
           <div className="scienceCard glass-panel">
-            <div className="scienceIcon"><Microscope size={40} /></div>
+            <div className="scienceIcon"><Microscope size={40} aria-hidden="true" /></div>
             <h3>{t.science.card2.title}</h3>
             <p>{t.science.card2.desc}</p>
           </div>
           <div className="scienceCard glass-panel">
-            <div className="scienceIcon"><Award size={40} /></div>
+            <div className="scienceIcon"><Award size={40} aria-hidden="true" /></div>
             <h3>{t.science.card3.title}</h3>
             <p>{t.science.card3.desc}</p>
           </div>

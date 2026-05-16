@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { X, Zap, Lock } from "lucide-react";
 import "./CartDrawer.css";
 
 interface CartDrawerProps {
@@ -16,26 +17,38 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ cart, isOpen, onClose }) => {
   const subtotal = cart?.estimatedCost?.totalAmount || { amount: 0, currencyCode: "BGN" };
 
   return (
-    <div className="cartOverlay" onClick={onClose}>
-      <div className="cartDrawer" onClick={(e) => e.stopPropagation()}>
+    <div className="cartOverlay" onClick={onClose} role="presentation">
+      <div
+        className="cartDrawer"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Shopping cart"
+      >
         <div className="cartHeader">
           <h2>Your Cart</h2>
-          <button className="closeButton" onClick={onClose}>&times;</button>
+          <button
+            className="closeButton"
+            onClick={onClose}
+            aria-label="Close cart"
+          >
+            <X size={20} aria-hidden="true" />
+          </button>
         </div>
 
         <div className="cartItems">
           {lines.length === 0 ? (
-            <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-              <p style={{ opacity: 0.5 }}>Your cart is empty.</p>
+            <div className="emptyCart">
+              <p>Your cart is empty.</p>
             </div>
           ) : (
             lines.map(({ node }: any) => (
               <div key={node.id} className="cartItem">
-                <div 
-                  className="cartItemImage" 
-                  style={{ 
-                    background: `url(${node.merchandise.product.featuredImage?.url || '/delora-photos/pomelli_bdna_image_0514-4.png'}) center/cover` 
-                  }} 
+                <div
+                  className="cartItemImage"
+                  style={{
+                    background: `url(${node.merchandise.product.featuredImage?.url || '/delora-photos/pomelli_bdna_image_0514-4.png'}) center/cover`
+                  }}
                 />
                 <div className="cartItemInfo">
                   <div className="cartItemTitle">{node.merchandise.product.title}</div>
@@ -54,14 +67,15 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ cart, isOpen, onClose }) => {
               <span>Subtotal</span>
               <span>{subtotal.amount} {subtotal.currencyCode}</span>
             </div>
-            
+
             <a href={cart.checkoutUrl} className="checkoutButton">
               <span>Checkout with Shop Pay</span>
-              <span>⚡</span>
+              <Zap size={16} aria-hidden="true" />
             </a>
-            
+
             <div className="biometricBadge">
-              <span>🔒 Secure Biometric Checkout</span>
+              <Lock size={13} aria-hidden="true" />
+              <span>Secure Biometric Checkout</span>
             </div>
           </div>
         )}

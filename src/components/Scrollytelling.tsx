@@ -13,7 +13,6 @@ interface Scene {
   image: string;
 }
 
-// ─── Sub-component: animated image for one scene ───────────────────────────
 function SceneImage({
   scene,
   index,
@@ -39,12 +38,11 @@ function SceneImage({
 
   return (
     <motion.div className="sceneImageContainer" style={{ opacity, scale }}>
-      <img src={scene.image} alt={scene.title} className="fullImage" />
+      <img src={scene.image} alt={scene.title} className="fullImage" loading="lazy" />
     </motion.div>
   );
 }
 
-// ─── Sub-component: animated text for one scene ────────────────────────────
 function SceneText({
   scene,
   index,
@@ -81,7 +79,6 @@ function SceneText({
   );
 }
 
-// ─── Sub-component: animated ambient glow ──────────────────────────────────
 function AmbientGlow({
   scene,
   index,
@@ -108,7 +105,6 @@ function AmbientGlow({
   );
 }
 
-// ─── Main component ────────────────────────────────────────────────────────
 const Scrollytelling = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
@@ -150,8 +146,8 @@ const Scrollytelling = () => {
 
   return (
     <section id="how-it-works" ref={containerRef} className="scrollySection">
-      <div className="stickyContainer">
-        {/* Ambient background glows */}
+      {/* Desktop Version: Sticky scroll */}
+      <div className="stickyContainer desktopOnly">
         <div className="scrollyBg">
           {localizedScenes.map((scene, i) => (
             <AmbientGlow key={scene.id} scene={scene} index={i} progress={smoothProgress} />
@@ -159,7 +155,6 @@ const Scrollytelling = () => {
         </div>
 
         <div className="scrollyGrid">
-          {/* Left: images */}
           <div className="visualPanel">
             <div className="imageWrapper glass-panel">
               {localizedScenes.map((scene, i) => (
@@ -168,7 +163,6 @@ const Scrollytelling = () => {
             </div>
           </div>
 
-          {/* Right: narrative text */}
           <div className="narrativePanel">
             <div className="narrativeCenter">
               {localizedScenes.map((scene, i) => (
@@ -182,7 +176,6 @@ const Scrollytelling = () => {
               ))}
             </div>
 
-            {/* Scroll progress bar */}
             <div className="progressTrack">
               <motion.div
                 className="progressFill"
@@ -192,8 +185,33 @@ const Scrollytelling = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile Version: Vertical list/cards */}
+      <div className="mobileOnly mobileScrolly">
+        <div className="container">
+          <div className="mobileHeader">
+            <span className="sceneNumber">{t.scrolly.stepLabel}S</span>
+            <h2>{t.scrolly_extra?.mobileTitle || 'How it Works'}</h2>
+          </div>
+          <div className="mobileSteps">
+            {localizedScenes.map((scene, i) => (
+              <div key={scene.id} className="mobileStepCard glass-panel">
+                <div className="mobileStepImage">
+                  <img src={scene.image} alt={scene.title} loading="lazy" />
+                  <span className="mobileStepBadge">0{i+1}</span>
+                </div>
+                <div className="mobileStepContent">
+                  <h3>{scene.title}</h3>
+                  <p>{scene.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
 
 export default Scrollytelling;
+

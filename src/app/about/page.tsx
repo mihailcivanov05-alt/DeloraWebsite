@@ -1,137 +1,103 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import Button from "@/components/Button";
+import Footer from "@/components/Footer";
+import { useLanguage } from "@/context/LanguageContext";
 import "./about.css";
 
-export const metadata = {
-  title: "Our Story | Delora",
-  description: "The mission behind Delora — bringing clinical IPL technology home, without compromise.",
-};
-
 export default function AboutPage() {
+  const { language, t } = useLanguage();
+
+  const content = {
+    en: {
+      hero: "Beauty shouldn't require a clinic appointment.",
+      sub: "Delora was born from a simple idea: the same technology that removes hair in clinics should be accessible to everyone, at home.",
+      title1: "A Problem Worth Solving",
+      p1: "The average person spends thousands and countless hours managing unwanted hair. Delora set out to change that.",
+      valuesTitle: "Three Principles. No Exceptions.",
+      v1: "Clinical Efficacy",
+      v1d: "Every specification is backed by clinical testing. We deliver long-lasting smoothness that you can trust.",
+      v2: "Safety First",
+      v2d: "Our SmartSkin sensor and cooling system are built into every device to ensure the highest safety standards.",
+      v3: "Accessible Luxury",
+      v3d: "Premium design and results shouldn't mean extreme pricing. We offer salon-grade quality at home."
+    },
+    bg: {
+      hero: "Красотата не трябва да изисква посещение в клиника.",
+      sub: "Delora се роди от проста идея: същата технология, която премахва окосмяването в клиниките, трябва да бъде достъпна за всеки у дома.",
+      title1: "Проблем, който си струва да бъде решен",
+      p1: "Средностатистическият човек харчи хиляди и безброй часове в управление на нежеланото окосмяване. Delora реши да промени това.",
+      valuesTitle: "Три принципа. Без изключения.",
+      v1: "Клинична ефективност",
+      v1d: "Всяка спецификация е подкрепена от клинични тестове. Ние осигуряваме дълготрайна гладкост, на която можете да се доверите.",
+      v2: "Безопасността на първо място",
+      v2d: "Нашият SmartSkin сензор и охладителна система са вградени във всяко устройство за най-високи стандарти за безопасност.",
+      v3: "Достъпен лукс",
+      v3d: "Премиум дизайнът и резултатите не трябва да означават екстремни цени. Предлагаме качество от салон у дома."
+    }
+  };
+
+  const c = language === 'bg' ? content.bg : content.en;
+
   return (
     <main>
       <Navbar />
 
-      {/* Hero */}
       <section className="about-hero">
         <div className="container">
-          <span className="about-badge">Our Mission</span>
-          <h1>Beauty shouldn&apos;t require a clinic appointment.</h1>
-          <p>Delora was born from a simple idea: the same technology that removes hair permanently in dermatology clinics should be accessible to everyone, at home, without compromise on quality or safety.</p>
+          <span className="about-badge">{language === 'en' ? 'Our Mission' : 'Нашата мисия'}</span>
+          <h1>{c.hero}</h1>
+          <p>{c.sub}</p>
         </div>
       </section>
 
-      {/* Origin Story */}
       <section className="about-section">
         <div className="container">
           <div className="about-split">
             <div className="about-text">
-              <span className="about-label">The Beginning</span>
-              <h2>A Problem Worth Solving</h2>
-              <p>
-                The average woman spends €18,000 and 72 days of her life managing unwanted hair. Salons charge €80–200 per session, require 8–12 visits, and demand appointments weeks in advance.
-              </p>
-              <p>
-                The existing home IPL market offered devices that were either dangerously underpowered, painful to use, or so confusing that users gave up after 2 sessions.
-              </p>
-              <p>
-                Delora set out to change that — not by lowering the bar, but by raising it to match clinical standards while making the experience genuinely effortless.
-              </p>
-            </div>
-            <div className="about-visual">
-              <div className="about-stat-stack">
-                {[
-                  { val: "€18,000", sub: "Average lifetime spend on hair removal" },
-                  { val: "72 days", sub: "Of a woman&apos;s life spent managing hair" },
-                  { val: "€150–400", sub: "Delora — once. For life." },
-                ].map((s) => (
-                  <div key={s.val} className="about-stat">
-                    <span className="about-stat-val">{s.val}</span>
-                    <span className="about-stat-sub">{s.sub}</span>
-                  </div>
-                ))}
-              </div>
+              <span className="about-label">{language === 'en' ? 'The Beginning' : 'Началото'}</span>
+              <h2>{c.title1}</h2>
+              <p>{c.p1}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values */}
       <section className="about-section about-light">
         <div className="container about-center">
-          <span className="about-label">What We Stand For</span>
-          <h2>Three Principles. No Exceptions.</h2>
+          <span className="about-label">{language === 'en' ? 'What We Stand For' : 'За какво се борим'}</span>
+          <h2>{c.valuesTitle}</h2>
           <div className="about-values">
-            {[
-              {
-                n: "01",
-                title: "Clinical Efficacy, Not Marketing Claims",
-                body: "Every specification on Delora&apos;s website is backed by clinical testing. We do not use the word &apos;permanent&apos; lightly — our results are validated to the same standard as in-clinic IPL studies."
-              },
-              {
-                n: "02",
-                title: "Safety is Non-Negotiable",
-                body: "The SmartSkin sensor, Fitzpatrick scale assessment, and sapphire cooling system weren&apos;t added as features — they were the minimum viable safety standard we allowed ourselves to ship."
-              },
-              {
-                n: "03",
-                title: "Luxury Without Inaccessibility",
-                body: "Premium design and premium results shouldn&apos;t mean premium pricing. Delora is designed to outlast, outperform, and out-value anything else in its class — at a fraction of clinic costs."
-              },
-            ].map((v) => (
-              <div key={v.n} className="about-value-card glass-panel">
-                <span className="about-value-n">{v.n}</span>
-                <h3>{v.title}</h3>
-                <p>{v.body}</p>
-              </div>
-            ))}
+            <div className="about-value-card glass-panel">
+              <span className="about-value-n">01</span>
+              <h3>{c.v1}</h3>
+              <p>{c.v1d}</p>
+            </div>
+            <div className="about-value-card glass-panel">
+              <span className="about-value-n">02</span>
+              <h3>{c.v2}</h3>
+              <p>{c.v2d}</p>
+            </div>
+            <div className="about-value-card glass-panel">
+              <span className="about-value-n">03</span>
+              <h3>{c.v3}</h3>
+              <p>{c.v3d}</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="about-section">
-        <div className="container about-center">
-          <span className="about-label">The Journey</span>
-          <h2>How We Got Here</h2>
-          <div className="about-timeline">
-            {[
-              { year: "2021", event: "Concept & Research", detail: "12 months of research into clinical IPL protocols, sapphire cooling physics, and skin sensor technology." },
-              { year: "2022", event: "Engineering & Safety Testing", detail: "Partnership with certified dermatological testing labs to validate efficacy across Fitzpatrick Types I–V." },
-              { year: "2023", event: "First Beta Units", detail: "300 beta devices distributed to a closed community for real-world testing. 94% reported significant reduction by week 8." },
-              { year: "2024", event: "FDA Clearance & Launch", detail: "Achieved FDA clearance and launched to the public. Sold out within 72 hours of launch." },
-              { year: "2025", event: "Global Expansion", detail: "Shipping to 40+ countries. Multi-language platform launched. Delora Elite 2nd generation in development." },
-            ].map((t, i) => (
-              <div key={t.year} className={`about-timeline-item ${i % 2 === 0 ? "" : "about-timeline-right"}`}>
-                <div className="about-timeline-content">
-                  <span className="about-timeline-year">{t.year}</span>
-                  <h3>{t.event}</h3>
-                  <p>{t.detail}</p>
-                </div>
-                <div className="about-timeline-dot" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
       <section className="about-cta">
         <div className="container about-center">
-          <h2>Ready to experience the difference?</h2>
-          <p>Join over 50,000 people who chose Delora over the salon — and never looked back.</p>
+          <h2>{language === 'en' ? 'Ready to experience the difference?' : 'Готови ли сте да усетите разликата?'}</h2>
           <Button variant="primary" size="lg" href="/#consultation">
-            Find My Delora Protocol
+            {t.quiz.cta}
           </Button>
         </div>
       </section>
 
-      <footer className="sci-footer">
-        <div className="container">
-          <a href="/" className="sci-footer-logo">DELORA</a>
-          <p>© {new Date().getFullYear()} Delora. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
+

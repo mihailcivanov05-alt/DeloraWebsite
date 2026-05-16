@@ -134,52 +134,84 @@
   transform-origin: top center;
 }
 
+/* Visibility Utilities */
+.desktopOnly { display: block; }
+.mobileOnly { display: none; }
+
+/* Mobile Scrolly Specific */
+.mobileScrolly {
+  padding: 80px 0;
+}
+
+.mobileHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mobileHeader h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.mobileSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobileStepCard {
+  padding: 1.5rem;
+  border-radius: 24px;
+}
+
+.mobileStepImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.mobileStepImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileStepBadge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--color-amethyst);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.mobileStepContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mobileStepContent p {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
 @media (max-width: 1024px) {
   .scrollySection {
     height: auto;
     min-height: auto;
   }
 
-  .stickyContainer {
-    position: relative;
-    height: auto;
-  }
-
-  .scrollyGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .visualPanel {
-    padding: 2rem;
-    height: 300px;
-  }
-
-  .imageWrapper {
-    height: 100%;
-    border-radius: 24px;
-  }
-  
-  .narrativePanel {
-    padding: 2rem;
-    height: auto;
-  }
-
-  .narrativeCenter {
-    height: auto;
-  }
-
-  .sceneText {
-    position: relative;
-    opacity: 1 !important;
-    transform: none !important;
-    margin-bottom: 4rem;
-  }
-  
-  .sceneTitle {
-    font-size: 2.5rem;
-  }
-
-  .progressTrack {
-    display: none;
-  }
+  .desktopOnly { display: none; }
+  .mobileOnly { display: block; }
 }
+

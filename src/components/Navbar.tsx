@@ -47,13 +47,15 @@ const Navbar = () => {
             <button 
               className={language === 'en' ? 'active' : ''} 
               onClick={() => setLanguage('en')}
+              aria-label="Switch language to English"
             >
               EN
             </button>
-            <span className="divider">|</span>
+            <span className="divider" aria-hidden="true">|</span>
             <button 
               className={language === 'bg' ? 'active' : ''} 
               onClick={() => setLanguage('bg')}
+              aria-label="Switch language to Bulgarian"
             >
               BG
             </button>
@@ -62,9 +64,9 @@ const Navbar = () => {
           <button 
             className="cartButton" 
             onClick={() => setIsCartOpen(true)}
-            aria-label="Open cart"
+            aria-label={`Open cart. ${cartCount} items.`}
           >
-            <ShoppingBag size={24} strokeWidth={1.5} />
+            <ShoppingBag size={24} strokeWidth={1.5} aria-hidden="true" />
             {cartCount > 0 && <span className="cartCount">{cartCount}</span>}
           </button>
 
@@ -74,8 +76,8 @@ const Navbar = () => {
             </Button>
           </div>
 
-          <button className="mobileMenuToggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button className="mobileMenuToggle" onClick={toggleMobileMenu} aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}>
+            {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
       </div>

@@ -1,0 +1,179 @@
+.productSection {
+  padding: 120px 0;
+  background: var(--color-white);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.mainProductImage {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.mainProductImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productBadge {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: var(--color-amethyst);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.thumbnailStrip {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.thumb {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info Side */
+.infoBadge {
+  color: var(--color-amethyst);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.productInfo h1 {
+  font-size: 3.5rem;
+  color: var(--color-charcoal);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.priceTag {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-amethyst);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.oldPrice {
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.infoSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.specList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.specList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  color: var(--color-charcoal);
+}
+
+.checkIcon {
+  color: #10b981;
+}
+
+.offerIncludes {
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.offerIncludes p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+.suitability {
+  font-weight: 600;
+  color: var(--color-charcoal) !important;
+}
+
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.shippingTrust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.featureRow {
+  display: flex;
+  gap: 3rem;
+  border-top: 1px solid rgba(91, 58, 122, 0.1);
+  padding-top: 2rem;
+}
+
+.miniFeature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-amethyst);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .productInfo h1 {
+    font-size: 2.5rem;
+  }
+}

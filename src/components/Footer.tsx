@@ -1,24 +1,30 @@
 "use client";
 
 import Button from "./Button";
-
-const EXPLORE_LINKS = [
-  { label: "How It Works", href: "/#how-it-works" },
-  { label: "The Science", href: "/science" },
-  { label: "Skin Consultation", href: "/#consultation" },
-  { label: "Our Story", href: "/about" },
-];
-
-const SUPPORT_LINKS = [
-  { label: "FAQ", href: "/faq" },
-  { label: "Shipping & Returns", href: "/shipping" },
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms & Conditions", href: "/terms" },
-];
-
-const LEGAL_LINKS = ["privacy", "terms"];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const { t, language } = useLanguage();
+
+  const EXPLORE_LINKS = [
+    { label: t.navbar.howItWorks, href: "/#how-it-works" },
+    { label: t.navbar.science, href: "/science" },
+    { label: t.navbar.consultation, href: "/#consultation" },
+    { label: t.navbar.about, href: "/about" },
+  ];
+
+  const SUPPORT_LINKS = [
+    { label: t.navbar.faq, href: "/faq" },
+    { label: language === 'en' ? "Shipping & Returns" : "Доставка и връщане", href: "/shipping" },
+    { label: language === 'en' ? "Privacy Policy" : "Политика за поверителност", href: "/privacy" },
+    { label: language === 'en' ? "Terms & Conditions" : "Общи условия", href: "/terms" },
+  ];
+
+  const LEGAL_LINKS = [
+    { id: "privacy", label: language === 'en' ? "Privacy" : "Поверителност" },
+    { id: "terms", label: language === 'en' ? "Terms" : "Условия" }
+  ];
+
   return (
     <footer className="site-footer">
       <div className="container">
@@ -26,18 +32,16 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <a href="/" className="footer-logo">DELORA</a>
-            <p className="footer-tagline">
-              Elevating beauty through clinical technology. Professional IPL results — in your home, on your schedule.
-            </p>
-            <p className="footer-copy">© {new Date().getFullYear()} Delora. All rights reserved.</p>
+            <p className="footer-tagline">{t.footer.tagline}</p>
+            <p className="footer-copy">© {new Date().getFullYear()} Delora. {t.footer.copyright}</p>
           </div>
 
           {/* Explore */}
           <div>
-            <h4 className="footer-col-title">Explore</h4>
+            <h4 className="footer-col-title">{t.footer.explore}</h4>
             <ul className="footer-links">
-              {EXPLORE_LINKS.map((l) => (
-                <li key={l.href}>
+              {EXPLORE_LINKS.map((l, i) => (
+                <li key={i}>
                   <a href={l.href} className="footer-link">{l.label}</a>
                 </li>
               ))}
@@ -46,10 +50,10 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="footer-col-title">Support</h4>
+            <h4 className="footer-col-title">{t.footer.support}</h4>
             <ul className="footer-links">
-              {SUPPORT_LINKS.map((l) => (
-                <li key={l.href}>
+              {SUPPORT_LINKS.map((l, i) => (
+                <li key={i}>
                   <a href={l.href} className="footer-link">{l.label}</a>
                 </li>
               ))}
@@ -58,30 +62,30 @@ export default function Footer() {
 
           {/* Email capture */}
           <div>
-            <h4 className="footer-col-title">Inner Circle</h4>
+            <h4 className="footer-col-title">{t.footer.innerCircle}</h4>
             <p className="footer-email-desc">
-              Exclusive launches, treatment tips, and early access. No spam.
+              {language === 'en' 
+                ? "Exclusive launches, treatment tips, and early access. No spam."
+                : "Ексклузивни предложения, съвети за процедури и ранен достъп. Без спам."}
             </p>
             <div className="footer-email-form">
               <input
                 type="email"
-                placeholder="Your email address"
+                placeholder={t.footer.emailPlaceholder}
                 className="footer-email-input"
                 aria-label="Your email address for newsletter"
               />
-              <Button variant="primary" size="md">Join the Circle</Button>
+              <Button variant="primary" size="md">{t.footer.join}</Button>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <span className="footer-legal-text">
-            Delora Ltd. · Sofia, Bulgaria · FDA Cleared · CE Marked
-          </span>
+          <span className="footer-legal-text">{t.footer.legal}</span>
           <div className="footer-legal-links">
             {LEGAL_LINKS.map((l) => (
-              <a key={l} href={`/${l}`} className="footer-legal-link">
-                {l.charAt(0).toUpperCase() + l.slice(1)}
+              <a key={l.id} href={`/${l.id}`} className="footer-legal-link">
+                {l.label}
               </a>
             ))}
           </div>
@@ -90,3 +94,4 @@ export default function Footer() {
     </footer>
   );
 }
+

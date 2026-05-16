@@ -93,6 +93,11 @@
   border-color: var(--color-lavender);
 }
 
+.footer-email-input:focus-visible {
+  outline: 2px solid var(--color-lavender);
+  outline-offset: 2px;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 2rem;

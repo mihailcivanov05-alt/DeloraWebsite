@@ -24,8 +24,6 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: "cover",
   themeColor: "#FAF9F6", // soft-white
 };
@@ -36,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="bg">
+    <html lang="en">
       <body className={`${cormorant.variable} ${nunito.variable}`}>
         <LanguageProvider>
           <CartProvider>
