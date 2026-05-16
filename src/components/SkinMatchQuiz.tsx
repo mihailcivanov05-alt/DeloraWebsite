@@ -42,13 +42,8 @@ const SkinMatchQuiz = () => {
 
   // Contextual tips for "Why we ask this"
   const getContextTip = () => {
-    switch(step) {
-      case 0: return "Helps identify the required energy depth.";
-      case 1: return "IPL targets melanin; contrast is key for efficacy.";
-      case 2: return "Ensures the Sapphire Cooling Core is calibrated for safety.";
-      case 3: return "Directs our AI to recommend the gentlest effective mode.";
-      default: return "";
-    }
+    const tips = t.quiz_extra?.tips || [];
+    return tips[step] || "";
   };
 
   return (

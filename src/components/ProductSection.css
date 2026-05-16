@@ -1,13 +1,18 @@
 .productSection {
-  padding: 120px 0;
+  padding: 80px 0;
   background: var(--color-white);
 }
 
 .productGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
   align-items: center;
+}
+
+.productVisual {
+  max-width: 480px;
+  width: 100%;
 }
 
 .mainProductImage {

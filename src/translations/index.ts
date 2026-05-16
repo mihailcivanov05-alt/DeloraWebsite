@@ -133,7 +133,14 @@ export const translations = {
       painlessTech: "Painless Tech"
     },
     quiz_extra: {
-      calculatingSubtext: "Matching your biology with Delora Elite technology..."
+      calculatingSubtext: "Matching your biology with Delora Elite technology...",
+      cta: "Start Your Skin Consultation",
+      tips: [
+        "Helps identify the required energy depth.",
+        "IPL targets melanin; contrast is key for efficacy.",
+        "Ensures the Sapphire Cooling Core is calibrated for safety.",
+        "Directs our AI to recommend the gentlest effective mode."
+      ]
     },
     scrolly_extra: {
       mobileTitle: "How it Works"
@@ -271,7 +278,14 @@ export const translations = {
       painlessTech: "Безболезнена технология"
     },
     quiz_extra: {
-      calculatingSubtext: "Съпоставяме биологията ви с технологията Delora Elite..."
+      calculatingSubtext: "Съпоставяме биологията ви с технологията Delora Elite...",
+      cta: "Започнете вашата консултация",
+      tips: [
+        "Помага за определяне на необходимата дълбочина на енергията.",
+        "IPL таргетира меланина; контрастът е ключов за ефикасността.",
+        "Гарантира, че Sapphire Cooling Core е калибриран за безопасност.",
+        "Насочва нашия AI да препоръча най-нежния ефективен режим."
+      ]
     },
     scrolly_extra: {
       mobileTitle: "Как работи"

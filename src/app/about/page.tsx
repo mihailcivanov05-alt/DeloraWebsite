@@ -91,7 +91,7 @@ export default function AboutPage() {
         <div className="container about-center">
           <h2>{language === 'en' ? 'Ready to experience the difference?' : 'Готови ли сте да усетите разликата?'}</h2>
           <Button variant="primary" size="lg" href="/#consultation">
-            {t.quiz.cta}
+            {t.quiz_extra?.cta || 'Start Your Skin Consultation'}
           </Button>
         </div>
       </section>

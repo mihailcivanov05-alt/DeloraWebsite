@@ -1,5 +1,5 @@
 .socialProofSection {
-  padding: 120px 0 80px;
+  padding: 80px 0 60px;
   background: var(--color-white);
   overflow: hidden;
 }
@@ -16,7 +16,7 @@
 
 .ugcHeader {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .ugcHeader h2 {
@@ -41,8 +41,8 @@
 }
 
 .ugcCard {
-  width: 260px;
-  height: 360px;
+  width: 220px;
+  height: 300px;
   flex-shrink: 0;
   border-radius: 20px;
   overflow: hidden;
@@ -94,7 +94,7 @@
 /* ═══════════════ Before & After Gallery ═══════════════ */
 .baSection {
   max-width: 1000px;
-  margin: 2rem auto 5rem;
+  margin: 1rem auto 3rem;
 }
 
 .baSectionTitle {
@@ -140,7 +140,7 @@
 }
 
 .baContent {
-  padding: 4rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -207,7 +207,7 @@
   justify-content: center;
   gap: 4rem;
   flex-wrap: wrap;
-  padding-top: 4rem;
+  padding-top: 2.5rem;
   border-top: 1px solid rgba(91, 58, 122, 0.1);
 }
 
