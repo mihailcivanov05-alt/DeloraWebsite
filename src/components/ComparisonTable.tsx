@@ -119,9 +119,11 @@ const ComparisonTable = () => {
           {/* Card 1: Delora Elite (Always Left) */}
           <div className="comparisonTable-cardItem featured">
             <div className="comparisonTable-cardImageWrapper">
-              <div className="comparisonTable-cardImagePlaceholder">
-                <span>{isBg ? current.delora.imagePlaceholderBg : current.delora.imagePlaceholderEn}</span>
-              </div>
+              <img 
+                src="/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png" 
+                alt="Delora Elite Usage" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </div>
             
             <div className="comparisonTable-cardIconWrapper check">

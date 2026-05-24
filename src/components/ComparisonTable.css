@@ -133,8 +133,8 @@
 }
 
 .comparisonTable-cardIconWrapper.check .comparisonTable-circleIcon {
-  background: #FCE7E9; /* Premium rose-pink circle */
-  color: #E05368; /* RoseSkinCo-matching pinkish check */
+  background: rgba(46, 196, 126, 0.15); /* Soft green background */
+  color: #2EC47E; /* Green check */
 }
 
 .comparisonTable-cardIconWrapper.cross .comparisonTable-circleIcon {
