@@ -11,8 +11,8 @@ interface CardContent {
   boldBg: string;
   textEn: string;
   textBg: string;
-  imagePlaceholderEn: string;
   imagePlaceholderBg: string;
+  imageSrc?: string;
 }
 
 interface TabData {
@@ -37,7 +37,8 @@ const ComparisonTable = () => {
         textEn: "Permanent hair reduction in as little as 4-8 weeks.",
         textBg: "Трайно намаляване на окосмяването за едва 4-8 седмици.",
         imagePlaceholderEn: "Delora Elite in use — smooth skin",
-        imagePlaceholderBg: "Delora Elite в употреба — гладка кожа"
+        imagePlaceholderBg: "Delora Elite в употреба — гладка кожа",
+        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png"
       },
       competitor: {
         boldEn: "Shave constantly to keep body hair in check",
@@ -57,7 +58,8 @@ const ComparisonTable = () => {
         textEn: "Targets unwanted hairs at the root to stop them from growing.",
         textBg: "Насочва се към корена на косъма, за да спре растежа му без болка.",
         imagePlaceholderEn: "Delora Elite — gentle cooling treatment",
-        imagePlaceholderBg: "Delora Elite — нежна охлаждаща процедура"
+        imagePlaceholderBg: "Delora Elite — нежна охлаждаща процедура",
+        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png"
       },
       competitor: {
         boldEn: "Hot wax literally rips your hair off your body. Ouch!",
@@ -65,7 +67,8 @@ const ComparisonTable = () => {
         textEn: "Extremely painful, expensive over time, and causes severe redness.",
         textBg: "Изключително болезнено, скъпо с времето и причинява сериозни зачервявания.",
         imagePlaceholderEn: "Hot Wax Treatment — painful pull",
-        imagePlaceholderBg: "Горещ восък — болезнено откъсване"
+        imagePlaceholderBg: "Горещ восък — болезнено откъсване",
+        imageSrc: "/Photoshoots/Other/hf_20260524_225521_79e3b4c5-272e-470c-8ec5-ecdde7fc1608.png"
       }
     },
     laser: {
@@ -77,7 +80,8 @@ const ComparisonTable = () => {
         textEn: "Take care of your hair at home on your own schedule. Safe and private.",
         textBg: "Погрижете се за окосмяването си у дома по ваш собствен график. Безопасно и дискретно.",
         imagePlaceholderEn: "Delora Elite — premium at-home treatment",
-        imagePlaceholderBg: "Delora Elite — луксозна процедура у дома"
+        imagePlaceholderBg: "Delora Elite — луксозна процедура у дома",
+        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png"
       },
       competitor: {
         boldEn: "Bring your hairy self all the way to a clinic",
@@ -119,11 +123,17 @@ const ComparisonTable = () => {
           {/* Card 1: Delora Elite (Always Left) */}
           <div className="comparisonTable-cardItem featured">
             <div className="comparisonTable-cardImageWrapper">
-              <img 
-                src="/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png" 
-                alt="Delora Elite Usage" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
+              {current.delora.imageSrc ? (
+                <img 
+                  src={current.delora.imageSrc} 
+                  alt="Delora Elite Usage" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              ) : (
+                <div className="comparisonTable-cardImagePlaceholder">
+                  <span>{isBg ? current.delora.imagePlaceholderBg : current.delora.imagePlaceholderEn}</span>
+                </div>
+              )}
             </div>
             
             <div className="comparisonTable-cardIconWrapper check">
@@ -145,9 +155,17 @@ const ComparisonTable = () => {
           {/* Card 2: Selected Competitor (Always Right) */}
           <div className="comparisonTable-cardItem competitor">
             <div className="comparisonTable-cardImageWrapper">
-              <div className="comparisonTable-cardImagePlaceholder">
-                <span>{isBg ? current.competitor.imagePlaceholderBg : current.competitor.imagePlaceholderEn}</span>
-              </div>
+              {current.competitor.imageSrc ? (
+                <img 
+                  src={current.competitor.imageSrc} 
+                  alt="Comparison" 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              ) : (
+                <div className="comparisonTable-cardImagePlaceholder">
+                  <span>{isBg ? current.competitor.imagePlaceholderBg : current.competitor.imagePlaceholderEn}</span>
+                </div>
+              )}
             </div>
 
             <div className="comparisonTable-cardIconWrapper cross">
