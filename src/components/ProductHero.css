@@ -60,6 +60,15 @@
 .productHero-thumbStrip {
   display: flex;
   gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding-bottom: 0.5rem; /* Space for scroll */
+  width: 100%;
+}
+
+.productHero-thumbStrip::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .productHero-thumb {
@@ -137,11 +146,13 @@
 /* Title & Subtitle */
 .productHero-title {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.75rem; /* Reduced for mobile */
   font-weight: 600;
   color: var(--color-charcoal);
-  line-height: 1.15;
+  line-height: 1.2;
   margin: 0;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .productHero-subtitle {
