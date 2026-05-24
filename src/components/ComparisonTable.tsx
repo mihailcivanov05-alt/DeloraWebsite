@@ -11,6 +11,7 @@ interface CardContent {
   boldBg: string;
   textEn: string;
   textBg: string;
+  imagePlaceholderEn: string;
   imagePlaceholderBg: string;
   imageSrc?: string;
 }
