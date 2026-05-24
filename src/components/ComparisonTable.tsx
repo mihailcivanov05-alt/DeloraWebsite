@@ -90,7 +90,8 @@ const ComparisonTable = () => {
         textEn: "Requires scheduling, traveling, high costs, and clinical sessions.",
         textBg: "Изисква планиране, пътуване, големи разходи и неудобни клинични процедури.",
         imagePlaceholderEn: "Clinical Laser Machine — expensive & public",
-        imagePlaceholderBg: "Професионален лазер — скъпо и неудобно"
+        imagePlaceholderBg: "Професионален лазер — скъпо и неудобно",
+        imageSrc: "/Photoshoots/Other/hf_20260524_231522_abe7b644-c383-45da-9830-3bb6c07feed3.png"
       }
     }
   };
