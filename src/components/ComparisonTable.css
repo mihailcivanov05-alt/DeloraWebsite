@@ -138,8 +138,8 @@
 }
 
 .comparisonTable-cardIconWrapper.cross .comparisonTable-circleIcon {
-  background: #F1F1F1; /* Grey background circle */
-  color: #71717A; /* Grey cross */
+  background: rgba(224, 83, 104, 0.1); /* Light red background */
+  color: #E05368; /* Bold red cross */
 }
 
 /* Typography & Info */
