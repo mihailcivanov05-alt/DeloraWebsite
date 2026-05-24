@@ -7,17 +7,11 @@ export default function Footer() {
   const { t, language } = useLanguage();
 
   const EXPLORE_LINKS = [
-    { label: t.navbar.howItWorks, href: "/#how-it-works" },
-    { label: t.navbar.science, href: "/science" },
     { label: t.navbar.consultation, href: "/#consultation" },
-    { label: t.navbar.about, href: "/about" },
   ];
 
   const SUPPORT_LINKS = [
-    { label: t.navbar.faq, href: "/faq" },
-    { label: language === 'en' ? "Shipping & Returns" : "Доставка и връщане", href: "/shipping" },
-    { label: language === 'en' ? "Privacy Policy" : "Политика за поверителност", href: "/privacy" },
-    { label: language === 'en' ? "Terms & Conditions" : "Общи условия", href: "/terms" },
+    { label: language === 'en' ? "Support" : "Поддръжка", href: "#" },
   ];
 
   const LEGAL_LINKS = [
@@ -31,7 +25,9 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-brand">
-            <a href="/" className="footer-logo">DELORA</a>
+            <a href="/" className="footer-logo">
+              <img src="/delora-photos/logo.png" alt="Delora Logo" className="footer-logo-img" />
+            </a>
             <p className="footer-tagline">{t.footer.tagline}</p>
             <p className="footer-copy">© {new Date().getFullYear()} Delora. {t.footer.copyright}</p>
           </div>
@@ -83,11 +79,6 @@ export default function Footer() {
         <div className="footer-bottom">
           <span className="footer-legal-text">{t.footer.legal}</span>
           <div className="footer-legal-links">
-            {LEGAL_LINKS.map((l) => (
-              <a key={l.id} href={`/${l.id}`} className="footer-legal-link">
-                {l.label}
-              </a>
-            ))}
           </div>
         </div>
       </div>

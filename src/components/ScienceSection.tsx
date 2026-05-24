@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Zap, Microscope, Award } from "lucide-react";
-import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import Button from "./Button";
 import "./ScienceSection.css";

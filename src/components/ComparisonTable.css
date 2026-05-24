@@ -1,0 +1,208 @@
+/* ==========================================
+   ComparisonTable — Dynamic Tabs Redesign (Lumi Style)
+   ========================================== */
+
+.comparisonTable {
+  padding: 5rem 1rem;
+  background-color: #FAF8FC; /* Beautiful soft amethyst-tinted backdrop */
+  overflow: hidden;
+}
+
+.comparisonTable-container {
+  max-width: 1000px !important;
+  margin: 0 auto;
+}
+
+/* Header Row: Flex layout on desktop */
+.comparisonTable-headerRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.comparisonTable-title {
+  font-family: var(--font-heading);
+  color: var(--color-charcoal);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Tab Pills */
+.comparisonTable-tabs {
+  display: flex;
+  background: rgba(91, 58, 122, 0.04);
+  padding: 6px;
+  border-radius: 100px;
+  border: 1px solid rgba(91, 58, 122, 0.05);
+  gap: 0.25rem;
+}
+
+.comparisonTable-tabBtn {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: transparent;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.comparisonTable-tabBtn:hover {
+  color: var(--color-amethyst);
+}
+
+.comparisonTable-tabBtn.active {
+  background: var(--color-amethyst);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(91, 58, 122, 0.18);
+}
+
+/* Cards Pair Layout: side-by-side */
+.comparisonTable-cardsPair {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+
+.comparisonTable-cardItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Elegant Image Wrapper with solid dark outline */
+.comparisonTable-cardImageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1.15 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid #1F1B24; /* Bold, high-end outline border matching the screenshot */
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.comparisonTable-cardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-lavender) 0%, rgba(91, 58, 122, 0.03) 100%);
+  color: var(--color-amethyst);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.4;
+}
+
+/* Icon Indicators */
+.comparisonTable-cardIconWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 1.25rem;
+}
+
+.comparisonTable-circleIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comparisonTable-cardItem:hover .comparisonTable-circleIcon {
+  transform: scale(1.1);
+}
+
+.comparisonTable-cardIconWrapper.check .comparisonTable-circleIcon {
+  background: #FCE7E9; /* Premium rose-pink circle */
+  color: #E05368; /* RoseSkinCo-matching pinkish check */
+}
+
+.comparisonTable-cardIconWrapper.cross .comparisonTable-circleIcon {
+  background: #F1F1F1; /* Grey background circle */
+  color: #71717A; /* Grey cross */
+}
+
+/* Typography & Info */
+.comparisonTable-cardInfo {
+  max-width: 360px;
+}
+
+.comparisonTable-cardText {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin: 0 0 0.5rem 0;
+}
+
+.comparisonTable-cardBold {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.comparisonTable-cardItem.featured .comparisonTable-cardBold {
+  color: var(--color-amethyst);
+}
+
+/* Mobile swipe hint hidden by default */
+.comparisonTable-mobilePrompt {
+  display: none;
+}
+
+/* Desktop Responsive Layout */
+@media (min-width: 768px) {
+  .comparisonTable {
+    padding: 7rem 2rem;
+  }
+
+  .comparisonTable-headerRow {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .comparisonTable-title {
+    font-size: 2.8rem;
+  }
+
+  .comparisonTable-cardsPair {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+
+  .comparisonTable-cardItem {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comparisonTable-cardsPair {
+    gap: 5rem;
+  }
+}

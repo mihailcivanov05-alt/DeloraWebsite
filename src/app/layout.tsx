@@ -34,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${cormorant.variable} ${nunito.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning className={`${cormorant.variable} ${nunito.variable}`}>
         <LanguageProvider>
           <CartProvider>
             {children}

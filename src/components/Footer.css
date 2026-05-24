@@ -12,13 +12,27 @@
 }
 
 .footer-logo {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--color-lavender);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 180px;
+  height: 45px;
+  overflow: hidden;
   margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  height: 220px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  filter: invert(1);
+  display: block;
 }
 
 .footer-tagline {

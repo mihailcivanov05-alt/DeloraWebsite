@@ -31,34 +31,16 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""} ${isMobileMenuOpen ? "menu-open" : ""}`}>
       <div className="container navbarContainer">
         <Link href="/" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
-          DELORA
+          <img src="/delora-photos/logo.png" alt="Delora Logo" className="logo-img" />
         </Link>
 
         {/* Desktop Links */}
         <ul className="navLinks desktopOnly">
-          <li><Link href="/#how-it-works" className="navLink">{t.navbar.howItWorks}</Link></li>
-          <li><Link href="/science" className="navLink">{t.navbar.science}</Link></li>
-          <li><Link href="/faq" className="navLink">{t.navbar.faq}</Link></li>
-          <li><Link href="/about" className="navLink">{t.navbar.about}</Link></li>
+          <li><Link href="/product" className="navLink">{language === 'en' ? 'Product' : 'Продукт'}</Link></li>
         </ul>
 
         <div className="actions">
           <div className="lang-switcher desktopOnly">
-            <button 
-              className={language === 'en' ? 'active' : ''} 
-              onClick={() => setLanguage('en')}
-              aria-label="Switch language to English"
-            >
-              EN
-            </button>
-            <span className="divider" aria-hidden="true">|</span>
-            <button 
-              className={language === 'bg' ? 'active' : ''} 
-              onClick={() => setLanguage('bg')}
-              aria-label="Switch language to Bulgarian"
-            >
-              BG
-            </button>
           </div>
           
           <button 
@@ -93,24 +75,9 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="mobileMenuLinks">
-              <Link href="/#how-it-works" onClick={toggleMobileMenu}>{t.navbar.howItWorks}</Link>
-              <Link href="/science" onClick={toggleMobileMenu}>{t.navbar.science}</Link>
-              <Link href="/faq" onClick={toggleMobileMenu}>{t.navbar.faq}</Link>
-              <Link href="/about" onClick={toggleMobileMenu}>{t.navbar.about}</Link>
+              <Link href="/product" onClick={toggleMobileMenu}>{language === 'en' ? 'Product' : 'Продукт'}</Link>
               
               <div className="mobileLangSwitcher">
-                <button 
-                  className={language === 'en' ? 'active' : ''} 
-                  onClick={() => { setLanguage('en'); toggleMobileMenu(); }}
-                >
-                  English
-                </button>
-                <button 
-                  className={language === 'bg' ? 'active' : ''} 
-                  onClick={() => { setLanguage('bg'); toggleMobileMenu(); }}
-                >
-                  Български
-                </button>
               </div>
 
               <div className="mobileMenuCta">

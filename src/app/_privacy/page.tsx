@@ -116,7 +116,9 @@ export default function PrivacyPage() {
 
       <footer className="sci-footer">
         <div className="container">
-          <a href="/" className="sci-footer-logo">DELORA</a>
+          <a href="/" className="sci-footer-logo">
+            <img src="/delora-photos/logo.png" alt="Delora Logo" className="footer-logo-img" />
+          </a>
           <p>© {new Date().getFullYear()} Delora. All rights reserved.</p>
         </div>
       </footer>

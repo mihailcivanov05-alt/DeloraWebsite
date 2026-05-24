@@ -7,15 +7,15 @@ import { useLanguage } from "@/context/LanguageContext";
 import "./SocialProof.css";
 
 const ugcCards = [
-  { img: "/delora-photos/pomelli_photoshoot-1.png", handle: "@delora_skin", caption: "Results after 4 sessions are insane..." },
-  { img: "/delora-photos/pomelli_photoshoot-2.png", handle: "@beauty_daily", caption: "The cooling tech is a game changer..." },
-  { img: "/delora-photos/pomelli_photoshoot-4.png", handle: "@sofia_re", caption: "Better than salon treatments..." },
-  { img: "/delora-photos/pomelli_bdna_image_0514.png", handle: "@nora_1", caption: "Smooth skin ready for summer!" },
-  { img: "/delora-photos/pomelli_bdna_image_0514-3.png", handle: "@desi_love", caption: "Best investment this year..." },
-  { img: "/delora-photos/pomelli_bdna_image_0514-5.png", handle: "@maria_v", caption: "Finally painless hair removal!" },
-  { img: "/delora-photos/pomelli_bdna_image_0514-6.png", handle: "@delora_skin", caption: "Results after 4 sessions are insane..." },
-  { img: "/delora-photos/pomelli_bdna_image_0514-7.png", handle: "@beauty_daily", caption: "The cooling tech is a game changer..." },
-  { img: "/delora-photos/pomelli_photoshoot-3.png", handle: "@sofia_re", caption: "Better than salon treatments..." },
+  { handle: "@delora_skin", caption: "Results after 4 sessions are insane..." },
+  { handle: "@beauty_daily", caption: "The cooling tech is a game changer..." },
+  { handle: "@sofia_re", caption: "Better than salon treatments..." },
+  { handle: "@nora_1", caption: "Smooth skin ready for summer!" },
+  { handle: "@desi_love", caption: "Best investment this year..." },
+  { handle: "@maria_v", caption: "Finally painless hair removal!" },
+  { handle: "@delora_skin", caption: "Results after 4 sessions are insane..." },
+  { handle: "@beauty_daily", caption: "The cooling tech is a game changer..." },
+  { handle: "@sofia_re", caption: "Better than salon treatments..." },
 ];
 
 const beforeAfterResults = [
@@ -135,18 +135,9 @@ const SocialProof = () => {
               className="ugcCard"
               style={{ '--rotation': `${(index % 5 - 2) * 2.5}deg` } as React.CSSProperties}
             >
-              <div className="ugcCardImage">
-                <Image 
-                  src={card.img} 
-                  alt={`User result shared by ${card.handle}`} 
-                  fill 
-                  style={{ objectFit: 'cover' }}
-                  sizes="280px"
-                />
-              </div>
               <div className="ugcCardOverlay">
                 <span className="ugcHandle">{card.handle}</span>
-                <p className="ugcCaption">{card.caption}</p>
+                <p className="ugcCaption">"{card.caption}"</p>
               </div>
             </div>
           ))}

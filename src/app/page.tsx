@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import PressBar from "@/components/PressBar";
 import Scrollytelling from "@/components/Scrollytelling";
 import ScienceSection from "@/components/ScienceSection";
 import SkinMatchQuiz from "@/components/SkinMatchQuiz";
@@ -14,7 +13,6 @@ export default function Home() {
     <main style={{ position: 'relative' }}>
       <Navbar />
       <Hero />
-      <PressBar />
       <Scrollytelling />
       <ProductSection />
       <ScienceSection />
