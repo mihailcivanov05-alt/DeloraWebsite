@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <a href="/" className="footer-logo">
-              <img src="/delora-photos/logo.png" alt="Delora Logo" className="footer-logo-img" />
+              <img src="/logo.png" alt="Delora Logo" className="footer-logo-img" />
             </a>
             <p className="footer-tagline">{t.footer.tagline}</p>
             <p className="footer-copy">© {new Date().getFullYear()} Delora. {t.footer.copyright}</p>

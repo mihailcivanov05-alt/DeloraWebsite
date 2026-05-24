@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""} ${isMobileMenuOpen ? "menu-open" : ""}`}>
       <div className="container navbarContainer">
         <Link href="/" className="logo" onClick={() => setIsMobileMenuOpen(false)}>
-          <img src="/delora-photos/logo.png" alt="Delora Logo" className="logo-img" />
+          <img src="/logo.png" alt="Delora Logo" className="logo-img" />
         </Link>
 
         {/* Desktop Links */}

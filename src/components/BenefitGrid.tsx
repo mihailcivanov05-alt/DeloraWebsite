@@ -9,7 +9,7 @@ const BenefitGrid = () => {
   const { language } = useLanguage();
   const isBg = language === 'bg';
 
-  const DEVICE_IMAGE = ""; // Image box placeholder
+  const DEVICE_IMAGE = "/Photoshoots/Other/hf_20260524_130838_d5b63023-01bb-415d-9978-96faa7a9a89e.png"; // Image box placeholder
 
   const leftBenefits = [
     {
