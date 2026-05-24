@@ -2,15 +2,13 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, Check, RefreshCw, Zap, Sparkles, Target, ShieldCheck, Info } from "lucide-react";
+import { ArrowLeft, Check, RefreshCw, XCircle, Info } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import Button from "./Button";
 import "./SkinMatchQuiz.css";
 
-const SKIN_COLORS = ["#F9E4D4", "#F3D0B1", "#E1B899", "#AD8A60"];
+const SKIN_COLORS = ["#F9E4D4", "#F3D0B1", "#E1B899", "#AD8A60", "#694a38", "#2c1c11"];
 const HAIR_COLORS = ["#2B2B2B", "#8D5524", "#C68642", "#E0E0E0"];
-const CONCERN_ICONS = [Zap, Sparkles, Target, ShieldCheck];
-const SENSITIVITY_ICONS = [ShieldCheck, Target, Zap, Info];
 
 const SkinMatchQuiz = () => {
   const [step, setStep] = useState(0);
@@ -40,11 +38,15 @@ const SkinMatchQuiz = () => {
 
   const progress = ((step + 1) / (t.quiz.questions.length + 1)) * 100;
 
-  // Contextual tips for "Why we ask this"
   const getContextTip = () => {
     const tips = t.quiz_extra?.tips || [];
     return tips[step] || "";
   };
+
+  // Suitability Logic
+  // Skin (Step 0): Type I-IV (index 0-3) are suitable. Type V-VI (index 4-5) are not.
+  // Hair (Step 1): Black/Brown (index 0-1) are suitable. Blonde/Red/Grey/White (index 2-3) are not.
+  const isSuitable = selections[0] <= 3 && selections[1] <= 1;
 
   return (
     <section id="consultation" className="quizSection">
@@ -97,7 +99,13 @@ const SkinMatchQuiz = () => {
                           whileTap={{ scale: 0.98 }}
                         >
                           <div className="optionVisual">
-                            {step === 0 && React.createElement(CONCERN_ICONS[i], { size: 28, className: "optionIcon", "aria-hidden": "true" })}
+                            {step === 0 && (
+                              <div 
+                                className="skinSwatch" 
+                                style={{ background: SKIN_COLORS[i] }} 
+                                aria-hidden="true"
+                              />
+                            )}
                             {step === 1 && (
                               <div 
                                 className="skinSwatch hairSwatch" 
@@ -105,14 +113,6 @@ const SkinMatchQuiz = () => {
                                 aria-hidden="true"
                               />
                             )}
-                            {step === 2 && (
-                              <div 
-                                className="skinSwatch" 
-                                style={{ background: SKIN_COLORS[i] }} 
-                                aria-hidden="true"
-                              />
-                            )}
-                            {step === 3 && React.createElement(SENSITIVITY_ICONS[i], { size: 28, className: "optionIcon", "aria-hidden": "true" })}
                           </div>
                           <span className="optionLabel">{option}</span>
                         </motion.div>
@@ -158,14 +158,16 @@ const SkinMatchQuiz = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, type: "spring" }}
               >
-                <div className="resultIcon">
-                  <Check size={40} />
+                <div className="resultIcon" style={{ background: isSuitable ? 'rgba(91, 58, 122, 0.1)' : 'rgba(224, 83, 104, 0.1)', color: isSuitable ? 'var(--color-amethyst)' : '#E05368' }}>
+                  {isSuitable ? <Check size={40} /> : <XCircle size={40} />}
                 </div>
-                <h2 className="resultTitle">{t.quiz.result.ready}</h2>
+                <h2 className="resultTitle">
+                  {isSuitable ? t.quiz.result.title_success : t.quiz.result.title_fail}
+                </h2>
                 
                 <div className="profileSummary">
                   <div className="summaryTag">
-                    <span>Skin: {t.quiz.questions[2].options[selections[2]]}</span>
+                    <span>Skin: {t.quiz.questions[0].options[selections[0]]}</span>
                   </div>
                   <div className="summaryTag">
                     <span>Hair: {t.quiz.questions[1].options[selections[1]]}</span>
@@ -173,10 +175,12 @@ const SkinMatchQuiz = () => {
                 </div>
 
                 <div className="resultMessage">
-                  <p>{t.quiz.result.desc}</p>
+                  <p>{isSuitable ? t.quiz.result.desc_success : t.quiz.result.desc_fail}</p>
                 </div>
                 <div className="resultActions">
-                  <Button size="lg" className="cta-pulse" href="#tech-specs">{t.quiz.result.cta}</Button>
+                  {isSuitable && (
+                    <Button size="lg" className="cta-pulse" href="#product-hero">{t.quiz.result.cta}</Button>
+                  )}
                   <Button variant="outline" size="lg" onClick={handleRestart}>
                     <RefreshCw size={18} style={{ marginRight: '8px' }} /> {t.quiz.restart}
                   </Button>

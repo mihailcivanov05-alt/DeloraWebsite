@@ -56,30 +56,22 @@ export const translations = {
       questions: [
         {
           id: 1,
-          text: "What is your primary skin concern?",
-          options: ["Body Hair Removal", "Face Rejuvenation", "Dark Spot Correction", "Acne Treatment"]
+          text: "Select your skin tone:",
+          options: ["Type I (Fair)", "Type II (Light)", "Type III (Medium)", "Type IV (Olive)", "Type V (Dark)", "Type VI (Deep)"]
         },
         {
           id: 2,
-          text: "Select your natural hair color in the treatment area:",
+          text: "Select your natural hair color:",
           options: ["Black / Dark Brown", "Light Brown", "Blonde / Red", "Grey / White"]
-        },
-        {
-          id: 3,
-          text: "Select your skin tone from the Fitzpatrick scale:",
-          options: ["Type I (Fair)", "Type II (Light)", "Type III (Medium)", "Type IV (Olive)"]
-        },
-        {
-          id: 4,
-          text: "How would you describe your skin's sensitivity?",
-          options: ["Highly Sensitive", "Normal", "Resilient", "Not Sure"]
         }
       ],
       result: {
         calculating: "Calibrating your precision protocol...",
         ready: "Analysis Complete",
-        title: "Your Personalized Protocol is Ready",
-        desc: "Based on your biological profile, the Delora Elite is your perfect match. Recommended intensity: Level 3-4 with Sapphire Cooling active.",
+        title_success: "Perfect Match! You are highly suitable.",
+        desc_success: "Based on your biological profile, the Delora Elite is perfectly safe and highly effective for you. You can expect up to 95% hair reduction.",
+        title_fail: "Not Recommended for Your Profile",
+        desc_fail: "IPL technology requires a contrast between skin and hair color. Unfortunately, based on your selections, IPL is not recommended as it may be ineffective or unsafe for your specific skin/hair type.",
         cta: "Claim My €229 Offer"
       },
       next: "Next Step",
@@ -211,10 +203,8 @@ export const translations = {
       calculatingSubtext: "Matching your biology with Delora Elite technology...",
       cta: "Start Your Skin Consultation",
       tips: [
-        "Helps identify the required energy depth.",
-        "IPL targets melanin; contrast is key for efficacy.",
-        "Ensures the Sapphire Cooling Core is calibrated for safety.",
-        "Directs our AI to recommend the gentlest effective mode."
+        "IPL requires melanin contrast. We need to check your skin tone.",
+        "IPL targets the melanin in the hair root. Lighter hair may not absorb enough energy."
       ]
     },
     scrolly_extra: {
@@ -276,30 +266,22 @@ export const translations = {
       questions: [
         {
           id: 1,
-          text: "Какво е основното ви притеснение относно кожата?",
-          options: ["Премахване на окосмяване", "Подмладяване на лицето", "Корекция на тъмни петна", "Лечение на акне"]
+          text: "Изберете вашия тип кожа:",
+          options: ["Тип I (Светъл)", "Тип II (Бял)", "Тип III (Среден)", "Тип IV (Маслинен)", "Тип V (Тъмен)", "Тип VI (Много тъмен)"]
         },
         {
           id: 2,
-          text: "Изберете естествения цвят на косата си в зоната на третиране:",
+          text: "Изберете естествения цвят на косата си:",
           options: ["Черна / Тъмно кафява", "Светло кафява", "Руса / Червена", "Сива / Бяла"]
-        },
-        {
-          id: 3,
-          text: "Изберете вашия тип кожа по скалата на Фицпатрик:",
-          options: ["Тип I (Светъл)", "Тип II (Бял)", "Тип III (Среден)", "Тип IV (Маслинен)"]
-        },
-        {
-          id: 4,
-          text: "Как бихте описали чувствителността на кожата си?",
-          options: ["Силно чувствителна", "Нормална", "Устойчива", "Не знам"]
         }
       ],
       result: {
         calculating: "Калибриране на вашия прецизен протокол...",
         ready: "Анализът е завършен",
-        title: "Вашият персонализиран протокол е готов",
-        desc: "Въз основа на вашия биологичен профил, Delora Elite е вашият перфектен избор. Препоръчителен интензитет: Ниво 3-4 с активна Sapphire Cooling.",
+        title_success: "Перфектно съвпадение! Вие сте напълно подходяща.",
+        desc_success: "Въз основа на вашия биологичен профил, Delora Elite е напълно безопасна и високоефективна за вас. Можете да очаквате до 95% намаляване на окосмяването.",
+        title_fail: "Не се препоръчва за вашия профил",
+        desc_fail: "IPL технологията изисква контраст между кожата и цвета на косата. За съжаление, въз основа на вашия избор, IPL не се препоръчва, тъй като може да бъде неефективна или небезопасна за вашия специфичен тип кожа/коса.",
         cta: "Вземи моята оферта за €229"
       },
       next: "Следваща стъпка",
@@ -431,10 +413,8 @@ export const translations = {
       calculatingSubtext: "Съпоставяме биологията ви с технологията Delora Elite...",
       cta: "Започнете вашата консултация",
       tips: [
-        "Помага за определяне на необходимата дълбочина на енергията.",
-        "IPL таргетира меланина; контрастът е ключов за ефикасността.",
-        "Гарантира, че Sapphire Cooling Core е калибриран за безопасност.",
-        "Насочва нашия AI да препоръча най-нежния ефективен режим."
+        "IPL изисква контраст на меланина. Трябва да проверим вашия тен на кожата.",
+        "IPL таргетира меланина в корена на косъма. По-светлата коса може да не абсорбира достатъчно енергия."
       ]
     },
     scrolly_extra: {
