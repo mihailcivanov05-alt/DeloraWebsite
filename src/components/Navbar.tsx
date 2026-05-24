@@ -36,7 +36,6 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <ul className="navLinks desktopOnly">
-          <li><Link href="/product" className="navLink">{language === 'en' ? 'Product' : 'Продукт'}</Link></li>
         </ul>
 
         <div className="actions">
@@ -75,7 +74,6 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="mobileMenuLinks">
-              <Link href="/product" onClick={toggleMobileMenu}>{language === 'en' ? 'Product' : 'Продукт'}</Link>
               
               <div className="mobileLangSwitcher">
               </div>
