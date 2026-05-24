@@ -46,7 +46,8 @@ const ComparisonTable = () => {
         textEn: "Only cuts hair at the surface. Razor burn, cuts, and ingrowns are common.",
         textBg: "Само отрязва косъма на повърхността. Чести порязвания, обриви и враснали косми.",
         imagePlaceholderEn: "Traditional Razor — constant upkeep",
-        imagePlaceholderBg: "Обикновена самобръсначка — постоянно поддържане"
+        imagePlaceholderBg: "Обикновена самобръсначка — постоянно поддържане",
+        imageSrc: "/Photoshoots/Other/hf_20260524_230406_0df9a313-b30e-43f5-9b02-38b2570c286a.png"
       }
     },
     waxing: {
