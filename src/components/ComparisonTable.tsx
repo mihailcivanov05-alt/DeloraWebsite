@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { Check, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import "./ComparisonTable.css";
@@ -129,10 +130,13 @@ const ComparisonTable = () => {
           <div className="comparisonTable-cardItem featured">
             <div className="comparisonTable-cardImageWrapper">
               {current.delora.imageSrc ? (
-                <img 
+                <Image 
                   src={current.delora.imageSrc} 
                   alt="Delora Elite Usage" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                 />
               ) : (
                 <div className="comparisonTable-cardImagePlaceholder">
@@ -161,10 +165,13 @@ const ComparisonTable = () => {
           <div className="comparisonTable-cardItem competitor">
             <div className="comparisonTable-cardImageWrapper">
               {current.competitor.imageSrc ? (
-                <img 
+                <Image 
                   src={current.competitor.imageSrc} 
                   alt="Comparison" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                 />
               ) : (
                 <div className="comparisonTable-cardImagePlaceholder">

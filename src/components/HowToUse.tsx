@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Scissors, Zap, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import "./HowToUse.css";
@@ -52,7 +53,13 @@ const HowToUse = () => {
             <div key={idx} className="howToUse-card">
               <div className="howToUse-imageWrapper">
                 {step.image ? (
-                  <img src={step.image} alt={step.title} className="howToUse-image" />
+                  <Image 
+                    src={step.image} 
+                    alt={step.title} 
+                    fill
+                    className="howToUse-image" 
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
                 ) : (
                   <div className="howToUse-placeholder" />
                 )}
