@@ -36,20 +36,27 @@
 .comparisonTable-tabs {
   display: flex;
   background: rgba(91, 58, 122, 0.04);
-  padding: 6px;
+  padding: 4px;
   border-radius: 100px;
   border: 1px solid rgba(91, 58, 122, 0.05);
   gap: 0.25rem;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparisonTable-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .comparisonTable-tabBtn {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-muted);
   background: transparent;
   border: none;
-  padding: 0.65rem 1.5rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -194,6 +201,11 @@
 
   .comparisonTable-title {
     font-size: 2.8rem;
+  }
+
+  .comparisonTable-tabBtn {
+    font-size: 0.9rem;
+    padding: 0.65rem 1.5rem;
   }
 
   .comparisonTable-cardsPair {
