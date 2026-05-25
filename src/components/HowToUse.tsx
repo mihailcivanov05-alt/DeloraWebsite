@@ -34,7 +34,7 @@ const HowToUse = () => {
       description: isBg 
         ? 'След 4–8 седмични процедури се насладете на до 95% намаляване на окосмяването.' 
         : 'After 4–8 weekly sessions, enjoy up to 95% hair reduction.',
-      image: ''
+      image: '/Photoshoots/Other/hf_20260525_001112_ee0f3847-67a1-408d-bf16-c05a2f12f2fd.png'
     }
   ];
 
