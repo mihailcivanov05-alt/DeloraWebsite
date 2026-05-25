@@ -17,7 +17,7 @@ const HowToUse = () => {
       description: isBg 
         ? 'Избръснете зоната и почистете кожата. Без кола маска или отскубване.' 
         : 'Shave the treatment area and clean your skin. No waxing or plucking.',
-      image: ''
+      image: '/Photoshoots/Other/hf_20260525_091805_96728dc3-030e-485f-8102-c83acb933053.png'
     },
     {
       num: '02',
@@ -26,7 +26,7 @@ const HowToUse = () => {
       description: isBg 
         ? 'Притиснете Delora към кожата и плъзгайте. Умният сензор настройва интензитета, докато сапфиреното охлаждане предпазва от болка.' 
         : 'Press Delora against your skin and glide. The smart sensor auto-adjusts intensity while sapphire cooling keeps you comfortable.',
-      image: '/Photoshoots/Other/hf_20260525_091805_96728dc3-030e-485f-8102-c83acb933053.png'
+      image: '/Photoshoots/Other/hf_20260525_093128_a4448ae2-b5f0-4341-9dd8-c8355bbcc540.png'
     },
     {
       num: '03',
