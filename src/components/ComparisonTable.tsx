@@ -108,16 +108,18 @@ const ComparisonTable = () => {
             {isBg ? "Delora в сравнение с..." : "Delora compared to..."}
           </h2>
           
-          <div className="comparisonTable-tabs">
-            {(Object.keys(tabData) as TabKey[]).map((key) => (
-              <button
-                key={key}
-                className={`comparisonTable-tabBtn ${activeTab === key ? "active" : ""}`}
-                onClick={() => setActiveTab(key)}
-              >
-                {isBg ? tabData[key].labelBg : tabData[key].labelEn}
-              </button>
-            ))}
+          <div className="comparisonTable-tabsWrapper">
+            <div className="comparisonTable-tabs">
+              {(Object.keys(tabData) as TabKey[]).map((key) => (
+                <button
+                  key={key}
+                  className={`comparisonTable-tabBtn ${activeTab === key ? "active" : ""}`}
+                  onClick={() => setActiveTab(key)}
+                >
+                  {isBg ? tabData[key].labelBg : tabData[key].labelEn}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
