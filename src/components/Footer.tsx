@@ -14,10 +14,7 @@ export default function Footer() {
     { label: language === 'en' ? "Support" : "Поддръжка", href: "#" },
   ];
 
-  const LEGAL_LINKS = [
-    { id: "privacy", label: language === 'en' ? "Privacy" : "Поверителност" },
-    { id: "terms", label: language === 'en' ? "Terms" : "Условия" }
-  ];
+
 
   return (
     <footer className="site-footer">
