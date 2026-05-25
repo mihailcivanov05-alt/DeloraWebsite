@@ -243,7 +243,25 @@
   }
 
   .optionsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .optionCard {
+    padding: 0.5rem;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .optionVisual {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+  }
+
+  .optionLabel {
+    font-size: 0.75rem;
+    line-height: 1.1;
   }
 
   .resultTitle {
