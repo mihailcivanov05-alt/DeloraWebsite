@@ -26,7 +26,7 @@ const HowToUse = () => {
       description: isBg 
         ? 'Притиснете Delora към кожата и плъзгайте. Умният сензор настройва интензитета, докато сапфиреното охлаждане предпазва от болка.' 
         : 'Press Delora against your skin and glide. The smart sensor auto-adjusts intensity while sapphire cooling keeps you comfortable.',
-      image: ''
+      image: '/Photoshoots/Bikini Area/hf_20260524_123307_6e6a4860-3e73-40e2-b50f-4b00f3385008.png'
     },
     {
       num: '03',

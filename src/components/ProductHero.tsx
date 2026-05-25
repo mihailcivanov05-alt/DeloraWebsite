@@ -11,7 +11,7 @@ const productImages = [
   { src: "/Photoshoots/Arm/hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.png", alt: "Delora Elite IPL Device — arm treatment view" },
   { src: "/Photoshoots/Leg/hf_20260524_110654_0630dd29-3ad6-454b-b3f1-3051b2aef3f6.png", alt: "Delora Elite IPL Device — leg treatment view" },
   { src: "/Photoshoots/Face/hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.png", alt: "Delora Elite IPL Device — facial treatment view" },
-  { src: "/Photoshoots/Bikini Area/hf_20260524_123307_6e6a4860-3e73-40e2-b50f-4b00f3385008.png", alt: "Delora Elite IPL Device — bikini area treatment view" },
+  { src: "/Photoshoots/Other/hf_20260525_091820_21b9328b-85fb-4937-be10-4838412f1ec8.png", alt: "Delora Elite IPL Device — bikini area treatment view" },
 ];
 
 const benefits = [
