@@ -1,0 +1,256 @@
+/* ==========================================
+   ComparisonTable — Dynamic Tabs Redesign (Lumi Style)
+   ========================================== */
+
+.comparisonTable {
+  padding: 5rem 1rem;
+  background-color: #FAF8FC; /* Beautiful soft amethyst-tinted backdrop */
+  overflow: hidden;
+}
+
+.comparisonTable-container {
+  max-width: 1000px !important;
+  margin: 0 auto;
+}
+
+/* Header Row: Flex layout on desktop */
+.comparisonTable-headerRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.comparisonTable-title {
+  font-family: var(--font-heading);
+  color: var(--color-charcoal);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+/* Tab Pills */
+.comparisonTable-tabsWrapper {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.comparisonTable-tabsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.comparisonTable-tabs {
+  display: inline-flex;
+  background: rgba(91, 58, 122, 0.04);
+  padding: 4px;
+  border-radius: 100px;
+  border: 1px solid rgba(91, 58, 122, 0.05);
+  gap: 0.25rem;
+  margin: 0 auto;
+}
+
+.comparisonTable-tabBtn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.85rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.comparisonTable-tabBtn:hover {
+  color: var(--color-amethyst);
+}
+
+.comparisonTable-tabBtn.active {
+  background: var(--color-amethyst);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(91, 58, 122, 0.18);
+}
+
+/* Cards Pair Layout: side-by-side */
+.comparisonTable-cardsPair {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.comparisonTable-cardItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Elegant Image Wrapper with solid dark outline */
+.comparisonTable-cardImageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1.15 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1F1B24;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.comparisonTable-cardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-lavender) 0%, rgba(91, 58, 122, 0.03) 100%);
+  color: var(--color-amethyst);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 2rem;
+  line-height: 1.4;
+}
+
+/* Icon Indicators */
+.comparisonTable-cardIconWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0 1.25rem;
+}
+
+.comparisonTable-circleIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comparisonTable-circleIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.comparisonTable-cardItem:hover .comparisonTable-circleIcon {
+  transform: scale(1.1);
+}
+
+.comparisonTable-cardIconWrapper.check .comparisonTable-circleIcon {
+  background: rgba(46, 196, 126, 0.15); /* Soft green background */
+  color: #2EC47E; /* Green check */
+}
+
+.comparisonTable-cardIconWrapper.cross .comparisonTable-circleIcon {
+  background: rgba(224, 83, 104, 0.1); /* Light red background */
+  color: #E05368; /* Bold red cross */
+}
+
+/* Typography & Info */
+.comparisonTable-cardInfo {
+  max-width: 360px;
+}
+
+.comparisonTable-cardText {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  line-height: 1.3;
+  margin: 0 0 0.5rem 0;
+}
+
+.comparisonTable-cardBold {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.comparisonTable-cardItem.featured .comparisonTable-cardBold {
+  color: var(--color-amethyst);
+}
+
+/* Mobile swipe hint hidden by default */
+.comparisonTable-mobilePrompt {
+  display: none;
+}
+
+/* Desktop Responsive Layout */
+@media (min-width: 768px) {
+  .comparisonTable {
+    padding: 7rem 2rem;
+  }
+
+  .comparisonTable-headerRow {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .comparisonTable-title {
+    font-size: 2.8rem;
+  }
+
+  .comparisonTable-tabBtn {
+    font-size: 0.9rem;
+    padding: 0.65rem 1.5rem;
+  }
+
+  .comparisonTable-cardsPair {
+    flex-direction: row;
+    gap: 3.5rem;
+  }
+
+  .comparisonTable-cardItem {
+    width: 50%;
+  }
+
+  .comparisonTable-cardImageWrapper {
+    border-radius: 24px;
+    border-width: 2px;
+  }
+
+  .comparisonTable-circleIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .comparisonTable-circleIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .comparisonTable-cardText {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .comparisonTable-cardBold {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comparisonTable-cardsPair {
+    gap: 5rem;
+  }
+}

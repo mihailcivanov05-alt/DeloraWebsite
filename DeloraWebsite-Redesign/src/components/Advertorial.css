@@ -1,0 +1,665 @@
+/* ============================================================
+   ADVERTORIAL — /ipl-vs-salon
+   Built in the Delora brand DNA: amethyst/lavender palette,
+   Cormorant headings, soft cards, lavender-gradient placeholders.
+   ============================================================ */
+
+.adv {
+  background: #ffffff;
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+}
+
+/* ── Layout primitives ── */
+.adv-wrap {
+  width: 100%;
+  max-width: 720px; /* text column */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.adv-wrap--wide {
+  max-width: 1080px; /* full-width visual blocks */
+}
+
+.adv-section {
+  padding: 4.5rem 0;
+  background: #ffffff;
+}
+
+/* Soft amethyst-tinted alternating sections (matches ComparisonTable backdrop) */
+.adv-section--tint {
+  background: #faf8fc;
+}
+
+.adv-section--hero {
+  padding-top: 3rem;
+  background: linear-gradient(180deg, #f3ecfa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.adv-section--offer {
+  background: linear-gradient(180deg, #faf8fc 0%, #f3ecfa 100%);
+}
+
+.adv-text {
+  text-align: center;
+}
+
+/* Spacing between blocks inside a section */
+.adv-section .adv-wrap + .adv-wrap {
+  margin-top: 2.5rem;
+}
+
+/* ── Header ── */
+.adv-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(91, 58, 122, 0.06);
+  box-shadow: 0 4px 30px rgba(91, 58, 122, 0.03);
+}
+
+.adv-headerInner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.adv-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.adv-logoImg {
+  height: 32px;
+  width: auto;
+}
+
+/* ── Typography (Cormorant headings, brand sizing) ── */
+.adv-h1 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-charcoal);
+  margin: 0 0 1.1rem;
+}
+
+.adv-h2 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.adv-sub {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--color-muted);
+  margin: 1rem auto 0;
+  max-width: 40ch;
+}
+
+.adv-text .adv-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.adv-sub--tight {
+  margin-top: 0.85rem;
+}
+
+.adv-body {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #4a4350;
+  margin: 0 0 1rem;
+  letter-spacing: 0.005em;
+}
+
+.adv-body:last-child {
+  margin-bottom: 0;
+}
+
+.adv-body strong {
+  color: var(--color-charcoal);
+  font-weight: 800;
+}
+
+.adv-rating {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin: 1rem 0 0;
+}
+
+.adv-ratingStars {
+  background: linear-gradient(135deg, #D4A843 0%, #F0D78C 50%, #D4A843 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+/* ── Hero media + overlay ── */
+.adv-heroMedia {
+  position: relative;
+}
+
+.adv-heroOverlay {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  text-align: center;
+  background: rgba(91, 58, 122, 0.92);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+  letter-spacing: 0.01em;
+  padding: 0.6rem 1.35rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(91, 58, 122, 0.25);
+}
+
+/* ── Visual placeholder blocks (brand DNA: soft lavender gradient) ── */
+.visual-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(91, 58, 122, 0.08);
+  background: linear-gradient(
+    120deg,
+    rgba(243, 236, 250, 0.6) 30%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(243, 236, 250, 0.6) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite ease-in-out;
+  color: var(--color-amethyst);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+  min-height: var(--ph-h, 240px);
+  box-shadow: 0 8px 30px rgba(91, 58, 122, 0.04);
+}
+
+.visual-placeholder .label {
+  max-width: 80%;
+}
+
+/* ── CTA rows ── */
+.adv-ctaRow {
+  display: flex;
+  justify-content: center;
+}
+
+.adv-ctaRow--stack {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.adv-inlineLink {
+  color: var(--color-amethyst);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.adv-inlineLink:hover {
+  color: var(--color-charcoal);
+}
+
+/* ── Comparison table ── */
+.adv-tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 20px;
+  border: 1px solid rgba(91, 58, 122, 0.1);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.adv-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  font-size: 0.95rem;
+}
+
+.adv-table th,
+.adv-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(91, 58, 122, 0.08);
+  vertical-align: top;
+}
+
+.adv-table tr:last-child th,
+.adv-table tr:last-child td {
+  border-bottom: none;
+}
+
+.adv-table thead th {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  background: rgba(91, 58, 122, 0.04);
+}
+
+.adv-table tbody th[scope="row"] {
+  font-weight: 700;
+  color: var(--color-charcoal);
+}
+
+.adv-table .adv-isEnemy {
+  color: var(--color-muted);
+}
+
+.adv-table thead th.adv-isEnemy {
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.adv-table .adv-isDelora {
+  background: rgba(91, 58, 122, 0.06);
+  font-weight: 700;
+  color: var(--color-amethyst);
+}
+
+.adv-table thead th.adv-isDelora {
+  background: var(--color-amethyst);
+  color: #fff;
+  border-top: 3px solid var(--color-amethyst);
+  box-shadow: 0 -4px 12px rgba(91, 58, 122, 0.08);
+}
+
+.adv-table td.adv-isDelora,
+.adv-table th.adv-isDelora {
+  border-left: 2px solid rgba(91, 58, 122, 0.1);
+  border-right: 2px solid rgba(91, 58, 122, 0.1);
+}
+
+.adv-table tbody tr:hover {
+  background-color: rgba(91, 58, 122, 0.02);
+}
+
+/* ── Math callout banner ── */
+.adv-mathCallout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.75rem;
+  min-height: 180px;
+  padding: 2rem 1.5rem;
+  border-radius: 28px;
+  text-align: center;
+  background: radial-gradient(circle at top left, #7d5a9c 0%, var(--color-amethyst) 60%, #472b61 100%);
+  color: #fff;
+  box-shadow: 0 18px 40px rgba(91, 58, 122, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.adv-mathCallout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.adv-mathLine {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.adv-mathLine--enemy {
+  font-size: clamp(1.5rem, 4.5vw, 2.4rem);
+  opacity: 0.7;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.adv-mathLine--delora {
+  font-size: clamp(2rem, 6.5vw, 3.4rem);
+  color: var(--color-lavender);
+}
+
+.adv-mathDivider {
+  width: 1px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* ── FAQ accordion ── */
+.adv-faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.adv-faqItem {
+  border: 1px solid rgba(91, 58, 122, 0.12);
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.adv-faqItem.is-open {
+  border-color: rgba(91, 58, 122, 0.3);
+  box-shadow: 0 10px 25px rgba(91, 58, 122, 0.06);
+  transform: translateY(-1px);
+}
+
+.adv-faqQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  padding: 1.1rem 1.35rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-charcoal);
+  cursor: pointer;
+  background: none;
+}
+
+.adv-faqChevron {
+  flex-shrink: 0;
+  color: var(--color-amethyst);
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.adv-faqItem.is-open .adv-faqChevron {
+  transform: rotate(180deg);
+}
+
+.adv-faqAnswer {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.adv-faqAnswer p {
+  padding: 0 1.35rem 1.2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4350;
+  margin: 0;
+}
+
+/* ── Quiz CTA card ── */
+.adv-quizCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  text-align: center;
+  padding: 2.25rem 1.5rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--color-lavender) 0%, rgba(91, 58, 122, 0.05) 100%);
+  border: 1px solid rgba(91, 58, 122, 0.1);
+  animation: quizPulse 3s ease-in-out 3;
+}
+
+.adv-quizCardText {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.3rem, 3.5vw, 1.75rem);
+  letter-spacing: -0.01em;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+/* ── Before/After carousel ── */
+.adv-carousel {
+  position: relative;
+}
+
+.adv-carouselTrack {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none;
+}
+
+.adv-carouselTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.adv-slide {
+  flex: 0 0 80%;
+  max-width: 420px;
+  scroll-snap-align: center;
+}
+
+.adv-carouselNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-amethyst);
+  font-size: 1.6rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(91, 58, 122, 0.12), 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.adv-carouselNav:hover {
+  background: var(--color-amethyst);
+  color: #fff;
+}
+
+.adv-carouselNav:active {
+  transform: translateY(-50%) scale(0.92);
+  box-shadow: 0 2px 8px rgba(91, 58, 122, 0.15);
+}
+
+.adv-carouselNav--prev {
+  left: -8px;
+}
+
+.adv-carouselNav--next {
+  right: -8px;
+}
+
+/* ── Trust badge strip ── */
+.adv-trust {
+  list-style: none;
+  margin: 0;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 2.25rem;
+  min-height: 100px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(91, 58, 122, 0.1);
+  box-shadow: var(--shadow-soft);
+}
+
+.adv-trustBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+}
+
+.adv-trustIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f3ecfa, #e8d8f5);
+  border: 1px solid rgba(91, 58, 122, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-amethyst);
+}
+
+/* ── Keyframes ── */
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+@keyframes heroGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  100% { transform: translate(-80px, 60px) scale(1.2); opacity: 0.3; }
+}
+
+@keyframes quizPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(91, 58, 122, 0); }
+  50% { box-shadow: 0 0 0 6px rgba(91, 58, 122, 0.06); }
+}
+
+/* ── Hero ambient glow ── */
+.adv-section--hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(220, 201, 240, 0.4) 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+  animation: heroGlow 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── Section dividers ── */
+.adv-section--tint::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(91, 58, 122, 0.12) 50%, transparent 100%);
+}
+
+/* ── Diamond HR ornaments ── */
+.adv-section hr {
+  border: none;
+  height: auto;
+  text-align: center;
+  margin: 2.5rem 0;
+  opacity: 1;
+}
+
+.adv-section hr::after {
+  content: '◆';
+  display: inline-block;
+  font-size: 0.6rem;
+  color: rgba(91, 58, 122, 0.25);
+  letter-spacing: 12px;
+}
+
+/* ── Product halo in offer section ── */
+.adv-section--offer .visual-placeholder {
+  position: relative;
+  z-index: 0;
+}
+
+.adv-section--offer .visual-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 58, 122, 0.06) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ── Gradient h2 in offer section ── */
+.adv-section--offer .adv-h2 {
+  background: linear-gradient(135deg, var(--color-amethyst) 0%, var(--color-lavender) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .adv-section {
+    padding: 3.25rem 0;
+  }
+  .adv-section--hero {
+    padding-top: 2.25rem;
+  }
+  .adv-section .adv-wrap + .adv-wrap {
+    margin-top: 1.75rem;
+  }
+
+  /* Visual blocks scale min-height down ~30% on mobile (spec) */
+  .visual-placeholder {
+    min-height: calc(var(--ph-h, 240px) * 0.7);
+  }
+
+  .adv-mathDivider {
+    display: none;
+  }
+
+  .adv-slide {
+    flex-basis: 88%;
+  }
+
+  .adv-carouselNav--prev {
+    left: 2px;
+  }
+  .adv-carouselNav--next {
+    right: 2px;
+  }
+}

@@ -1,0 +1,40 @@
+# dependencies
+**/node_modules/
+**/.pnp
+**.pnp.*
+**/.yarn/*
+
+# testing
+**/coverage/
+
+# next.js / build output
+**/.next/
+**/out/
+**/build/
+**/.tmp/
+**/tsconfig.tsbuildinfo
+
+# OS metadata
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# environment variables
+.env*
+**.env*
+
+# debug logs
+*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+
+# misc
+*.pem
+*.zip
+.vercel/
+**/.vercel/
+
+# Backups
+**/.git-backup/

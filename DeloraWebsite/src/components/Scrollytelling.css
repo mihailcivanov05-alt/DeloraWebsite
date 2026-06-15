@@ -1,0 +1,218 @@
+.scrollySection {
+  height: 300vh;
+  position: relative !important;
+  background: var(--color-white);
+  overflow: visible !important;
+}
+
+.scrollyBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.scrollyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+}
+
+/* Visual Panel (Left) */
+.visualPanel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  z-index: 2;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 500px;
+  height: 65%;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(91, 58, 122, 0.15);
+  cursor: default;
+}
+
+.sceneImageContainer {
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
+}
+
+.fullImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ambientGlow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  filter: blur(100px);
+  opacity: 0.15;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* Narrative Panel (Right) */
+.narrativePanel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+  z-index: 2;
+}
+
+.narrativeCenter {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+.sceneText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: opacity, transform;
+}
+
+.sceneNumber {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--color-amethyst);
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.sceneTitle {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: var(--color-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.sceneDescription {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+  max-width: 450px;
+}
+
+/* Progress Track */
+.progressTrack {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 2px;
+  background: rgba(91, 58, 122, 0.1);
+}
+
+.progressFill {
+  width: 100%;
+  height: 100%;
+  background: var(--color-amethyst);
+  transform-origin: top center;
+}
+
+/* Visibility Utilities */
+.desktopOnly { display: block; }
+.mobileOnly { display: none; }
+
+/* Mobile Scrolly Specific */
+.mobileScrolly {
+  padding: 60px 0;
+}
+
+.mobileHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mobileHeader h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.mobileSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobileStepCard {
+  padding: 1.5rem;
+  border-radius: 24px;
+}
+
+.mobileStepImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.mobileStepImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileStepBadge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: var(--color-amethyst);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.mobileStepContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mobileStepContent p {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .scrollySection {
+    height: auto;
+    min-height: auto;
+  }
+
+  .desktopOnly { display: none; }
+  .mobileOnly { display: block; }
+}
+

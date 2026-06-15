@@ -1,0 +1,142 @@
+.howToUse {
+  padding: 4rem 0;
+  background-color: var(--background);
+}
+
+.howToUse-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.howToUse-title {
+  font-family: var(--font-heading);
+  color: var(--color-charcoal);
+  font-size: 2rem;
+}
+
+.howToUse-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.howToUse-card {
+  background: var(--color-soft-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.howToUse-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(91, 58, 122, 0.1);
+}
+
+.howToUse-imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 Aspect ratio */
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.howToUse-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.howToUse-card:hover .howToUse-image {
+  transform: scale(1.05);
+}
+
+.howToUse-stepNum {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  color: var(--color-amethyst);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.howToUse-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.howToUse-titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.howToUse-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-amethyst);
+  flex-shrink: 0;
+}
+
+.howToUse-cardTitle {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.howToUse-description {
+  font-family: var(--font-body);
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .howToUse {
+    padding: 6rem 0;
+  }
+
+  .howToUse-title {
+    font-size: 2.5rem;
+  }
+
+  .howToUse-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.howToUse-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-lavender) 0%, rgba(91, 58, 122, 0.03) 100%);
+  border-bottom: 1px solid rgba(91, 58, 122, 0.08);
+}
+

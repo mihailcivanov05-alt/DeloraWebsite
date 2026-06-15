@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la /Users/mihailivanov/Documents)",
+      "Read(//Users/mihailivanov/Documents/**)",
+      "Bash(ls -la \"/Users/mihailivanov/Documents/Delora /\" \"/Users/mihailivanov/Documents/Delora /Delora Project/\" 2>/dev/null; echo \"---DOWNLOADS---\"; ls -la ~/Downloads/ 2>/dev/null | grep -i \"above\\\\|redesign\\\\|brief\\\\|delora\"; echo \"---DESKTOP---\"; ls -la ~/Desktop/ 2>/dev/null | grep -i \"above\\\\|redesign\\\\|brief\\\\|delora\")",
+      "Read(//Users/mihailivanov/Downloads/**)",
+      "Read(//Users/mihailivanov/Desktop/**)",
+      "Bash(du -sh DeloraWebsite/node_modules)",
+      "Bash(ls DeloraWebsite/*.zip)",
+      "Bash(rsync -a --exclude='.next' --exclude='.git' --exclude='*.zip' --exclude='out' DeloraWebsite/ DeloraWebsite-Redesign/)",
+      "Bash(node -e \"const i=require\\('lucide-react'\\); ['Headset','Snowflake','BadgeCheck','ShieldCheck','Truck','Check','Star'].forEach\\(n=>console.log\\(n, !!i[n]\\)\\)\")",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s -o /tmp/redesign-page.html -w \"%{http_code}\" http://localhost:3001/)",
+      "Read(//tmp/**)",
+      "Bash(ls ~/.claude/skills/ 2>/dev/null; echo \"---project---\"; ls /Users/mihailivanov/Documents/Delora/.claude/skills/ 2>/dev/null)",
+      "Read(//Users/mihailivanov/.claude/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001)",
+      "Bash(curl -s http://localhost:3001)",
+      "Read(//Applications/Google Chrome.app/**)",
+      "Read(//Users/mihailivanov/Library/Caches/**)",
+      "Bash(npm ls *)",
+      "Bash(python3 skills/ui-ux-pro-max/scripts/search.py \"beauty skincare e-commerce elegant luxury\" --design-system -f markdown)",
+      "Bash(python3 skills/ui-ux-pro-max/scripts/search.py \"accessibility animation loading focus\" --domain ux -n 12)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(curl -s -o /dev/null -w \"localhost:3001 -> HTTP %{http_code}\\\\n\" http://localhost:3001)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(mkdir -p \"/Users/mihailivanov/Documents/Delora /DeloraWebsite-Redesign/.claude\")",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(echo \"TSC_EXIT=$?\")",
+      "Bash(curl -s -o /tmp/adv2.html -w \"%{http_code}\" http://localhost:3001/ipl-vs-salon)",
+      "Bash(mkdir -p briefs)",
+      "Bash(mv ~/Downloads/Delora_Above_Fold_Redesign_Brief.md ~/Downloads/Delora_Above_Fold_Redesign_Brief_ADDENDUM.md ~/Downloads/Delora_Above_Fold_Redesign_Brief_ADDENDUM_1.md ~/Downloads/Delora_Advertorial_Build_Spec_Nood_Style.md briefs/)",
+      "Bash(ls ~/Downloads/*.md)"
+    ],
+    "additionalDirectories": [
+      "/Users/mihailivanov/Documents/Delora /DeloraWebsite-Redesign"
+    ]
+  }
+}

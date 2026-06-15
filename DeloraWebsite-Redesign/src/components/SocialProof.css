@@ -1,0 +1,266 @@
+.socialProofSection {
+  padding: 80px 0 60px;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.socialBadge {
+  color: var(--color-amethyst);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.ugcHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.ugcHeader h2 {
+  font-size: 3.5rem;
+  color: var(--color-charcoal);
+  line-height: 1.1;
+}
+
+/* ═══════════════ Rotating Marquee ═══════════════ */
+.ugcMarqueeWrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  padding: 2rem 0 4rem;
+}
+
+.ugcMarqueeTrack {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  will-change: transform;
+}
+
+.ugcCard {
+  width: 220px;
+  height: 300px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transform: rotate(var(--rotation, 0deg));
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 30px rgba(91, 58, 122, 0.12);
+}
+
+.ugcCard:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 16px 50px rgba(91, 58, 122, 0.2);
+  z-index: 2;
+}
+
+.ugcCardOverlay {
+  position: absolute;
+  inset: 0;
+  padding: 1.5rem;
+  background: var(--color-soft-white);
+  border: 1px solid rgba(91, 58, 122, 0.1);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.ugcHandle {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-amethyst);
+}
+
+.ugcCaption {
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ═══════════════ Before & After Gallery ═══════════════ */
+.baSection {
+  max-width: 1000px;
+  margin: 1rem auto 3rem;
+}
+
+.baSectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-charcoal);
+  margin-bottom: 2.5rem;
+}
+
+.baCard {
+  background: var(--color-soft-white);
+  border-radius: 40px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  box-shadow: 0 30px 80px rgba(91, 58, 122, 0.08);
+}
+
+.baImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--color-white);
+}
+
+.baImageContainer {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+
+.baLabel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--color-charcoal);
+}
+
+.baContent {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.baContent h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-charcoal);
+}
+
+.baContent p {
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.baNav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.baNavBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(91, 58, 122, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-amethyst);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.baNavBtn:hover {
+  background: var(--color-amethyst);
+  color: white;
+  border-color: var(--color-amethyst);
+}
+
+.baDots {
+  display: flex;
+  gap: 8px;
+}
+
+.baDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(91, 58, 122, 0.2);
+  transition: all 0.3s ease;
+}
+
+.baDot.active {
+  background: var(--color-amethyst);
+  transform: scale(1.2);
+}
+
+/* ═══════════════ Trust Bar ═══════════════ */
+.trustBar {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(91, 58, 122, 0.1);
+}
+
+.trustBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.badgeIcon {
+  color: var(--color-amethyst);
+  margin-bottom: 1rem;
+}
+
+.badgeText {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+}
+
+/* ═══════════════ Responsive ═══════════════ */
+@media (max-width: 1024px) {
+  .socialProofSection {
+    padding: 80px 0 60px;
+  }
+
+  .ugcHeader h2 {
+    font-size: 2.5rem;
+  }
+
+  .ugcCard {
+    width: 220px;
+    height: 300px;
+  }
+
+  .baCard {
+    grid-template-columns: 1fr;
+  }
+
+  .baContent {
+    padding: 2.5rem;
+  }
+
+  .trustBar {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .ugcCard {
+    width: 180px;
+    height: 260px;
+  }
+
+  .baSectionTitle {
+    font-size: 1.5rem;
+  }
+}
