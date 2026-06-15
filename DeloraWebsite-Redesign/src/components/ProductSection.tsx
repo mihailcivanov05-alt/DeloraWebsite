@@ -15,13 +15,13 @@ const ProductSection = () => {
         <div className="productGrid">
           <div className="productVisual">
             <div className="mainProductImage glass-panel">
-              <img src="/delora-photos/pomelli_bdna_image_0514-6.png" alt="Delora Elite IPL Device" loading="eager" />
+              <img src="/delora-photos/pomelli_bdna_image_0514-6.webp" alt="Delora Elite IPL Device" loading="eager" />
               <div className="productBadge">{t.hero.badge}</div>
             </div>
             <div className="thumbnailStrip">
-              <div className="thumb glass-panel"><img src="/delora-photos/pomelli_bdna_image_0514-2.png" alt="Delora device detail view 1" loading="lazy" /></div>
-              <div className="thumb glass-panel"><img src="/delora-photos/pomelli_bdna_image_0514-7.png" alt="Delora device detail view 2" loading="lazy" /></div>
-              <div className="thumb glass-panel"><img src="/delora-photos/pomelli_photoshoot-4.png" alt="Delora device in use" loading="lazy" /></div>
+              <div className="thumb glass-panel"><img src="/delora-photos/pomelli_bdna_image_0514-2.webp" alt="Delora device detail view 1" loading="lazy" /></div>
+              <div className="thumb glass-panel"><img src="/delora-photos/pomelli_bdna_image_0514-7.webp" alt="Delora device detail view 2" loading="lazy" /></div>
+              <div className="thumb glass-panel"><img src="/delora-photos/pomelli_photoshoot-4.webp" alt="Delora device in use" loading="lazy" /></div>
             </div>
           </div>
 
@@ -29,7 +29,7 @@ const ProductSection = () => {
             <div className="infoHead">
               <span className="infoBadge">{t.specs.badge}</span>
               <h1>{t.specs.offerTitle}</h1>
-              <p className="priceTag">€229 <span className="oldPrice">€399</span></p>
+              <p className="priceTag">€189 <span className="oldPrice">€399</span></p>
             </div>
 
             <p className="infoSubtitle">{t.specs.offerSubtitle}</p>
@@ -47,7 +47,7 @@ const ProductSection = () => {
 
             <div className="ctaGroup">
               <Button variant="primary" size="lg" href="https://checkout.delora.com">
-                {t.navbar.shop} — €229
+                {t.navbar.shop} — €189
               </Button>
               <div className="shippingTrust">
                 <ShieldCheck size={16} aria-hidden="true" /> {t.product?.shippingTrust || 'Free Express Shipping & 90-Day Guarantee'}

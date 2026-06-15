@@ -17,7 +17,7 @@ const HowToUse = () => {
       description: isBg 
         ? 'Избръснете зоната и почистете кожата. Без кола маска или отскубване.' 
         : 'Shave the treatment area and clean your skin. No waxing or plucking.',
-      image: '/Photoshoots/Other/hf_20260525_093128_a4448ae2-b5f0-4341-9dd8-c8355bbcc540.png'
+      image: '/Photoshoots/Other/hf_20260525_093128_a4448ae2-b5f0-4341-9dd8-c8355bbcc540.webp'
     },
     {
       num: '02',
@@ -26,7 +26,7 @@ const HowToUse = () => {
       description: isBg 
         ? 'Притиснете Delora към кожата и плъзгайте. Умният сензор настройва интензитета, докато сапфиреното охлаждане предпазва от болка.' 
         : 'Press Delora against your skin and glide. The smart sensor auto-adjusts intensity while sapphire cooling keeps you comfortable.',
-      image: '/Photoshoots/Other/hf_20260525_091805_96728dc3-030e-485f-8102-c83acb933053.png'
+      image: '/Photoshoots/Other/hf_20260525_091805_96728dc3-030e-485f-8102-c83acb933053.webp'
     },
     {
       num: '03',
@@ -35,7 +35,7 @@ const HowToUse = () => {
       description: isBg 
         ? 'След 4–8 седмични процедури се насладете на до 95% намаляване на окосмяването.' 
         : 'After 4–8 weekly sessions, enjoy up to 95% hair reduction.',
-      image: '/Photoshoots/Other/hf_20260525_001112_ee0f3847-67a1-408d-bf16-c05a2f12f2fd.png'
+      image: '/Photoshoots/Other/hf_20260525_001112_ee0f3847-67a1-408d-bf16-c05a2f12f2fd.webp'
     }
   ];
 

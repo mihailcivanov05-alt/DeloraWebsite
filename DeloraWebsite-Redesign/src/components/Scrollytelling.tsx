@@ -126,21 +126,21 @@ const Scrollytelling = () => {
       title: t.scrolly.step1.title,
       description: t.scrolly.step1.description,
       color: "#DCC9F0",
-      image: "/delora-photos/pomelli_bdna_image_0514-2.png",
+      image: "/delora-photos/pomelli_bdna_image_0514-2.webp",
     },
     {
       id: "precision",
       title: t.scrolly.step2.title,
       description: t.scrolly.step2.description,
       color: "#5B3A7A",
-      image: "/delora-photos/pomelli_photoshoot_image_9_16_0514.png",
+      image: "/delora-photos/pomelli_photoshoot_image_9_16_0514.webp",
     },
     {
       id: "intelligence",
       title: t.scrolly.step3.title,
       description: t.scrolly.step3.description,
       color: "#D8C3A5",
-      image: "/delora-photos/pomelli_bdna_image_0514-7.png",
+      image: "/delora-photos/pomelli_bdna_image_0514-7.webp",
     },
   ];
 

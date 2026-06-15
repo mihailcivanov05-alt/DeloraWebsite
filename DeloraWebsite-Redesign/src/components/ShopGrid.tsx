@@ -84,10 +84,10 @@ const copy = {
   },
 };
 
-const DEVICE_IMG = "/Photoshoots/Other/hf_20260524_121655_0eadf972-f9fc-443d-9bc9-029db7b2993c.png";
+const DEVICE_IMG = "/Photoshoots/Other/hf_20260524_121655_0eadf972-f9fc-443d-9bc9-029db7b2993c.webp";
 const SOON_IMAGES = [
-  "/Photoshoots/Arm/hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.png",
-  "/Photoshoots/Face/hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.png",
+  "/Photoshoots/Arm/hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.webp",
+  "/Photoshoots/Face/hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.webp",
   "", // serum has no photo — render a gradient placeholder
 ];
 

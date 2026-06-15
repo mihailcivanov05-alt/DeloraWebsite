@@ -52,6 +52,19 @@ const Navbar = () => {
 
         <div className="actions">
           <div className="lang-switcher desktopOnly">
+            <button 
+              className={language === "en" ? "active" : ""} 
+              onClick={() => setLanguage("en")}
+            >
+              EN
+            </button>
+            <span className="divider">|</span>
+            <button 
+              className={language === "bg" ? "active" : ""} 
+              onClick={() => setLanguage("bg")}
+            >
+              BG
+            </button>
           </div>
           
           <button 
@@ -93,6 +106,18 @@ const Navbar = () => {
               ))}
 
               <div className="mobileLangSwitcher">
+                <button 
+                  className={language === "en" ? "active" : ""} 
+                  onClick={() => { setLanguage("en"); toggleMobileMenu(); }}
+                >
+                  EN
+                </button>
+                <button 
+                  className={language === "bg" ? "active" : ""} 
+                  onClick={() => { setLanguage("bg"); toggleMobileMenu(); }}
+                >
+                  BG
+                </button>
               </div>
 
               <div className="mobileMenuCta">

@@ -23,12 +23,14 @@ function Placeholder({
   minH,
   maxW,
   className = "",
+  src,
 }: {
   id: string;
   label: string;
   minH: number;
   maxW?: number;
   className?: string;
+  src?: string;
 }) {
   const style: React.CSSProperties = { ["--ph-h" as string]: `${minH}px` } as React.CSSProperties;
   if (maxW) {
@@ -38,7 +40,15 @@ function Placeholder({
   }
   return (
     <div id={id} className={`visual-placeholder ${className}`} style={style}>
-      <span className="label">{label}</span>
+      {src ? (
+        <img
+          src={src}
+          alt={label}
+          style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
+        />
+      ) : (
+        <span className="label">{label}</span>
+      )}
     </div>
   );
 }
@@ -57,7 +67,7 @@ const comparison = {
     },
     {
       label: "За 10 години",
-      cells: ["€10,000–€18,000", "€8,000–€12,000", "€2,500–€4,000", "€289 (€189 + поддръжка)"],
+      cells: ["€10,000–€18,000", "€8,000–€12,000", "€2,500–€4,000", "€189 (еднократно)"],
     },
     {
       label: "Болка/комфорт",
@@ -304,7 +314,7 @@ const AdvertorialTraditional = () => {
           <div id="visual-math" className="adv-mathCallout">
             <span className="adv-mathLine adv-mathLine--enemy">€18,000+ за салон</span>
             <span className="adv-mathDivider" aria-hidden="true" />
-            <span className="adv-mathLine adv-mathLine--delora">€289 за Delora</span>
+            <span className="adv-mathLine adv-mathLine--delora">€189 за Delora</span>
           </div>
         </div>
 
@@ -393,17 +403,18 @@ const AdvertorialTraditional = () => {
             </button>
             <div className="adv-carouselTrack" ref={carouselRef} id="visual-carousel">
               {[
-                { n: 1, lbl: "ПРЕДИ | СЛЕД — Жена, която спря салон" },
-                { n: 2, lbl: "ПРЕДИ | СЛЕД — Жена, която спря восък" },
-                { n: 3, lbl: "ПРЕДИ | СЛЕД — Жена, която спря бръснене" },
+                { n: 1, lbl: "ПРЕДИ | СЛЕД — Жена, която спря салон", src: "/delora-photos-clean/delora_before_after_02.webp" },
+                { n: 2, lbl: "ПРЕДИ | СЛЕД — Жена, която спря восък", src: "/delora-photos-clean/delora_before_after_05.webp" },
+                { n: 3, lbl: "ПРЕДИ | СЛЕД — Жена, която спря бръснене", src: "/delora-photos-clean/delora_before_after_03.webp" },
                 { n: 4, lbl: "ВИДЕО — 15-30 sec authentic testimonial" },
-                { n: 5, lbl: "ПРЕДИ | СЛЕД — Друга част от тялото" },
+                { n: 5, lbl: "ПРЕДИ | СЛЕД — Друга част от тялото", src: "/delora-photos-clean/delora_before_after_04.webp" },
               ].map((slide) => (
                 <div className="adv-slide" key={slide.n}>
                   <Placeholder
                     id={`visual-carousel-slide-${slide.n}`}
                     minH={420}
                     label={`Слайд ${slide.n}/5: ${slide.lbl}`}
+                    src={slide.src}
                   />
                 </div>
               ))}
@@ -441,6 +452,7 @@ const AdvertorialTraditional = () => {
             minH={400}
             maxW={300}
             label="PRODUCT HERO SHOT — ~300x400px"
+            src="/delora-photos-clean/delora_studio_product_01.webp"
           />
         </div>
 

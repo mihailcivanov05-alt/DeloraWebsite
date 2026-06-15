@@ -57,7 +57,7 @@ const Hero = () => {
         >
           <div className="hero-image-container glass-panel">
             <Image 
-              src="/delora-photos/pomelli_bdna_image_0514-4.png" 
+              src="/delora-photos/pomelli_bdna_image_0514-4.webp" 
               alt="Delora IPL Device" 
               fill 
               style={{ objectFit: 'cover', borderRadius: '40px' }}

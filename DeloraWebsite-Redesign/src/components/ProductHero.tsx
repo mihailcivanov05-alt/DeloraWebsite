@@ -7,11 +7,11 @@ import Button from "./Button";
 import "./ProductHero.css";
 
 const productImages = [
-  { src: "/Photoshoots/Other/hf_20260524_121655_0eadf972-f9fc-443d-9bc9-029db7b2993c.png", alt: "Delora Elite IPL Device — front view" },
-  { src: "/Photoshoots/Arm/hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.png", alt: "Delora Elite IPL Device — arm treatment view" },
-  { src: "/Photoshoots/Leg/hf_20260524_110654_0630dd29-3ad6-454b-b3f1-3051b2aef3f6.png", alt: "Delora Elite IPL Device — leg treatment view" },
-  { src: "/Photoshoots/Face/hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.png", alt: "Delora Elite IPL Device — facial treatment view" },
-  { src: "/Photoshoots/Other/hf_20260525_091820_21b9328b-85fb-4937-be10-4838412f1ec8.png", alt: "Delora Elite IPL Device — bikini area treatment view" },
+  { src: "/Photoshoots/Other/hf_20260524_121655_0eadf972-f9fc-443d-9bc9-029db7b2993c.webp", alt: "Delora Elite IPL Device — front view" },
+  { src: "/Photoshoots/Arm/hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.webp", alt: "Delora Elite IPL Device — arm treatment view" },
+  { src: "/Photoshoots/Leg/hf_20260524_110654_0630dd29-3ad6-454b-b3f1-3051b2aef3f6.webp", alt: "Delora Elite IPL Device — leg treatment view" },
+  { src: "/Photoshoots/Face/hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.webp", alt: "Delora Elite IPL Device — facial treatment view" },
+  { src: "/Photoshoots/Other/hf_20260525_091820_21b9328b-85fb-4937-be10-4838412f1ec8.webp", alt: "Delora Elite IPL Device — bikini area treatment view" },
 ];
 
 /* ── Reordered benefits: outcome first, then comfort → ease → durability ── */

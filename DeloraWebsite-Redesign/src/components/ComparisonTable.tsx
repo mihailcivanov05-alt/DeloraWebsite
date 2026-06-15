@@ -40,7 +40,7 @@ const ComparisonTable = () => {
         textBg: "Трайно намаляване на окосмяването за едва 4-8 седмици.",
         imagePlaceholderEn: "Delora Elite in use — smooth skin",
         imagePlaceholderBg: "Delora Elite в употреба — гладка кожа",
-        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png"
+        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.webp"
       },
       competitor: {
         boldEn: "Shave constantly to keep body hair in check",
@@ -49,7 +49,7 @@ const ComparisonTable = () => {
         textBg: "Само отрязва косъма на повърхността. Чести порязвания, обриви и враснали косми.",
         imagePlaceholderEn: "Traditional Razor — constant upkeep",
         imagePlaceholderBg: "Обикновена самобръсначка — постоянно поддържане",
-        imageSrc: "/Photoshoots/Other/hf_20260524_230406_0df9a313-b30e-43f5-9b02-38b2570c286a.png"
+        imageSrc: "/Photoshoots/Other/hf_20260524_230406_0df9a313-b30e-43f5-9b02-38b2570c286a.webp"
       }
     },
     waxing: {
@@ -62,7 +62,7 @@ const ComparisonTable = () => {
         textBg: "Насочва се към корена на косъма, за да спре растежа му без болка.",
         imagePlaceholderEn: "Delora Elite — gentle cooling treatment",
         imagePlaceholderBg: "Delora Elite — нежна охлаждаща процедура",
-        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png"
+        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.webp"
       },
       competitor: {
         boldEn: "Hot wax literally rips your hair off your body. Ouch!",
@@ -71,7 +71,7 @@ const ComparisonTable = () => {
         textBg: "Изключително болезнено, скъпо с времето и причинява сериозни зачервявания.",
         imagePlaceholderEn: "Hot Wax Treatment — painful pull",
         imagePlaceholderBg: "Горещ восък — болезнено откъсване",
-        imageSrc: "/Photoshoots/Other/hf_20260524_225521_79e3b4c5-272e-470c-8ec5-ecdde7fc1608.png"
+        imageSrc: "/Photoshoots/Other/hf_20260524_225521_79e3b4c5-272e-470c-8ec5-ecdde7fc1608.webp"
       }
     },
     laser: {
@@ -84,7 +84,7 @@ const ComparisonTable = () => {
         textBg: "Погрижете се за окосмяването си у дома по ваш собствен график. Безопасно и дискретно.",
         imagePlaceholderEn: "Delora Elite — premium at-home treatment",
         imagePlaceholderBg: "Delora Elite — луксозна процедура у дома",
-        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png"
+        imageSrc: "/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.webp"
       },
       competitor: {
         boldEn: "Bring your hairy self all the way to a clinic",
@@ -93,7 +93,7 @@ const ComparisonTable = () => {
         textBg: "Изисква планиране, пътуване, големи разходи и неудобни клинични процедури.",
         imagePlaceholderEn: "Clinical Laser Machine — expensive & public",
         imagePlaceholderBg: "Професионален лазер — скъпо и неудобно",
-        imageSrc: "/Photoshoots/Other/hf_20260524_231522_abe7b644-c383-45da-9830-3bb6c07feed3.png"
+        imageSrc: "/Photoshoots/Other/hf_20260524_231522_abe7b644-c383-45da-9830-3bb6c07feed3.webp"
       }
     }
   };

@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Button from "./Button";
 import "./StickyCartBar.css";
 
-const STICKY_IMAGE = "";
+const STICKY_IMAGE = "/delora-photos-clean/delora_studio_product_01.webp";
 
 const StickyCartBar = () => {
   const { language } = useLanguage();

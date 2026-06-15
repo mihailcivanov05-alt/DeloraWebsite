@@ -47,7 +47,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ cart, isOpen, onClose }) => {
                 <div
                   className="cartItemImage"
                   style={{
-                    background: `url(${node.merchandise.product.featuredImage?.url || '/delora-photos/pomelli_bdna_image_0514-4.png'}) center/cover`
+                    background: `url(${node.merchandise.product.featuredImage?.url || '/delora-photos/pomelli_bdna_image_0514-4.webp'}) center/cover`
                   }}
                 />
                 <div className="cartItemInfo">

@@ -23,12 +23,14 @@ function Placeholder({
   minH,
   maxW,
   className = "",
+  src,
 }: {
   id: string;
   label: string;
   minH: number;
   maxW?: number;
   className?: string;
+  src?: string;
 }) {
   const style: React.CSSProperties = { ["--ph-h" as string]: `${minH}px` } as React.CSSProperties;
   if (maxW) {
@@ -38,7 +40,15 @@ function Placeholder({
   }
   return (
     <div id={id} className={`visual-placeholder ${className}`} style={style}>
-      <span className="label">{label}</span>
+      {src ? (
+        <img
+          src={src}
+          alt={label}
+          style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
+        />
+      ) : (
+        <span className="label">{label}</span>
+      )}
     </div>
   );
 }
@@ -367,9 +377,9 @@ const AdvertorialDevices = () => {
             </button>
             <div className="adv-carouselTrack" ref={carouselRef} id="visual-carousel">
               {[
-                { n: 1, lbl: "ПРЕДИ | СЛЕД — Жена, която спря евтин IPL" },
-                { n: 2, lbl: "ПРЕДИ | СЛЕД — Сравнение с премиум бранд" },
-                { n: 3, lbl: "ОТЗИВ — За издръжливостта на Delora" },
+                { n: 1, lbl: "ПРЕДИ | СЛЕД — Жена, която спря евтин IPL", src: "/delora-photos-clean/delora_before_after_02.webp" },
+                { n: 2, lbl: "ПРЕДИ | СЛЕД — Сравнение с премиум бранд", src: "/delora-photos-clean/delora_before_after_05.webp" },
+                { n: 3, lbl: "ОТЗИВ — За издръжливостта на Delora", src: "/delora-photos-clean/delora_before_after_03.webp" },
                 { n: 4, lbl: "ВИДЕО — 15-30 sec authentic testimonial" }
               ].map((slide) => (
                 <div className="adv-slide" key={slide.n}>
@@ -377,6 +387,7 @@ const AdvertorialDevices = () => {
                     id={`visual-carousel-slide-${slide.n}`}
                     minH={420}
                     label={`Слайд ${slide.n}/4: ${slide.lbl}`}
+                    src={slide.src}
                   />
                 </div>
               ))}
@@ -413,6 +424,7 @@ const AdvertorialDevices = () => {
             minH={400}
             maxW={300}
             label="PRODUCT HERO SHOT — ~300x400px"
+            src="/delora-photos-clean/delora_studio_product_01.webp"
           />
         </div>
 

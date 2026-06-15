@@ -40,9 +40,9 @@ const FinalCTA = () => {
           
           <div className="finalCta-priceContainer">
             <span className="finalCta-priceOriginal">€399</span>
-            <span className="finalCta-priceCurrent">€229</span>
+            <span className="finalCta-priceCurrent">€189</span>
             <span className="finalCta-priceBadge">
-              {language === "en" ? "Save 43%" : "Спестете 43%"}
+              {language === "en" ? "Save 53%" : "Спестете 53%"}
             </span>
           </div>
           

@@ -19,7 +19,7 @@ export const translations = {
       trustItem1: "95% Reduction in 8 weeks",
       trustItem2: "FDA Cleared Technology",
       trustItem3: "90-Day Money Back Guarantee",
-      price: "Now €229"
+      price: "Now €189"
     },
     press: {
       asSeenIn: "As Seen In"
@@ -72,7 +72,7 @@ export const translations = {
         desc_success: "Based on your biological profile, the Delora Elite is perfectly safe and highly effective for you. You can expect up to 95% hair reduction.",
         title_fail: "Not Recommended for Your Profile",
         desc_fail: "IPL technology requires a contrast between skin and hair color. Unfortunately, based on your selections, IPL is not recommended as it may be ineffective or unsafe for your specific skin/hair type.",
-        cta: "Claim My €229 Offer"
+        cta: "Claim My €189 Offer"
       },
       next: "Next Step",
       back: "Back",
@@ -87,7 +87,7 @@ export const translations = {
     specs: {
       title: "Technical Specifications",
       badge: "Engineering",
-      price: "€229",
+      price: "€189",
       offerTitle: "The Delora Elite Package",
       offerSubtitle: "Everything you need for a professional at-home treatment.",
       items: [
@@ -149,7 +149,7 @@ export const translations = {
         shavingVals: ["Days", "Cuts & irritation", "€500+/year", "Daily routine", "Razor burn, ingrowns", "Daily", "None"],
         salonVals: ["Months", "Moderate–high", "€3,000+", "Monthly appointments", "Redness, swelling", "30–60 min/session", "None"],
         otherIPLVals: ["Months", "Mild–moderate", "€150–300", "At home", "Possible discomfort", "20–30 min", "Varies"],
-        deloraVals: ["✓ Years of smoothness", "✓ Completely painless", "✓ One-time €229", "✓ 15 min at home", "✓ Ice-cooling protection", "✓ Under 15 minutes", "✓ 90-day money back"]
+        deloraVals: ["✓ Years of smoothness", "✓ Completely painless", "✓ One-time €189", "✓ 15 min at home", "✓ Ice-cooling protection", "✓ Under 15 minutes", "✓ 90-day money back"]
       },
       howToUse: {
         title: "Salon Results in 3 Simple Steps",
@@ -229,7 +229,7 @@ export const translations = {
       trustItem1: "95% намаление за 8 седмици",
       trustItem2: "FDA одобрена технология",
       trustItem3: "90 дни гаранция за връщане на парите",
-      price: "Сега €229"
+      price: "Сега €189"
     },
     press: {
       asSeenIn: "Представено в"
@@ -282,7 +282,7 @@ export const translations = {
         desc_success: "Въз основа на вашия биологичен профил, Delora Elite е напълно безопасна и високоефективна за вас. Можете да очаквате до 95% намаляване на окосмяването.",
         title_fail: "Не се препоръчва за вашия профил",
         desc_fail: "IPL технологията изисква контраст между кожата и цвета на косата. За съжаление, въз основа на вашия избор, IPL не се препоръчва, тъй като може да бъде неефективна или небезопасна за вашия специфичен тип кожа/коса.",
-        cta: "Вземи моята оферта за €229"
+        cta: "Вземи моята оферта за €189"
       },
       next: "Следваща стъпка",
       back: "Назад",
@@ -297,7 +297,7 @@ export const translations = {
     specs: {
       title: "Технически спецификации",
       badge: "Инженерство",
-      price: "€229",
+      price: "€189",
       offerTitle: "Пакет Delora Elite",
       offerSubtitle: "Всичко необходимо за професионална процедура у дома.",
       items: [
@@ -359,7 +359,7 @@ export const translations = {
         shavingVals: ["Дни", "Порязвания и дразнене", "€500+/година", "Ежедневна рутина", "Враснали косми", "Ежедневно", "Няма"],
         salonVals: ["Месеци", "Умерена–висока", "€3,000+", "Месечни часове", "Зачервяване, подуване", "30–60 мин/сесия", "Няма"],
         otherIPLVals: ["Месеци", "Лека–умерена", "€150–300", "У дома", "Възможен дискомфорт", "20–30 мин", "Варира"],
-        deloraVals: ["✓ Години гладкост", "✓ Напълно безболезнено", "✓ Еднократно €229", "✓ 15 мин у дома", "✓ Ледена защита", "✓ Под 15 минути", "✓ 90 дни връщане на пари"]
+        deloraVals: ["✓ Години гладкост", "✓ Напълно безболезнено", "✓ Еднократно €189", "✓ 15 мин у дома", "✓ Ледена защита", "✓ Под 15 минути", "✓ 90 дни връщане на пари"]
       },
       howToUse: {
         title: "Салонни резултати в 3 лесни стъпки",

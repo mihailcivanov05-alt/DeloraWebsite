@@ -7,16 +7,16 @@ import "./BeforeAfterSection.css";
 
 const results = [
   {
-    before: "/Photoshoots/Before & After/hf_20260524_132911_1a22dc83-68e9-4b5d-a8ff-b2f64e312ed5.png",
-    after: "/Photoshoots/Before & After/hf_20260524_134252_d9bbaf12-a12b-4ffb-9d8e-f28ae978aafc.png",
+    before: "/delora-photos-clean/delora_before_after_03.webp",
+    after: "/delora-photos-clean/delora_before_after_04.webp",
     titleEn: "Underarms — 6 Weeks",
     titleBg: "Подмишници — 6 седмици",
     descEn: "Visible reduction in hair density and thickness after completing the recommended 6-week course.",
     descBg: "Видимо намаляване на гъстотата и дебелината на косъма след завършване на препоръчителния 6-седмичен курс."
   },
   {
-    before: "/Photoshoots/Before & After/hf_20260524_132222_8f8715c8-6c0d-4b75-8d96-4a34ba142605.png",
-    after: "/Photoshoots/Before & After/hf_20260524_140502_69b5000a-e610-4a50-b8aa-a607c2706cb2.png",
+    before: "/delora-photos-clean/delora_before_after_02.webp",
+    after: "/delora-photos-clean/delora_before_after_05.webp",
     titleEn: "Legs — 8 Weeks",
     titleBg: "Крака — 8 седмици",
     descEn: "Significant hair reduction and smoother skin texture with consistent weekly treatments.",
@@ -51,7 +51,7 @@ const BeforeAfterSection = () => {
           <div className="beforeAfter-images">
             <div className="beforeAfter-imageContainer">
               {current.before ? (
-                <img src={current.before} alt="Before treatment" loading="lazy" />
+                <img src={current.before} alt="Before treatment" loading="eager" />
               ) : (
                 <div className="beforeAfter-placeholder">
                   <span>{language === "en" ? "Before" : "Преди"}</span>
@@ -61,7 +61,7 @@ const BeforeAfterSection = () => {
             </div>
             <div className="beforeAfter-imageContainer">
               {current.after ? (
-                <img src={current.after} alt="After treatment" loading="lazy" />
+                <img src={current.after} alt="After treatment" loading="eager" />
               ) : (
                 <div className="beforeAfter-placeholder">
                   <span>{language === "en" ? "After" : "След"}</span>

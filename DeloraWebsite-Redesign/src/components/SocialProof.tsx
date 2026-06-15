@@ -20,16 +20,16 @@ const ugcCards = [
 
 const beforeAfterResults = [
   {
-    before: "/delora-photos/pomelli_photoshoot-1.png",
-    after: "/delora-photos/pomelli_photoshoot-2.png",
+    before: "/delora-photos/pomelli_photoshoot-1.webp",
+    after: "/delora-photos/pomelli_photoshoot-2.webp",
     titleEn: "Underarms — 6 Weeks",
     titleBg: "Подмишници — 6 седмици",
     descEn: "Visible reduction in hair density and thickness after completing the recommended course.",
     descBg: "Видимо намаляване на гъстотата и дебелината на косъма след завършване на препоръчителния курс.",
   },
   {
-    before: "/delora-photos/pomelli_photoshoot-4.png",
-    after: "/delora-photos/pomelli_bdna_image_0514-3.png",
+    before: "/delora-photos/pomelli_photoshoot-4.webp",
+    after: "/delora-photos/pomelli_bdna_image_0514-3.webp",
     titleEn: "Legs — 8 Weeks",
     titleBg: "Крака — 8 седмици",
     descEn: "Significant hair reduction and smoother skin texture with consistent use.",
