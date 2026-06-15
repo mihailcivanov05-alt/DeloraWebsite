@@ -1,0 +1,859 @@
+{
+    "renamed": [
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/ChatGPT Image May 25, 2026 at 11_52_38 AM.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_01.png",
+            "original_name": "ChatGPT Image May 25, 2026 at 11_52_38 AM.png",
+            "new_name": "delora_ad_primary_01.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/ChatGPT Image May 25, 2026 at 11_55_09 AM.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_02.png",
+            "original_name": "ChatGPT Image May 25, 2026 at 11_55_09 AM.png",
+            "new_name": "delora_ad_primary_02.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260525_090254_2a5b597a-3800-4b92-bf52-6bfa99efb02e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_03.png",
+            "original_name": "hf_20260525_090254_2a5b597a-3800-4b92-bf52-6bfa99efb02e.png",
+            "new_name": "delora_ad_primary_03.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260525_090257_2fda435d-b973-4863-99da-e2763ff2eab8.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_04.png",
+            "original_name": "hf_20260525_090257_2fda435d-b973-4863-99da-e2763ff2eab8.png",
+            "new_name": "delora_ad_primary_04.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260525_095026_8aff8fa9-3910-44c4-b364-f7e323022dc1.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_05.png",
+            "original_name": "hf_20260525_095026_8aff8fa9-3910-44c4-b364-f7e323022dc1.png",
+            "new_name": "delora_ad_primary_05.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260525_095034_06feb161-bd89-4952-83c7-b3dedb01dc0e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_06.png",
+            "original_name": "hf_20260525_095034_06feb161-bd89-4952-83c7-b3dedb01dc0e.png",
+            "new_name": "delora_ad_primary_06.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260525_103244_51979d2d-e850-44af-a368-0291e178d56a.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_07.png",
+            "original_name": "hf_20260525_103244_51979d2d-e850-44af-a368-0291e178d56a.png",
+            "new_name": "delora_ad_primary_07.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_182325_629efa10-9189-47dc-8119-68b16a515572.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_08.png",
+            "original_name": "hf_20260526_182325_629efa10-9189-47dc-8119-68b16a515572.png",
+            "new_name": "delora_ad_primary_08.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_185002_1591b783-28eb-4907-92c8-a7b34c29d495.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_09.png",
+            "original_name": "hf_20260526_185002_1591b783-28eb-4907-92c8-a7b34c29d495.png",
+            "new_name": "delora_ad_primary_09.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_185837_287a6eb7-d896-4877-b962-8f05d7c2e5ec.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_10.png",
+            "original_name": "hf_20260526_185837_287a6eb7-d896-4877-b962-8f05d7c2e5ec.png",
+            "new_name": "delora_ad_primary_10.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_194442_415fdbb9-8d99-49bd-a712-323c77ee4902.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_11.png",
+            "original_name": "hf_20260526_194442_415fdbb9-8d99-49bd-a712-323c77ee4902.png",
+            "new_name": "delora_ad_primary_11.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_201729_0b645721-000d-4ba7-84cb-3ba17ecc2454.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_12.png",
+            "original_name": "hf_20260526_201729_0b645721-000d-4ba7-84cb-3ba17ecc2454.png",
+            "new_name": "delora_ad_primary_12.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_201738_e6bd7eee-9177-4adb-be15-ce9dfb49a954.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_13.png",
+            "original_name": "hf_20260526_201738_e6bd7eee-9177-4adb-be15-ce9dfb49a954.png",
+            "new_name": "delora_ad_primary_13.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_214141_1b5356a4-95ff-424c-be15-bf61991ac8a7.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_14.png",
+            "original_name": "hf_20260526_214141_1b5356a4-95ff-424c-be15-bf61991ac8a7.png",
+            "new_name": "delora_ad_primary_14.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_214548_72aec2c4-e137-4569-a8df-7627e42de54e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_15.png",
+            "original_name": "hf_20260526_214548_72aec2c4-e137-4569-a8df-7627e42de54e.png",
+            "new_name": "delora_ad_primary_15.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_214959_609de7d0-c2dc-4d63-bf2f-def83ffa4827.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_16.png",
+            "original_name": "hf_20260526_214959_609de7d0-c2dc-4d63-bf2f-def83ffa4827.png",
+            "new_name": "delora_ad_primary_16.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_220650_1e8c1ff7-190d-4718-9bf5-c7d07f53f737.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_17.png",
+            "original_name": "hf_20260526_220650_1e8c1ff7-190d-4718-9bf5-c7d07f53f737.png",
+            "new_name": "delora_ad_primary_17.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_221554_a0f442c7-b3d7-4d78-8f18-0c377437ad8e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_18.png",
+            "original_name": "hf_20260526_221554_a0f442c7-b3d7-4d78-8f18-0c377437ad8e.png",
+            "new_name": "delora_ad_primary_18.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_225455_d5178b15-1e01-46db-9fb1-e79e02de0f04.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_19.png",
+            "original_name": "hf_20260526_225455_d5178b15-1e01-46db-9fb1-e79e02de0f04.png",
+            "new_name": "delora_ad_primary_19.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/hf_20260526_225908_765672bb-9f89-4bab-b46e-126d1204b8de.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Primary/delora_ad_primary_20.png",
+            "original_name": "hf_20260526_225908_765672bb-9f89-4bab-b46e-126d1204b8de.png",
+            "new_name": "delora_ad_primary_20.png",
+            "category": "ADS/Primary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/406843954_354815540461063_3542004825303590140_n-1.jpg.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_01.png",
+            "original_name": "406843954_354815540461063_3542004825303590140_n-1.jpg.png",
+            "new_name": "delora_ad_ref_social_01.png",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/408478387_367323115779034_6120807087824164130_n-1_resized.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_02.jpg",
+            "original_name": "408478387_367323115779034_6120807087824164130_n-1_resized.jpg",
+            "new_name": "delora_ad_ref_social_02.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/433104892_975494060674010_6091390192690108098_n-1.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_03.jpg",
+            "original_name": "433104892_975494060674010_6091390192690108098_n-1.jpg",
+            "new_name": "delora_ad_ref_social_03.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/436343947_455811093668556_4812245745837903467_n-1_resized.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_04.jpg",
+            "original_name": "436343947_455811093668556_4812245745837903467_n-1_resized.jpg",
+            "new_name": "delora_ad_ref_social_04.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/442392291_3504969949720393_585273447411127322_n-2_resized.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_05.jpg",
+            "original_name": "442392291_3504969949720393_585273447411127322_n-2_resized.jpg",
+            "new_name": "delora_ad_ref_social_05.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/442507681_368344205794529_6675497383558329661_n-2.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_06.jpg",
+            "original_name": "442507681_368344205794529_6675497383558329661_n-2.jpg",
+            "new_name": "delora_ad_ref_social_06.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/485681914_500413246471189_5467937492188194099_n-1_resized.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_07.jpg",
+            "original_name": "485681914_500413246471189_5467937492188194099_n-1_resized.jpg",
+            "new_name": "delora_ad_ref_social_07.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/659829770_930983473247253_6926089444596951924_n.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_08.jpg",
+            "original_name": "659829770_930983473247253_6926089444596951924_n.jpg",
+            "new_name": "delora_ad_ref_social_08.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/672684304_1962424654355735_4988387279113553337_n (1).jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_09.jpg",
+            "original_name": "672684304_1962424654355735_4988387279113553337_n (1).jpg",
+            "new_name": "delora_ad_ref_social_09.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/672684304_1962424654355735_4988387279113553337_n.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_10.jpg",
+            "original_name": "672684304_1962424654355735_4988387279113553337_n.jpg",
+            "new_name": "delora_ad_ref_social_10.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/media-743ad33e589e_resized.jpg",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/References/delora_ad_ref_social_11.jpg",
+            "original_name": "media-743ad33e589e_resized.jpg",
+            "new_name": "delora_ad_ref_social_11.jpg",
+            "category": "ADS/References"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/ChatGPT Image May 25, 2026 at 12_16_54 PM (1).png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/delora_ad_secondary_01.png",
+            "original_name": "ChatGPT Image May 25, 2026 at 12_16_54 PM (1).png",
+            "new_name": "delora_ad_secondary_01.png",
+            "category": "ADS/Secondary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/ChatGPT Image May 25, 2026 at 12_16_54 PM (2).png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/delora_ad_secondary_02.png",
+            "original_name": "ChatGPT Image May 25, 2026 at 12_16_54 PM (2).png",
+            "new_name": "delora_ad_secondary_02.png",
+            "category": "ADS/Secondary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/ChatGPT Image May 25, 2026 at 12_16_55 PM (3).png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/delora_ad_secondary_03.png",
+            "original_name": "ChatGPT Image May 25, 2026 at 12_16_55 PM (3).png",
+            "new_name": "delora_ad_secondary_03.png",
+            "category": "ADS/Secondary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/ChatGPT Image May 25, 2026 at 12_16_55 PM (4).png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/Secondary/delora_ad_secondary_04.png",
+            "original_name": "ChatGPT Image May 25, 2026 at 12_16_55 PM (4).png",
+            "new_name": "delora_ad_secondary_04.png",
+            "category": "ADS/Secondary"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_161823_4d0ccd10-a940-493c-ba48-78cc2cd2986c.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_01.png",
+            "original_name": "hf_20260603_161823_4d0ccd10-a940-493c-ba48-78cc2cd2986c.png",
+            "new_name": "delora_ad_with_copy_01.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_162011_be5870ec-e429-4086-8f72-3361a7a0656f.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_02.png",
+            "original_name": "hf_20260603_162011_be5870ec-e429-4086-8f72-3361a7a0656f.png",
+            "new_name": "delora_ad_with_copy_02.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_162243_01235955-b1da-4f99-9dd4-7095a7b0331d.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_03.png",
+            "original_name": "hf_20260603_162243_01235955-b1da-4f99-9dd4-7095a7b0331d.png",
+            "new_name": "delora_ad_with_copy_03.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_162246_2bc3616b-4923-4229-9930-084ae3806a1e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_04.png",
+            "original_name": "hf_20260603_162246_2bc3616b-4923-4229-9930-084ae3806a1e.png",
+            "new_name": "delora_ad_with_copy_04.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_181056_a7ea9373-74a4-46bd-b7ed-7deabb4927d7.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_05.png",
+            "original_name": "hf_20260603_181056_a7ea9373-74a4-46bd-b7ed-7deabb4927d7.png",
+            "new_name": "delora_ad_with_copy_05.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_181602_2db012da-ddfb-4b09-a573-5be482cd108e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_06.png",
+            "original_name": "hf_20260603_181602_2db012da-ddfb-4b09-a573-5be482cd108e.png",
+            "new_name": "delora_ad_with_copy_06.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_182819_7c90c6aa-a96a-47eb-a9f0-3e364405be3f.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_07.png",
+            "original_name": "hf_20260603_182819_7c90c6aa-a96a-47eb-a9f0-3e364405be3f.png",
+            "new_name": "delora_ad_with_copy_07.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_183022_92cc62c4-7e77-401d-9dde-5222cbc8f310.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_08.png",
+            "original_name": "hf_20260603_183022_92cc62c4-7e77-401d-9dde-5222cbc8f310.png",
+            "new_name": "delora_ad_with_copy_08.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_183526_06956a77-fa12-4b8b-99d3-02f0349cfe3d.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_09.png",
+            "original_name": "hf_20260603_183526_06956a77-fa12-4b8b-99d3-02f0349cfe3d.png",
+            "new_name": "delora_ad_with_copy_09.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_183744_a0c6a140-61fc-411e-b7c9-fbe479322a06.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_10.png",
+            "original_name": "hf_20260603_183744_a0c6a140-61fc-411e-b7c9-fbe479322a06.png",
+            "new_name": "delora_ad_with_copy_10.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_183755_06c63f6e-2d3e-4bea-a103-3f671e46e161.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_11.png",
+            "original_name": "hf_20260603_183755_06c63f6e-2d3e-4bea-a103-3f671e46e161.png",
+            "new_name": "delora_ad_with_copy_11.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_183941_bfb9b658-5271-4974-bece-1753b745ad78.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_12.png",
+            "original_name": "hf_20260603_183941_bfb9b658-5271-4974-bece-1753b745ad78.png",
+            "new_name": "delora_ad_with_copy_12.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/hf_20260603_184218_c90f1b8f-f60c-4fb5-b531-407f974a8161.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/ADS/With Copy/delora_ad_with_copy_13.png",
+            "original_name": "hf_20260603_184218_c90f1b8f-f60c-4fb5-b531-407f974a8161.png",
+            "new_name": "delora_ad_with_copy_13.png",
+            "category": "ADS/With Copy"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/hf_20260524_104844_47648083-70df-4918-8e53-0033e733c172.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/delora_arm_treatment_01.png",
+            "original_name": "hf_20260524_104844_47648083-70df-4918-8e53-0033e733c172.png",
+            "new_name": "delora_arm_treatment_01.png",
+            "category": "Photoshoots/Arm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/hf_20260524_105146_2db1bade-7a33-463d-bc5c-227f3bc6d12b.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/delora_arm_treatment_02.png",
+            "original_name": "hf_20260524_105146_2db1bade-7a33-463d-bc5c-227f3bc6d12b.png",
+            "new_name": "delora_arm_treatment_02.png",
+            "category": "Photoshoots/Arm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/hf_20260524_123737_4e461cc8-26f8-400e-8dc7-c3ebc1c1086c.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/delora_arm_treatment_03.png",
+            "original_name": "hf_20260524_123737_4e461cc8-26f8-400e-8dc7-c3ebc1c1086c.png",
+            "new_name": "delora_arm_treatment_03.png",
+            "category": "Photoshoots/Arm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Arm/delora_arm_treatment_04.png",
+            "original_name": "hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.png",
+            "new_name": "delora_arm_treatment_04.png",
+            "category": "Photoshoots/Arm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/hf_20260524_132219_f92ef930-80cd-4a12-9274-45dc11d9a236.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/delora_before_after_01.png",
+            "original_name": "hf_20260524_132219_f92ef930-80cd-4a12-9274-45dc11d9a236.png",
+            "new_name": "delora_before_after_01.png",
+            "category": "Photoshoots/Before & After"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/hf_20260524_132222_8f8715c8-6c0d-4b75-8d96-4a34ba142605.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/delora_before_after_02.png",
+            "original_name": "hf_20260524_132222_8f8715c8-6c0d-4b75-8d96-4a34ba142605.png",
+            "new_name": "delora_before_after_02.png",
+            "category": "Photoshoots/Before & After"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/hf_20260524_132911_1a22dc83-68e9-4b5d-a8ff-b2f64e312ed5.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/delora_before_after_03.png",
+            "original_name": "hf_20260524_132911_1a22dc83-68e9-4b5d-a8ff-b2f64e312ed5.png",
+            "new_name": "delora_before_after_03.png",
+            "category": "Photoshoots/Before & After"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/hf_20260524_134252_d9bbaf12-a12b-4ffb-9d8e-f28ae978aafc.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/delora_before_after_04.png",
+            "original_name": "hf_20260524_134252_d9bbaf12-a12b-4ffb-9d8e-f28ae978aafc.png",
+            "new_name": "delora_before_after_04.png",
+            "category": "Photoshoots/Before & After"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/hf_20260524_140502_69b5000a-e610-4a50-b8aa-a607c2706cb2.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Before & After/delora_before_after_05.png",
+            "original_name": "hf_20260524_140502_69b5000a-e610-4a50-b8aa-a607c2706cb2.png",
+            "new_name": "delora_before_after_05.png",
+            "category": "Photoshoots/Before & After"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Bikini Area/hf_20260524_123307_6e6a4860-3e73-40e2-b50f-4b00f3385008.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Bikini Area/delora_bikini_area_treatment_01.png",
+            "original_name": "hf_20260524_123307_6e6a4860-3e73-40e2-b50f-4b00f3385008.png",
+            "new_name": "delora_bikini_area_treatment_01.png",
+            "category": "Photoshoots/Bikini Area"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/hf_20260524_111132_47e2ef7d-f07f-42ef-97b3-00f097f2b128.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/delora_face_treatment_01.png",
+            "original_name": "hf_20260524_111132_47e2ef7d-f07f-42ef-97b3-00f097f2b128.png",
+            "new_name": "delora_face_treatment_01.png",
+            "category": "Photoshoots/Face"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/hf_20260524_111142_80b607b2-5d28-415c-9997-5c09a752e6cb.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/delora_face_treatment_02.png",
+            "original_name": "hf_20260524_111142_80b607b2-5d28-415c-9997-5c09a752e6cb.png",
+            "new_name": "delora_face_treatment_02.png",
+            "category": "Photoshoots/Face"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/delora_face_treatment_03.png",
+            "original_name": "hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.png",
+            "new_name": "delora_face_treatment_03.png",
+            "category": "Photoshoots/Face"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/hf_20260524_112310_5e50f233-95bd-4dc3-9c9d-096da9b811c3.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/delora_face_treatment_04.png",
+            "original_name": "hf_20260524_112310_5e50f233-95bd-4dc3-9c9d-096da9b811c3.png",
+            "new_name": "delora_face_treatment_04.png",
+            "category": "Photoshoots/Face"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/hf_20260524_121011_7208578a-7a94-4ea2-b7be-1bc497551a13.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/delora_face_treatment_05.png",
+            "original_name": "hf_20260524_121011_7208578a-7a94-4ea2-b7be-1bc497551a13.png",
+            "new_name": "delora_face_treatment_05.png",
+            "category": "Photoshoots/Face"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/hf_20260524_121451_40ef7e51-9a5f-4b5e-a7e1-ce0b47da2306.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Face/delora_face_treatment_06.png",
+            "original_name": "hf_20260524_121451_40ef7e51-9a5f-4b5e-a7e1-ce0b47da2306.png",
+            "new_name": "delora_face_treatment_06.png",
+            "category": "Photoshoots/Face"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/hf_20260524_094750_5bf1ec7e-4928-4650-929b-58b46832844c.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/delora_leg_treatment_01.png",
+            "original_name": "hf_20260524_094750_5bf1ec7e-4928-4650-929b-58b46832844c.png",
+            "new_name": "delora_leg_treatment_01.png",
+            "category": "Photoshoots/Leg"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/hf_20260524_095339_16d5e4ac-0144-4a3d-9623-7c4ff3782187.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/delora_leg_treatment_02.png",
+            "original_name": "hf_20260524_095339_16d5e4ac-0144-4a3d-9623-7c4ff3782187.png",
+            "new_name": "delora_leg_treatment_02.png",
+            "category": "Photoshoots/Leg"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/hf_20260524_095629_d41f7dc7-add0-4558-b6ea-7e053ee2da87.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/delora_leg_treatment_03.png",
+            "original_name": "hf_20260524_095629_d41f7dc7-add0-4558-b6ea-7e053ee2da87.png",
+            "new_name": "delora_leg_treatment_03.png",
+            "category": "Photoshoots/Leg"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/hf_20260524_110654_0630dd29-3ad6-454b-b3f1-3051b2aef3f6.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Leg/delora_leg_treatment_04.png",
+            "original_name": "hf_20260524_110654_0630dd29-3ad6-454b-b3f1-3051b2aef3f6.png",
+            "new_name": "delora_leg_treatment_04.png",
+            "category": "Photoshoots/Leg"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260524_121655_0eadf972-f9fc-443d-9bc9-029db7b2993c.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_01.png",
+            "original_name": "hf_20260524_121655_0eadf972-f9fc-443d-9bc9-029db7b2993c.png",
+            "new_name": "delora_lifestyle_other_01.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260524_130838_d5b63023-01bb-415d-9978-96faa7a9a89e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_02.png",
+            "original_name": "hf_20260524_130838_d5b63023-01bb-415d-9978-96faa7a9a89e.png",
+            "new_name": "delora_lifestyle_other_02.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_03.png",
+            "original_name": "hf_20260524_224750_7f24dd8d-5dd5-4b3a-8a2f-8b4b6a28d452.png",
+            "new_name": "delora_lifestyle_other_03.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260524_225521_79e3b4c5-272e-470c-8ec5-ecdde7fc1608.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_04.png",
+            "original_name": "hf_20260524_225521_79e3b4c5-272e-470c-8ec5-ecdde7fc1608.png",
+            "new_name": "delora_lifestyle_other_04.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260524_230406_0df9a313-b30e-43f5-9b02-38b2570c286a.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_05.png",
+            "original_name": "hf_20260524_230406_0df9a313-b30e-43f5-9b02-38b2570c286a.png",
+            "new_name": "delora_lifestyle_other_05.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260524_231522_abe7b644-c383-45da-9830-3bb6c07feed3.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_06.png",
+            "original_name": "hf_20260524_231522_abe7b644-c383-45da-9830-3bb6c07feed3.png",
+            "new_name": "delora_lifestyle_other_06.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260525_000903_9f0f7b7d-62d7-4975-9211-edc1b832784b.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_07.png",
+            "original_name": "hf_20260525_000903_9f0f7b7d-62d7-4975-9211-edc1b832784b.png",
+            "new_name": "delora_lifestyle_other_07.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260525_000906_b2b76e2b-63cf-4010-a735-efb0905be3c7.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_08.png",
+            "original_name": "hf_20260525_000906_b2b76e2b-63cf-4010-a735-efb0905be3c7.png",
+            "new_name": "delora_lifestyle_other_08.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260525_001112_ee0f3847-67a1-408d-bf16-c05a2f12f2fd.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_09.png",
+            "original_name": "hf_20260525_001112_ee0f3847-67a1-408d-bf16-c05a2f12f2fd.png",
+            "new_name": "delora_lifestyle_other_09.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260525_091805_96728dc3-030e-485f-8102-c83acb933053.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_10.png",
+            "original_name": "hf_20260525_091805_96728dc3-030e-485f-8102-c83acb933053.png",
+            "new_name": "delora_lifestyle_other_10.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260525_091820_21b9328b-85fb-4937-be10-4838412f1ec8.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_11.png",
+            "original_name": "hf_20260525_091820_21b9328b-85fb-4937-be10-4838412f1ec8.png",
+            "new_name": "delora_lifestyle_other_11.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/hf_20260525_093128_a4448ae2-b5f0-4341-9dd8-c8355bbcc540.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Other/delora_lifestyle_other_12.png",
+            "original_name": "hf_20260525_093128_a4448ae2-b5f0-4341-9dd8-c8355bbcc540.png",
+            "new_name": "delora_lifestyle_other_12.png",
+            "category": "Photoshoots/Other"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_185002_1591b783-28eb-4907-92c8-a7b34c29d495.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_01.png",
+            "original_name": "hf_20260526_185002_1591b783-28eb-4907-92c8-a7b34c29d495.png",
+            "new_name": "delora_studio_product_01.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_185051_6bec3892-384f-414f-a31e-2ab5b4951073.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_02.png",
+            "original_name": "hf_20260526_185051_6bec3892-384f-414f-a31e-2ab5b4951073.png",
+            "new_name": "delora_studio_product_02.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_185837_287a6eb7-d896-4877-b962-8f05d7c2e5ec.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_03.png",
+            "original_name": "hf_20260526_185837_287a6eb7-d896-4877-b962-8f05d7c2e5ec.png",
+            "new_name": "delora_studio_product_03.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_191356_6113d356-04e9-4c2b-ae62-638f265d9856.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_04.png",
+            "original_name": "hf_20260526_191356_6113d356-04e9-4c2b-ae62-638f265d9856.png",
+            "new_name": "delora_studio_product_04.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_193251_4ed1c966-fdef-44e7-9bc5-72ff9d0b0957.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_05.png",
+            "original_name": "hf_20260526_193251_4ed1c966-fdef-44e7-9bc5-72ff9d0b0957.png",
+            "new_name": "delora_studio_product_05.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_194437_8ce58f5b-8754-410b-a983-0f754f7f593f.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_06.png",
+            "original_name": "hf_20260526_194437_8ce58f5b-8754-410b-a983-0f754f7f593f.png",
+            "new_name": "delora_studio_product_06.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_194825_5fb35eb3-6ef9-4631-a7da-4d0e04ce8d9d.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_07.png",
+            "original_name": "hf_20260526_194825_5fb35eb3-6ef9-4631-a7da-4d0e04ce8d9d.png",
+            "new_name": "delora_studio_product_07.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_195120_72bc1a26-f134-4bc1-9cfd-bba030fa8d9e.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_08.png",
+            "original_name": "hf_20260526_195120_72bc1a26-f134-4bc1-9cfd-bba030fa8d9e.png",
+            "new_name": "delora_studio_product_08.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/hf_20260526_200153_da2ae848-a649-490a-a2c7-d38f006b5fa3.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Studio/delora_studio_product_09.png",
+            "original_name": "hf_20260526_200153_da2ae848-a649-490a-a2c7-d38f006b5fa3.png",
+            "new_name": "delora_studio_product_09.png",
+            "category": "Photoshoots/Studio"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/hf_20260524_122830_573a24e6-62c6-47e3-9763-e831239ff605.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/delora_underarm_treatment_01.png",
+            "original_name": "hf_20260524_122830_573a24e6-62c6-47e3-9763-e831239ff605.png",
+            "new_name": "delora_underarm_treatment_01.png",
+            "category": "Photoshoots/Underarm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/hf_20260524_125233_660b6f10-4d23-4df5-afcb-5d0340a6a0b0.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/delora_underarm_treatment_02.png",
+            "original_name": "hf_20260524_125233_660b6f10-4d23-4df5-afcb-5d0340a6a0b0.png",
+            "new_name": "delora_underarm_treatment_02.png",
+            "category": "Photoshoots/Underarm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/hf_20260524_125237_2760ff28-2afb-4947-89d6-c9ec79d92888.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/delora_underarm_treatment_03.png",
+            "original_name": "hf_20260524_125237_2760ff28-2afb-4947-89d6-c9ec79d92888.png",
+            "new_name": "delora_underarm_treatment_03.png",
+            "category": "Photoshoots/Underarm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/hf_20260524_130349_0e7c9306-4e12-41c8-9308-23bc5cc7199d.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/delora_underarm_treatment_04.png",
+            "original_name": "hf_20260524_130349_0e7c9306-4e12-41c8-9308-23bc5cc7199d.png",
+            "new_name": "delora_underarm_treatment_04.png",
+            "category": "Photoshoots/Underarm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/hf_20260524_130354_da701ece-2ee0-49c6-ba5e-f273e94bfea2.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/delora_underarm_treatment_05.png",
+            "original_name": "hf_20260524_130354_da701ece-2ee0-49c6-ba5e-f273e94bfea2.png",
+            "new_name": "delora_underarm_treatment_05.png",
+            "category": "Photoshoots/Underarm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/hf_20260524_130400_76177e00-51c3-479e-9ef3-634fcc06b5a7.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Photoshoots/Underarm/delora_underarm_treatment_06.png",
+            "original_name": "hf_20260524_130400_76177e00-51c3-479e-9ef3-634fcc06b5a7.png",
+            "new_name": "delora_underarm_treatment_06.png",
+            "category": "Photoshoots/Underarm"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/Frame56.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_frame56.jpg.webp",
+            "original_name": "Frame56.jpg.webp",
+            "new_name": "delora_ref_frame56.jpg.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/Frame60.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_frame60.jpg.webp",
+            "original_name": "Frame60.jpg.webp",
+            "new_name": "delora_ref_frame60.jpg.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/Lumi2_PDPGallery_Rapidflash_08172bc4-504b-4906-b6d1-f8fc0c01e915.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_lumi_handset.webp",
+            "original_name": "Lumi2_PDPGallery_Rapidflash_08172bc4-504b-4906-b6d1-f8fc0c01e915.jpg.webp",
+            "new_name": "delora_ref_roseskin_lumi_handset.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/PDPGalleryResultTimeline.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_timeline.webp",
+            "original_name": "PDPGalleryResultTimeline.jpg.webp",
+            "new_name": "delora_ref_timeline.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0042.png.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0042.webp",
+            "original_name": "ROSE-SKIN_0042.png.webp",
+            "new_name": "delora_ref_roseskin_0042.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_012.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_012.webp",
+            "original_name": "ROSE-SKIN_012.jpg.webp",
+            "new_name": "delora_ref_roseskin_012.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0172-(8).png.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0172.webp",
+            "original_name": "ROSE-SKIN_0172-(8).png.webp",
+            "new_name": "delora_ref_roseskin_0172.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0197-(5).png.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0197.webp",
+            "original_name": "ROSE-SKIN_0197-(5).png.webp",
+            "new_name": "delora_ref_roseskin_0197.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0256-copy.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0256.webp",
+            "original_name": "ROSE-SKIN_0256-copy.webp",
+            "new_name": "delora_ref_roseskin_0256.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0296-copy.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0296.webp",
+            "original_name": "ROSE-SKIN_0296-copy.webp",
+            "new_name": "delora_ref_roseskin_0296.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_035.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_035.webp",
+            "original_name": "ROSE-SKIN_035.jpg.webp",
+            "new_name": "delora_ref_roseskin_035.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0428-2.png.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0428.webp",
+            "original_name": "ROSE-SKIN_0428-2.png.webp",
+            "new_name": "delora_ref_roseskin_0428.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0454-2-copy.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0454.webp",
+            "original_name": "ROSE-SKIN_0454-2-copy.webp",
+            "new_name": "delora_ref_roseskin_0454.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0531-2.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0531.webp",
+            "original_name": "ROSE-SKIN_0531-2.jpg.webp",
+            "new_name": "delora_ref_roseskin_0531.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_0544-copy.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_0544.webp",
+            "original_name": "ROSE-SKIN_0544-copy.webp",
+            "new_name": "delora_ref_roseskin_0544.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_112.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_112.webp",
+            "original_name": "ROSE-SKIN_112.jpg.webp",
+            "new_name": "delora_ref_roseskin_112.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE-SKIN_132.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_132.webp",
+            "original_name": "ROSE-SKIN_132.jpg.webp",
+            "new_name": "delora_ref_roseskin_132.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE_SKIN_0037_6_copy.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_rose_skin_0037_6_copy.webp",
+            "original_name": "ROSE_SKIN_0037_6_copy.webp",
+            "new_name": "delora_ref_rose_skin_0037_6_copy.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE_SKIN_0373_8_copy.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_rose_skin_0373_8_copy.webp",
+            "original_name": "ROSE_SKIN_0373_8_copy.webp",
+            "new_name": "delora_ref_rose_skin_0373_8_copy.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/ROSE_SKIN_0468_2.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_rose_skin_0468_2.jpg.webp",
+            "original_name": "ROSE_SKIN_0468_2.jpg.webp",
+            "new_name": "delora_ref_rose_skin_0468_2.jpg.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/RoseSkinCo-Brithday-0817_re.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_roseskinco.webp",
+            "original_name": "RoseSkinCo-Brithday-0817_re.jpg.webp",
+            "new_name": "delora_ref_roseskin_roseskinco.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/RoseSkinCo-Lumi-IPL-Hair-Removal-Handset-white-Gold_jpg.jpg.webp",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_roseskin_roseskinco.webp",
+            "original_name": "RoseSkinCo-Lumi-IPL-Hair-Removal-Handset-white-Gold_jpg.jpg.webp",
+            "new_name": "delora_ref_roseskin_roseskinco.webp",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/pomelli_bdna_image_0523-3.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_pomelli_0523-3.png",
+            "original_name": "pomelli_bdna_image_0523-3.png",
+            "new_name": "delora_ref_pomelli_0523-3.png",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/pomelli_bdna_image_0523-4.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_pomelli_0523-4.png",
+            "original_name": "pomelli_bdna_image_0523-4.png",
+            "new_name": "delora_ref_pomelli_0523-4.png",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/pomelli_bdna_image_0523-5.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_pomelli_0523-5.png",
+            "original_name": "pomelli_bdna_image_0523-5.png",
+            "new_name": "delora_ref_pomelli_0523-5.png",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/pomelli_bdna_image_0523-6.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_pomelli_0523-6.png",
+            "original_name": "pomelli_bdna_image_0523-6.png",
+            "new_name": "delora_ref_pomelli_0523-6.png",
+            "category": "Reference images"
+        },
+        {
+            "original_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/pomelli_bdna_image_0523.png",
+            "new_path": "/Users/mihailivanov/Downloads/Delora Visual Assets/Reference images/delora_ref_pomelli_0523.png",
+            "original_name": "pomelli_bdna_image_0523.png",
+            "new_name": "delora_ref_pomelli_0523.png",
+            "category": "Reference images"
+        }
+    ],
+    "skipped": []
+}
