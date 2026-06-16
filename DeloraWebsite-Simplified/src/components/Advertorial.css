@@ -35,7 +35,7 @@
   --adv-radius-pill: 50px;
   --adv-radius-sm:   8px;
 
-  --adv-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --adv-ease: cubic-bezier(0.23, 1, 0.32, 1);
   --adv-ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -164,6 +164,7 @@
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--adv-charcoal);
+  text-wrap: balance;
   margin: 0 0 1.25rem;
 }
 
@@ -174,6 +175,7 @@
   line-height: 1.2;
   letter-spacing: -0.015em;
   color: var(--adv-charcoal);
+  text-wrap: balance;
   margin: 0 0 1rem;
 }
 
@@ -183,6 +185,7 @@
   font-weight: 600;
   line-height: 1.3;
   color: var(--adv-charcoal);
+  text-wrap: balance;
   margin: 0 0 0.6rem;
 }
 
@@ -198,6 +201,7 @@
   font-size: 1rem;
   line-height: 1.7;
   color: var(--adv-charcoal);
+  text-wrap: pretty;
   margin: 0 0 1rem;
 }
 
@@ -259,6 +263,10 @@
   transform: translateY(-1px);
 }
 
+.adv-btnPrimary:active {
+  transform: scale(0.97);
+}
+
 .adv-btnSecondary {
   display: inline-flex;
   align-items: center;
@@ -281,6 +289,10 @@
 .adv-btnSecondary:hover {
   background: var(--adv-lavender-soft);
   transform: translateY(-1px);
+}
+
+.adv-btnSecondary:active {
+  transform: scale(0.97);
 }
 
 .adv-btnLink {
@@ -1029,22 +1041,6 @@
 /* ─────────────────────────────────────────────
    SECTION PILL LABEL
 ───────────────────────────────────────────── */
-.adv-sectionPill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: var(--adv-lavender-soft);
-  border: 1px solid var(--adv-lavender);
-  border-radius: var(--adv-radius-pill);
-  padding: 0.3rem 0.9rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--adv-amethyst);
-  margin-bottom: 1rem;
-}
-
 /* ─────────────────────────────────────────────
    UTILITY: SPACING HELPERS
 ───────────────────────────────────────────── */

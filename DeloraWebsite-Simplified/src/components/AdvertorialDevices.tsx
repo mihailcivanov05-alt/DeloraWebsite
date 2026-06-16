@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import { CreditCard, Truck, ShieldCheck, BadgeCheck, ChevronDown } from "lucide-react";
+import { CreditCard, Truck, ShieldCheck, BadgeCheck, ChevronDown, AlertTriangle } from "lucide-react";
 import Footer from "./Footer";
 import "./Footer.css";
 import "./Advertorial.css";
@@ -40,7 +40,7 @@ function Placeholder({
 const enemies = [
   {
     id: "budget",
-    icon: "💸",
+    icon: <AlertTriangle size={24} strokeWidth={1.5} />,
     badgeLabel: "Капан #1",
     title: "Евтиният IPL (€89)",
     costLabel: "€89 сега · €45/год реално",
@@ -56,7 +56,7 @@ const enemies = [
   },
   {
     id: "premium",
-    icon: "🏷️",
+    icon: <BadgeCheck size={24} strokeWidth={1.5} />,
     badgeLabel: "Капан #2",
     title: "Премиумният IPL (€349+)",
     costLabel: "€349 за 1 J/cm² повече",
@@ -72,7 +72,7 @@ const enemies = [
   },
   {
     id: "delora",
-    icon: "✨",
+    icon: <ShieldCheck size={24} strokeWidth={1.5} />,
     badgeLabel: "Златната среда",
     title: "Delora (€189)",
     costLabel: "€9/год · 20+ год. живот",
@@ -285,7 +285,6 @@ export default function AdvertorialDevices() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 2 · Двата капана</span>
           <h2 className="adv-h2">Двата IPL капана — и изходът от тях.</h2>
           <div className="adv-divider" />
           <p className="adv-intro">
@@ -327,7 +326,6 @@ export default function AdvertorialDevices() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--cream">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 3 · Как работи IPL</span>
           <h2 className="adv-h2">Технологията, която прави разликата.</h2>
           <div className="adv-divider" />
         </div>
@@ -395,7 +393,6 @@ export default function AdvertorialDevices() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 4 · Сравнение</span>
           <h2 className="adv-h2">Трите устройства. Само числата.</h2>
           <div className="adv-divider" />
           <p className="adv-intro">Без маркетингови твърдения. Само техническите спецификации.</p>
@@ -490,7 +487,6 @@ export default function AdvertorialDevices() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--cream">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 5 · Честно</span>
           <h2 className="adv-h2">Честни отговори на честни въпроси.</h2>
           <div className="adv-divider" />
           <p className="adv-intro">Няма да ти продаваме лъжи. Ето каква е реалността.</p>
@@ -562,7 +558,6 @@ export default function AdvertorialDevices() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 6 · Реални отзиви</span>
           <h2 className="adv-h2">Жени, които намериха правилния избор.</h2>
           <div className="adv-divider" />
           <div className="adv-ratingRow">
@@ -656,7 +651,6 @@ export default function AdvertorialDevices() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--offer">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 7 · Офертата</span>
           <h2 className="adv-h2">Клинична ефективност. €189. Без компромиси.</h2>
           <div className="adv-divider" />
           <p className="adv-sub" style={{ margin: "0 auto 2rem" }}>

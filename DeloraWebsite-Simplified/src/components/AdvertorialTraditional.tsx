@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import { CreditCard, Truck, ShieldCheck, BadgeCheck, ChevronDown } from "lucide-react";
+import { CreditCard, Truck, ShieldCheck, BadgeCheck, ChevronDown, AlertTriangle, Frown, XCircle } from "lucide-react";
 import Footer from "./Footer";
 import "./Footer.css";
 import "./Advertorial.css";
@@ -40,7 +40,7 @@ function Placeholder({
 const enemies = [
   {
     id: "salon",
-    icon: "💆",
+    icon: <AlertTriangle size={24} strokeWidth={1.5} />,
     badgeLabel: "Враг #1",
     title: "Салонен лазер",
     costLabel: "€80–€150 / сесия",
@@ -55,7 +55,7 @@ const enemies = [
   },
   {
     id: "wax",
-    icon: "🕯️",
+    icon: <Frown size={24} strokeWidth={1.5} />,
     badgeLabel: "Враг #2",
     title: "Восък",
     costLabel: "€50–€100 / сесия",
@@ -70,7 +70,7 @@ const enemies = [
   },
   {
     id: "shave",
-    icon: "🪒",
+    icon: <XCircle size={24} strokeWidth={1.5} />,
     badgeLabel: "Враг #3",
     title: "Бръснене",
     costLabel: "Ежедневна загуба на Zeit",
@@ -283,7 +283,6 @@ export default function AdvertorialTraditional() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 2 · Проблемът</span>
           <h2 className="adv-h2">Трите начина, по които депилацията те робува</h2>
           <div className="adv-divider" />
           <p className="adv-intro">
@@ -325,7 +324,6 @@ export default function AdvertorialTraditional() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--cream">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 3 · Решението</span>
           <h2 className="adv-h2">Delora прекъсва цикъла.</h2>
           <div className="adv-divider" />
         </div>
@@ -388,7 +386,6 @@ export default function AdvertorialTraditional() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 4 · Сравнение</span>
           <h2 className="adv-h2">Delora срещу всичко останало.</h2>
           <div className="adv-divider" />
           <p className="adv-intro">Без маркетингови трикове. Само числата.</p>
@@ -477,7 +474,6 @@ export default function AdvertorialTraditional() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--cream">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 5 · Честно</span>
           <h2 className="adv-h2">Честно. Ето какво трябва да знаеш.</h2>
           <div className="adv-divider" />
           <p className="adv-intro">
@@ -560,7 +556,6 @@ export default function AdvertorialTraditional() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 6 · Реални жени</span>
           <h2 className="adv-h2">Жени, които спряха да ходят на салон.</h2>
           <div className="adv-divider" />
           <div className="adv-ratingRow">
@@ -655,7 +650,6 @@ export default function AdvertorialTraditional() {
       ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--offer">
         <div className="adv-wrap adv-text">
-          <span className="adv-sectionPill">Секция 7 · Офертата</span>
           <h2 className="adv-h2">Веднъж. €189. Край на цикъла.</h2>
           <div className="adv-divider" />
           <p className="adv-sub" style={{ margin: "0 auto 2rem" }}>
