@@ -1,90 +1,197 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import Link from "next/link";
-import Button from "./Button";
+import { CreditCard, Truck, ShieldCheck, BadgeCheck, ChevronDown } from "lucide-react";
 import Footer from "./Footer";
-import { CreditCard, Truck, ShieldCheck, BadgeCheck } from "lucide-react";
 import "./Footer.css";
 import "./Advertorial.css";
 
-const DEVICE_HREF = "/#product-hero";
+/* ── Links ── */
+const DEVICE_HREF = "/products/delora";
 const QUIZ_HREF = "/#consultation";
 
+/* ── Visual Placeholder ── */
 function Placeholder({
   id,
   label,
-  minH,
+  minH = 280,
   maxW,
   className = "",
-  src,
 }: {
   id: string;
   label: string;
-  minH: number;
+  minH?: number;
   maxW?: number;
   className?: string;
-  src?: string;
 }) {
-  const style: React.CSSProperties = { ["--ph-h" as string]: `${minH}px` } as React.CSSProperties;
-  if (maxW) {
-    style.maxWidth = maxW;
-    style.marginLeft = "auto";
-    style.marginRight = "auto";
-  }
+  const style: React.CSSProperties = {
+    ["--ph-h" as string]: `${minH}px`,
+    ...(maxW ? { maxWidth: maxW, marginLeft: "auto", marginRight: "auto" } : {}),
+  };
   return (
     <div id={id} className={`visual-placeholder ${className}`} style={style}>
-      {src ? (
-        <img
-          src={src}
-          alt={label}
-          style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }}
-        />
-      ) : (
-        <span className="label">{label}</span>
-      )}
+      <span className="label">{label}</span>
     </div>
   );
 }
 
-const comparison = {
-  columns: ["", "Евтиния IPL (€89)", "Delora (€189)", "Премиумния IPL (€349)"],
+/* ── Enemy data (budget vs premium IPL) ── */
+const enemies = [
+  {
+    id: "budget",
+    icon: "💸",
+    badgeLabel: "Капан #1",
+    title: "Евтиният IPL (€89)",
+    costLabel: "€89 сега · €45/год реално",
+    bullets: [
+      "15 J/cm² — недостатъчна енергия",
+      "Охлаждане 25°C — риск от изгаряния",
+      "50,000 импулса → умира за 1–2 год.",
+      "Работи само на идеална кожа+коса",
+      "30-дневна гаранция (разкрива всичко)",
+    ],
+    footer: "Ще купиш 5+ бройки за 10 години: >€445",
+    variant: "bad" as const,
+  },
+  {
+    id: "premium",
+    icon: "🏷️",
+    badgeLabel: "Капан #2",
+    title: "Премиумният IPL (€349+)",
+    costLabel: "€349 за 1 J/cm² повече",
+    bullets: [
+      "27 J/cm² — клинично, но минимална разлика",
+      "15°C охлаждане — добро (като Delora)",
+      "1,000,000 импулса — добро (като Delora)",
+      "€160 за бранда — не за технологията",
+      "Плащаш за лого, не за резултат",
+    ],
+    footer: "€17/год — добро устройство. Лош deal.",
+    variant: "bad" as const,
+  },
+  {
+    id: "delora",
+    icon: "✨",
+    badgeLabel: "Златната среда",
+    title: "Delora (€189)",
+    costLabel: "€9/год · 20+ год. живот",
+    bullets: [
+      "26 J/cm² — клинично ефективна енергия",
+      "Сапфирено охлаждане до 15°C (безопасно)",
+      "1,000,000 импулса — 40+ год. реална употреба",
+      "90-дневна гаранция (ние вярваме в него)",
+      "CE маркирано, дерматологично тествано",
+    ],
+    footer: "€189 веднъж. €9 на година. Готово.",
+    variant: "good" as const,
+  },
+];
+
+const comparisonData = {
+  headers: ["Характеристика", "Евтиният (€89)", "Delora (€189)", "Премиумният (€349)"],
+  headerVariants: ["", "budget", "delora", "premium"],
   rows: [
-    { label: "Цена", cells: ["€89", "€189", "€349"] },
-    { label: "Охлаждане", cells: ["25°C (риск)", "15°C (безопасно)", "15°C (безопасно)"] },
-    { label: "Енергия (J/cm²)", cells: ["15 (слабо)", "26 (клинично)", "27 (клинично+)"] },
-    { label: "Импулси", cells: ["50,000 (умира за 2г)", "1,000,000 (20г+)", "1,000,000 (20г+)"] },
-    { label: "Гаранция", cells: ["30 дни", "90 дни", "1–2 години"] },
-    { label: "Реален живот", cells: ["Макс 2 години", "20+ години", "20+ години"] },
-    { label: "Цена на година", cells: ["€45/година (купи 5x)", "€9/година", "€17/година"] },
-    { label: "Премия за дизайн", cells: ["Няма", "Няма", "€160 за 1 J/cm²"] }
+    {
+      label: "Цена",
+      cells: ["€89", "€189", "€349"],
+      variants: ["budget", "delora", "premium"],
+    },
+    {
+      label: "Енергия (J/cm²)",
+      cells: ["15 (слабо)", "26 (клинично ✓)", "27 (клинично ✓)"],
+      variants: ["budget", "delora", "premium"],
+    },
+    {
+      label: "Охлаждане",
+      cells: ["25°C (риск)", "15°C (безопасно ✓)", "15°C (безопасно ✓)"],
+      variants: ["budget", "delora", "premium"],
+    },
+    {
+      label: "Импулси",
+      cells: ["50,000 (1–2 год.)", "1,000,000 (20+ год. ✓)", "1,000,000 (20+ год. ✓)"],
+      variants: ["budget", "delora", "premium"],
+    },
+    {
+      label: "Гаранция",
+      cells: ["30 дни", "90 дни ✓", "1–2 години"],
+      variants: ["budget", "delora", "premium"],
+    },
+    {
+      label: "Реален живот",
+      cells: ["Макс 2 год.", "20+ год. ✓", "20+ год. ✓"],
+      variants: ["budget", "delora", "premium"],
+    },
+    {
+      label: "Цена/год.",
+      cells: ["€45/год.", "€9/год. ✓", "€17/год."],
+      variants: ["budget", "delora", "premium"],
+    },
+    {
+      label: "Премия за бранд",
+      cells: ["Няма", "Няма ✓", "€160 (само за лого)"],
+      variants: ["budget", "delora", "premium"],
+    },
   ],
 };
 
 const faqItems = [
   {
-    q: "Евтиния IPL с 15J/cm² работи ли?",
-    a: "Да, технически. Но 'работи' е отговор. Nood използва 18J/cm². Ulike използва 26J/cm². Braun използва 27J/cm². Защо? Защото по-висока енергия = по-доследни резултати, особенно на тъмна кожа или фина коса. Евтиния 15J/cm² работи само на идеална комбинация (светла кожа + тъмна коса). Всичко друго? Разочарование.",
+    q: "Евтиният IPL с 15 J/cm² работи ли изобщо?",
+    a: "Технически — да. На практика — разочарование. Nood използва 18 J/cm². Ulike — 26 J/cm². Braun — 27 J/cm². Защо? Защото по-висока енергия = по-стабилни резултати, особено на по-тъмна кожа или фина коса. Евтиният 15 J/cm² работи само на идеална комбинация: много светла кожа + много тъмна коса. Всичко друго? Бавно разочарование.",
   },
   {
-    q: "Но охлаждането... наистина ли е разлика?",
-    a: "Да. 25°C vs 15°C е разлика между 'това пързалка' и 'болно.' Евтините устройства пък не охлаждат добре защото охлаждането е скъпо. Резултат: Посетителите спират да го използват защото боли. Или изгаряния. И тогава дават възврат.",
+    q: "Охлаждането наистина ли прави разлика?",
+    a: `Да. 25°C срещу 15°C е разликата между "топло и неприятно" и "безопасно и комфортно.“ Евтините устройства не инвестират в добро охлаждане — то е скъпо. Резултатът: потребителите спират да го използват (боли или изгаря). После искат възврат. Затова евтините имат 30-дневна гаранция — знаят, че повечето ще предадат преди да изтекат.`,
   },
   {
-    q: "€89 устройство, което трае 2 години... така ли е?",
-    a: "По-скоро 18–24 месеца. Евтина пластмаса + слабо охлаждане = двигател отказва по-бързо. Или сензорът на охлаждането умира. Тогава 'замени, не поправи.'",
+    q: "€89 устройство, което трае само 2 години — реално ли е?",
+    a: "Да. Евтина пластмаса + слаб мотор за охлаждане = двигателят отказва за 18–24 месеца. Или сензорът за контакт с кожата умира. Или батерията деградира. При 50,000 импулса: ако използваш 2 пъти седмично, 15 мин. — изчерпваш ги за около 2 години. После купуваш ново. За 10 години: 5 устройства × €89 = €445.",
   },
   {
-    q: "Но 1,000,000 импулса... мне ли е още толкова много?",
-    a: "За Delora? 1,000,000 импулса = 40+ години на пълна употреба. За евтин €89? 50,000 импулса = 1–2 години, макар че батерията или охлаждането ще умрат първо.",
+    q: "Но 1,000,000 импулса — не е ли твърде много?",
+    a: "За Delora 1,000,000 импулса = 40+ години пълна употреба. Реалното ограничение е охлаждащата система — тя ще издържи 20–25 години при нормална употреба. За евтиния €89? 50,000 импулса = 1–2 години, въпреки че батерията или охлаждането ще умрат първо.",
   },
   {
-    q: "Може ли €349 премиум IPL наистина е по-добро?",
-    a: "Почти идентично на Delora. +1J/cm² енергия (невъзможно забелязване). Същото охлаждане. Същата издържане. Но €160 повече. Защо? Дизайн. Бренд. Лукс. Ако харесваш € extra за красивото кутие, купи го. Ако искаш резултатите, Delora ще направи 99% от работата за половин цена.",
+    q: "Защо премиумът (€349) не е по-добър от Delora?",
+    a: "Защото технологията е почти идентична. 27 J/cm² срещу 26 J/cm² — разлика, която не ще усетиш. 15°C охлаждане — едно и също. 1,000,000 импулса — едно и също. Разликата е €160. Тя отива за бранда, дизайна, кутията и маркетинга — не за клинична ефективност. Ако трябва да избираш между €189 и €349 — €160 разлика без реална разлика в резултата не е добра сделка.",
   },
   {
-    q: "Гаранция? Наистина ли е проблем?",
-    a: "€89: 30 дни (ако го разбиеш на ден 31, поздрав). Delora: 90 дни (достатъчно да видиш резултати). €349: 1–2 години (разумно). Ако девайсът умира след гаранцията, с евтиния няма поддръжка. С Delora? Ремонт обикновено възможен.",
+    q: "А ако Delora не работи за мен?",
+    a: "90 дни гаранция. Не виждаш резултат — пълна възвращане. Без въпроси. Специално избрахме 90 дни (не 30), защото първите видими резултати идват между 4-та и 8-та седмица. Искаме да имаш достатъчно време за честна оценка.",
+  },
+];
+
+const slides = [
+  {
+    id: "s1",
+    stars: 5,
+    quote: `„Преди имах евтин IPL от €65. Не виждах почти никакъв резултат след 3 месеца. С Delora — след 6 седмици разликата беше очевидна.“`,
+    author: "Симона К., 26 г. — София",
+  },
+  {
+    id: "s2",
+    stars: 5,
+    quote: `„Проучих Braun и Philips — наистина са добри. Но €350 за 1 J/cm² повече? Не. Delora е точно толкова ефективен.“`,
+    author: "Радина М., 33 г. — Пловдив",
+  },
+  {
+    id: "s3",
+    stars: 5,
+    quote: `„Евтиният IPL изгори. Буквално. Delora е различно ниво — охлаждането е реално и резултатите са реални.“`,
+    author: "Теодора В., 29 г. — Варна",
+  },
+  {
+    id: "s4",
+    stars: 5,
+    quote: `„€189 за нещо, което ще ми служи 20 години срещу €89 за нещо, което ще изхвърля след 2? Математиката е проста.“`,
+    author: "Камелия Н., 37 г. — Бургас",
+  },
+  {
+    id: "s5",
+    stars: 5,
+    quote: `„Накрая спрях да се двоумя. 90-дневната гаранция ми даде сигурност. Не съжалявам нито за секунда.“`,
+    author: "Гергана Л., 31 г. — Стара Загора",
   },
 ];
 
@@ -95,184 +202,254 @@ const trustBadges = [
   { Icon: BadgeCheck, label: "CE маркирано" },
 ];
 
-const AdvertorialDevices = () => {
+/* ── Component ── */
+export default function AdvertorialDevices() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  const scrollCarousel = (dir: 1 | -1) => {
-    const el = carouselRef.current;
-    if (!el) return;
-    el.scrollBy({ left: dir * (el.clientWidth * 0.85), behavior: "smooth" });
-  };
+  const toggleFaq = useCallback((i: number) => {
+    setOpenFaq((prev) => (prev === i ? null : i));
+  }, []);
+
+  const scrollCarousel = useCallback(
+    (dir: 1 | -1) => {
+      const el = carouselRef.current;
+      if (!el) return;
+      const next = Math.max(0, Math.min(slides.length - 1, activeSlide + dir));
+      setActiveSlide(next);
+      el.scrollTo({ left: next * (el.clientWidth * 0.88), behavior: "smooth" });
+    },
+    [activeSlide]
+  );
 
   return (
     <div className="adv">
+      {/* ── Sticky Header ── */}
       <header className="adv-header">
         <div className="adv-headerInner">
-          <Link href="/" className="adv-logo">
+          <Link href="/" className="adv-logo" aria-label="Delora — начало">
             <img src="/logo.png" alt="Delora" className="adv-logoImg" />
           </Link>
-          <Button href={DEVICE_HREF} variant="primary" size="sm">
-            Виж устройството
-          </Button>
+          <a href={DEVICE_HREF} className="adv-btnPrimary" style={{ fontSize: "0.82rem", padding: "0.6rem 1.25rem" }}>
+            Виж устройството →
+          </a>
         </div>
       </header>
 
-      {/* ───────────────── SECTION 1 — HERO + PROBLEM FRAME ───────────────── */}
+      {/* ════════════════════════════════════════════
+          SECTION 1 — HERO + PROBLEM FRAME
+      ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--hero">
-        <div className="adv-wrap adv-text">
-          <h1 className="adv-h1">
-            IPL устройства: €89 боклук срещу €300+ люкс.<br/>
-            Ние сме нещо друго.
-          </h1>
-          <p className="adv-sub">
-            Евтините не работят. Скъпите са пърелюкс. Ако искаш резултати, трябва Goldilocks.
-          </p>
-          <div className="adv-ctaRow">
-            <Button href={DEVICE_HREF} variant="primary" size="lg">
-              Виж устройството
-            </Button>
+        <div className="adv-wrap adv-wrap--wide">
+          <div className="adv-heroContent">
+            <div className="adv-ratingBadge">
+              <span className="adv-ratingStars">★★★★★</span>
+              <span>4.9/5 · 17 реални отзива</span>
+            </div>
+            <span className="adv-eyebrow">IPL устройства: кой е струва парите</span>
+            <h1 className="adv-h1">
+              €89 боклук.<br />
+              €349 излишество.<br />
+              €189 е точно по средата.
+            </h1>
+            <p className="adv-sub">
+              Евтините IPL не работят достатъчно добре. Скъпите са платени за бранда, не за технологията.
+              Delora е клиничната ефективност — без да плащаш за лого.
+            </p>
+            <div className="adv-ctaRow">
+              <a href={DEVICE_HREF} className="adv-btnPrimary">
+                Виж устройството →
+              </a>
+              <a href={QUIZ_HREF} className="adv-btnSecondary">
+                Направи теста — 2 мин
+              </a>
+            </div>
           </div>
         </div>
-        <div className="adv-wrap adv-wrap--wide">
+
+        {/* VB1 — Hero video/GIF */}
+        <div className="adv-wrap adv-wrap--wide" style={{ paddingBottom: 0 }}>
           <div className="adv-heroMedia">
             <Placeholder
               id="visual-hero"
               minH={460}
-              label="HERO VIDEO/GIF — full-width, ~500px · Split-screen: Cheap device (breaks), Premium (luxe unboxing), Delora (just works)."
+              label="VISUAL BLOCK 1 — HERO VIDEO/GIF · Пълна ширина, ~460px · Три устройства едно до друго: €89 (евтин), €189 (Delora), €349 (премиум) · Сравнение: спецификации, охлаждане, резултати"
             />
           </div>
         </div>
       </section>
 
-      {/* ───────────────── SECTION 2 — THE PROBLEM (Two enemies) ───────────────── */}
+      {/* ════════════════════════════════════════════
+          SECTION 2 — NAME THE ENEMY (Two IPL extremes)
+      ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <h2 className="adv-h2">Дилемата на IPL: бюджет срещу дизайн, качество срещу цена</h2>
+          <span className="adv-sectionPill">Секция 2 · Двата капана</span>
+          <h2 className="adv-h2">Двата IPL капана — и изходът от тях.</h2>
+          <div className="adv-divider" />
+          <p className="adv-intro">
+            Пазарът на IPL устройства е пълен с крайности. Ето защо нито едната не е правилният избор.
+          </p>
         </div>
-        <div className="adv-wrap">
-          <p className="adv-body"><strong>Вариант 1: Евтиния IPL (€89–€120)</strong></p>
-          <p className="adv-body">
-            'За тази цена, защо не?' Точно.<br/>
-            • Слабо охлаждане (болка, риск от изгаряния)<br/>
-            • Низко J/cm² енергия (не работи добре, особенно на тъмна кожа)<br/>
-            • Разбиваемо (пластмаса, не издържа)<br/>
-            • Слаба гаранция (30 дни, ако имаш късмет)<br/>
-            • За 2 години? Купи втори. Или трети.
-          </p>
-          <p className="adv-body">За 10 години: €300–€600 в подмени + разочарование.</p>
-          <hr />
 
-          <p className="adv-body"><strong>Вариант 2: Премиумния IPL (€300–€399)</strong></p>
-          <p className="adv-body">
-            Лукс. Но зачем?<br/>
-            • Красиво дизайнирано (за €300 повече...)<br/>
-            • Бренд премия (Ulike, Braun, някои други)<br/>
-            • Технически почти идентично на по-евтиния (26–28J/cm²)<br/>
-            • Но €200 повече за...дизайн? Логото?<br/>
-            • Обработка: същата IPL технология, различен корпус
-          </p>
-          <p className="adv-body">За 10 години: €300–€399 + непотребна цена.</p>
-          <hr />
-
-          <p className="adv-body">
-            Общата проблем? Избор е между:<br/>
-            — Евтин и ненадежден<br/>
-            — Скъп и скъп за нищо
-          </p>
-          <p className="adv-body"><strong>Няма среда. Докато сега.</strong></p>
-        </div>
         <div className="adv-wrap adv-wrap--wide">
+          <div className="adv-enemyGrid">
+            {enemies.map((e) => (
+              <div key={e.id} className={`adv-enemyCard adv-enemyCard--${e.variant}`}>
+                <div className="adv-enemyIcon">{e.icon}</div>
+                <div className="adv-enemyLabel">{e.badgeLabel}</div>
+                <h3 className="adv-h3">{e.title}</h3>
+                <p className="adv-enemyCost">{e.costLabel}</p>
+                <ul className="adv-enemyBullets">
+                  {e.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+                <div className="adv-enemyFooter">{e.footer}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* VB2 — Three device photos */}
+        <div className="adv-wrap adv-wrap--wide mt-4">
           <Placeholder
-            id="visual-enemies-devices"
-            minH={380}
-            label="THREE-COLUMN COMPARISON — ~400px · LEFT: Budget IPL (dingy). CENTER: Delora (glow/balanced). RIGHT: Premium IPL (sleek/excessive)."
+            id="visual-devices-comparison"
+            minH={360}
+            label="VISUAL BLOCK 2 — ТРИ УСТРОЙСТВА ЕДНО ДО ДРУГО · Ляво: евтин IPL €89 (червени тонове, X маркери) · Център: Delora €189 (лавандулово, ✓ маркери) · Дясно: Премиум €349 (оранжево, въпросителни) · Конфронтационен, едностранен в полза на Delora"
           />
         </div>
       </section>
 
-      {/* ───────────────── SECTION 3 — THE SWITCH (Delora as the escape) ───────────────── */}
-      <section className="adv-section">
+      {/* ════════════════════════════════════════════
+          SECTION 3 — THE SWITCH
+      ════════════════════════════════════════════ */}
+      <section className="adv-section adv-section--cream">
         <div className="adv-wrap adv-text">
-          <h2 className="adv-h2">Delora е IPL за хората, които мислят логично</h2>
+          <span className="adv-sectionPill">Секция 3 · Как работи IPL</span>
+          <h2 className="adv-h2">Технологията, която прави разликата.</h2>
+          <div className="adv-divider" />
         </div>
+
         <div className="adv-wrap">
-          <p className="adv-body">
-            Дешевите девайси не работят, защото изрязват разходи везде:<br/>
-            • Слабо охлаждане → БОЛЬ → повече пари на лекар<br/>
-            • Ниска енергия → НАМАЛЕНИ РЕЗУЛТАТИ → разочарование<br/>
-            • Лошо качество → РАЗБИВАНЕ → купи отново
-          </p>
-          <p className="adv-body">
-            Скъпите девайси работят, но излишно:<br/>
-            • €300+ за същата технология като €189 модел<br/>
-            • Премия за дизайн, не за работоспособност<br/>
-            • Ако работи същото, защо плащаш 2x повече?
-          </p>
-          <p className="adv-body">
-            Delora? €189. Промишлено охлаждане (26J/cm², достатъчно).
-            Солидна гаранция (90 дни). Работи точно както си го заслужава.
-          </p>
-          <p className="adv-body">
-            <strong>Математика:</strong><br/>
-            • Евтин: €89 × 3 (разбиване + подмени) = €267 + разочарование<br/>
-            • Скъп: €349 + €300 премия за което? Дизайн<br/>
-            • Delora: €189. Един път. Работи добре.
-          </p>
+          <div className="adv-switchContent">
+            <div className="adv-switchText">
+              <p className="adv-body adv-body--large">
+                Не всички IPL са едни и същи. Разликата между €89 и €189 не е в бранда — тя е в енергията и охлаждането.
+              </p>
+
+              <div className="adv-step">
+                <div className="adv-stepNum">1</div>
+                <p className="adv-stepText">
+                  <strong>26 J/cm²</strong> — клинично доказана енергия. Евтиният е 15 J/cm². Разликата е между „работи понякога" и „работи стабилно."
+                </p>
+              </div>
+              <div className="adv-step">
+                <div className="adv-stepNum">2</div>
+                <p className="adv-stepText">
+                  <strong>15°C сапфирено охлаждане</strong> — защитава кожата, прави процедурата безболезнена. Евтиният охлажда до 25°C — недостатъчно.
+                </p>
+              </div>
+              <div className="adv-step">
+                <div className="adv-stepNum">3</div>
+                <p className="adv-stepText">
+                  <strong>1,000,000 импулса</strong> = 40+ години употреба. Евтиният има 50,000 = 1–2 години.
+                </p>
+              </div>
+              <div className="adv-step">
+                <div className="adv-stepNum">4</div>
+                <p className="adv-stepText">
+                  <strong>90-дневна гаранция</strong> — защото сме сигурни в резултата. Евтиният дава 30 дни (защото знае, че повечето ще предадат преди 60-тия ден).
+                </p>
+              </div>
+
+              <p className="adv-body mt-3" style={{ color: "var(--adv-muted)" }}>
+                Премиумът (€349) е добро устройство. Но 27 срещу 26 J/cm² — разлика, която не ще усетиш. €160 отиват за лого, кутия и маркетинг. Не за резултат.
+              </p>
+            </div>
+
+            <div className="adv-switchVisual">
+              {/* VB3 — IPL Mechanism Animation */}
+              <Placeholder
+                id="visual-ipl-mechanism"
+                minH={360}
+                label="VISUAL BLOCK 3 — IPL МЕХАНИЗЪМ АНИМАЦИЯ · Как светлината достига корена · Сравнение: 15 J/cm² (евтин) → слаб ефект vs 26 J/cm² (Delora) → пълен ефект · Образователен стил"
+              />
+            </div>
+          </div>
         </div>
-        <div className="adv-wrap">
+
+        {/* VB4 — Results Timeline */}
+        <div className="adv-wrap adv-wrap--wide mt-4">
           <Placeholder
-            id="visual-mechanism-devices"
-            minH={460}
-            maxW={640}
-            label="ANIMATED DIAGRAM — ~600×500px · IPL process + Caption: 'IPL teknology е еднаква във всички девайси. Разликата е охлаждането...'"
-          />
-        </div>
-        <div className="adv-wrap adv-wrap--wide">
-          <Placeholder
-            id="visual-tech-specs"
-            minH={300}
-            label="TECHNICAL SPEC COMPARISON — ~500x300px · Bar chart: Budget vs Delora vs Premium on cooling, energy, flash count, durability."
+            id="visual-results-timeline"
+            minH={200}
+            label="VISUAL BLOCK 4 — ВРЕМЕВА ЛИНИЯ НА РЕЗУЛТАТИТЕ · Седм. 1–2: нищо видимо → Седм. 3–4: видимо намаляване → Седм. 5–8: 50–95% → Седм. 12: само поддръжка · Сравнение между евтин (бавен) и Delora (по-бърз)"
           />
         </div>
       </section>
 
-      {/* ───────────────── SECTION 4 — SIDE-BY-SIDE COMPARISON (THE MATH) ───────────────── */}
+      {/* ════════════════════════════════════════════
+          SECTION 4 — SIDE-BY-SIDE COMPARISON
+      ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <h2 className="adv-h2">€89 срещу €189 срещу €349. Какво плащаш, наистина?</h2>
-          <p className="adv-sub adv-sub--tight">Всички работят с IPL. Но разликата е експоненциална.</p>
+          <span className="adv-sectionPill">Секция 4 · Сравнение</span>
+          <h2 className="adv-h2">Трите устройства. Само числата.</h2>
+          <div className="adv-divider" />
+          <p className="adv-intro">Без маркетингови твърдения. Само техническите спецификации.</p>
         </div>
 
+        {/* VB5 — Split-screen */}
         <div className="adv-wrap adv-wrap--wide">
+          <Placeholder
+            id="visual-split-screen"
+            minH={340}
+            label="VISUAL BLOCK 5 — SPLIT-SCREEN · Ляво: €89 (червено) — с X на слабите спецификации · Център: €189 Delora (лавандулово) — ✓ на всичко · Дясно: €349 (оранжево) — ✓ на техн., ? на цената · Акцентът е, че Delora = премиум спецификации на разумна цена"
+          />
+        </div>
+
+        {/* VB6 — Comparison Table */}
+        <div className="adv-wrap adv-wrap--wide mt-4">
           <div className="adv-tableWrap">
             <table className="adv-table">
               <thead>
                 <tr>
-                  {comparison.columns.map((col, i) => (
+                  {comparisonData.headers.map((h, i) => (
                     <th
                       key={i}
                       className={
-                        i === 2
-                          ? "adv-isDelora"
-                          : i === 0
-                            ? ""
-                            : "adv-isEnemy"
+                        comparisonData.headerVariants[i] === "delora"
+                          ? "adv-th--delora"
+                          : comparisonData.headerVariants[i] === "budget"
+                          ? "adv-th--budget"
+                          : comparisonData.headerVariants[i] === "premium"
+                          ? "adv-th--premium"
+                          : ""
                       }
                     >
-                      {col}
+                      {h}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {comparison.rows.map((row, r) => (
-                  <tr key={r}>
-                    <th scope="row">{row.label}</th>
+                {comparisonData.rows.map((row, ri) => (
+                  <tr key={ri}>
+                    <td>{row.label}</td>
                     {row.cells.map((cell, ci) => (
                       <td
                         key={ci}
-                        className={ci === 1 ? "adv-isDelora" : "adv-isEnemy"}
+                        className={
+                          row.variants[ci] === "delora"
+                            ? "adv-td--delora"
+                            : row.variants[ci] === "budget"
+                            ? "adv-td--budget"
+                            : row.variants[ci] === "premium"
+                            ? "adv-td--premium"
+                            : ""
+                        }
                       >
                         {cell}
                       </td>
@@ -284,168 +461,301 @@ const AdvertorialDevices = () => {
           </div>
         </div>
 
-        <div className="adv-wrap adv-wrap--wide">
-          <div id="visual-math" className="adv-mathCallout">
-            <p className="adv-mathDesc">
-              €89 устройство се чупи за 2г. Купуваш го 5 пъти = €445 + разочарование.<br/>
-              €349 устройство издържа 20г, €160 от които са за дизайн премия.<br/>
-              <strong>Delora: €189, издържа 20г, нула дизайн премия.</strong>
+        {/* VB7 — Big Number Math Callout */}
+        <div className="adv-wrap mt-4">
+          <div className="adv-mathBanner">
+            <div className="adv-mathBanner__numbers">
+              <span className="adv-mathBanner__num adv-mathBanner__num--enemy">€89</span>
+              <span className="adv-mathBanner__sep">·</span>
+              <span className="adv-mathBanner__num">€189</span>
+              <span className="adv-mathBanner__sep">·</span>
+              <span className="adv-mathBanner__num adv-mathBanner__num--enemy">€349</span>
+            </div>
+            <p className="adv-mathBanner__caption">
+              Евтин капан&nbsp;&nbsp;·&nbsp;&nbsp;Delora — клинична ефективност&nbsp;&nbsp;·&nbsp;&nbsp;Надплатен бранд
             </p>
           </div>
         </div>
 
-        <div className="adv-wrap adv-ctaRow">
-          <Button href={DEVICE_HREF} variant="primary" size="lg">
-            Виж устройството
-          </Button>
+        {/* Mid-page CTA */}
+        <div className="adv-wrap adv-text mt-4">
+          <a href={DEVICE_HREF} className="adv-btnPrimary">
+            Виж Delora →
+          </a>
         </div>
       </section>
 
-      {/* ───────────────── SECTION 5 — OBJECTIONS (HONEST FAQ) ───────────────── */}
-      <section className="adv-section">
+      {/* ════════════════════════════════════════════
+          SECTION 5 — OBJECTIONS (FAQ)
+      ════════════════════════════════════════════ */}
+      <section className="adv-section adv-section--cream">
         <div className="adv-wrap adv-text">
-          <h2 className="adv-h2">"Евтиния IPL е достатъчен, щом работи." Е, технически...</h2>
-          <p className="adv-sub adv-sub--tight">
-            Истината е по-сложна. Ето защо евтините по-лошо работят.
-          </p>
+          <span className="adv-sectionPill">Секция 5 · Честно</span>
+          <h2 className="adv-h2">Честни отговори на честни въпроси.</h2>
+          <div className="adv-divider" />
+          <p className="adv-intro">Няма да ти продаваме лъжи. Ето каква е реалността.</p>
         </div>
 
-        <div className="adv-wrap">
+        {/* VB8 — Suitability Chart */}
+        <div className="adv-wrap adv-wrap--wide">
           <Placeholder
-            id="visual-calculator"
-            minH={250}
-            maxW={400}
-            label="INTERACTIVE CALCULATOR — ~400x250px · Cost per year: Budget €45/y, Delora €9/y, Premium €17/y."
+            id="visual-suitability"
+            minH={320}
+            label="VISUAL BLOCK 8 — ДИАГРАМА НА ПОДХОДЯЩИТЕ · Решетка: тонове на кожата × цвят на косата · Работи / Работи по-бавно / Не работи · За кого е Delora — и за кого не е (честността изгражда доверие)"
           />
         </div>
 
-        <div className="adv-wrap">
+        {/* FAQ Accordion */}
+        <div className="adv-wrap mt-4">
           <div className="adv-faqList">
-            {faqItems.map((item, i) => {
-              const isOpen = openFaq === i;
-              return (
-                <div key={i} className={`adv-faqItem ${isOpen ? "is-open" : ""}`}>
-                  <button
-                    className="adv-faqQuestion"
-                    onClick={() => setOpenFaq(isOpen ? null : i)}
-                    aria-expanded={isOpen}
-                  >
-                    <span>{item.q}</span>
-                    <span className="adv-faqChevron" aria-hidden="true">
-                      ⌄
-                    </span>
-                  </button>
-                  <div className="adv-faqAnswer" style={{ maxHeight: isOpen ? "600px" : "0px" }}>
-                    <p>{item.a}</p>
-                  </div>
+            {faqItems.map((item, i) => (
+              <div key={i} className={`adv-faqItem${openFaq === i ? " adv-faqItem--open" : ""}`}>
+                <button
+                  className="adv-faqQ"
+                  onClick={() => toggleFaq(i)}
+                  aria-expanded={openFaq === i}
+                  onKeyDown={(e) => (e.key === " " || e.key === "Enter") && toggleFaq(i)}
+                >
+                  <span>{item.q}</span>
+                  <span className="adv-faqChevron" aria-hidden="true">
+                    <ChevronDown size={14} />
+                  </span>
+                </button>
+                <div className="adv-faqA" aria-hidden={openFaq !== i}>
+                  <div className="adv-faqAInner">{item.a}</div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* Cost Per Year Calculator */}
+        <div className="adv-wrap adv-wrap--wide mt-4">
+          <p className="adv-body adv-text" style={{ fontWeight: 600, marginBottom: "0.5rem" }}>
+            Цена за година — истинската математика
+          </p>
+          <div className="adv-calcGrid">
+            <div className="adv-calcCard adv-calcCard--bad">
+              <div className="adv-calcLabel">Евтиният (€89)</div>
+              <div className="adv-calcAmount">€45</div>
+              <div className="adv-calcSub">на година<br />(купуваш 5+ пъти за 10 год.)</div>
+            </div>
+            <div className="adv-calcCard adv-calcCard--good">
+              <div className="adv-calcLabel">✓ Delora (€189)</div>
+              <div className="adv-calcAmount">€9</div>
+              <div className="adv-calcSub">на година<br />(20+ години живот)</div>
+            </div>
+            <div className="adv-calcCard adv-calcCard--neutral">
+              <div className="adv-calcLabel">Премиумният (€349)</div>
+              <div className="adv-calcAmount">€17</div>
+              <div className="adv-calcSub">на година<br />(добро устр., лош deal)</div>
+            </div>
+          </div>
+          <p className="adv-intro adv-text mt-2" style={{ fontSize: "0.78rem" }}>
+            * Изчислено на база 20-годишен живот на устройствата
+          </p>
         </div>
       </section>
 
-      {/* ───────────────── SECTION 6 — REAL PEOPLE (SOCIAL PROOF) ───────────────── */}
+      {/* ════════════════════════════════════════════
+          SECTION 6 — SOCIAL PROOF
+      ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--tint">
         <div className="adv-wrap adv-text">
-          <h2 className="adv-h2">Жени, които откритичкват евтиния IPL и намерили Delora</h2>
-          <p className="adv-rating">
-            <span className="adv-ratingStars" aria-hidden="true">
-              ★★★★★
-            </span>{" "}
-            4.9/5 — 17 реални отзива
-          </p>
+          <span className="adv-sectionPill">Секция 6 · Реални отзиви</span>
+          <h2 className="adv-h2">Жени, които намериха правилния избор.</h2>
+          <div className="adv-divider" />
+          <div className="adv-ratingRow">
+            <span className="adv-ratingNum">4.9</span>
+            <div className="adv-ratingInfo">
+              <span className="adv-ratingStars">★★★★★</span>
+              <span className="adv-ratingCount">17 реални отзива</span>
+            </div>
+          </div>
         </div>
 
+        {/* VB9 — Before/After Carousel */}
         <div className="adv-wrap adv-wrap--wide">
-          <div className="adv-carousel">
-            <button
-              type="button"
-              className="adv-carouselNav adv-carouselNav--prev"
-              onClick={() => scrollCarousel(-1)}
-              aria-label="Предишен отзив"
-            >
-              ‹
-            </button>
-            <div className="adv-carouselTrack" ref={carouselRef} id="visual-carousel">
-              {[
-                { n: 1, lbl: "ПРЕДИ | СЛЕД — Жена, която спря евтин IPL", src: "/delora-photos-clean/delora_before_after_02.webp" },
-                { n: 2, lbl: "ПРЕДИ | СЛЕД — Сравнение с премиум бранд", src: "/delora-photos-clean/delora_before_after_05.webp" },
-                { n: 3, lbl: "ОТЗИВ — За издръжливостта на Delora", src: "/delora-photos-clean/delora_before_after_03.webp" },
-                { n: 4, lbl: "ВИДЕО — 15-30 sec authentic testimonial" }
-              ].map((slide) => (
-                <div className="adv-slide" key={slide.n}>
-                  <Placeholder
-                    id={`visual-carousel-slide-${slide.n}`}
-                    minH={420}
-                    label={`Слайд ${slide.n}/4: ${slide.lbl}`}
-                    src={slide.src}
-                  />
+          <div className="adv-carouselWrap">
+            <div className="adv-carousel" ref={carouselRef}>
+              {slides.map((slide, i) => (
+                <div key={slide.id} className="adv-slide">
+                  <div className="adv-slideBARow">
+                    <div className="adv-slideImg">
+                      <Placeholder
+                        id={`visual-before-${i + 1}`}
+                        minH={200}
+                        label={`ПРЕДИ — Слайд ${i + 1}/5`}
+                      />
+                      <span className="adv-slideImgLabel">ПРЕДИ</span>
+                    </div>
+                    <div className="adv-slideImg">
+                      <Placeholder
+                        id={`visual-after-${i + 1}`}
+                        minH={200}
+                        label={`СЛЕД — Слайд ${i + 1}/5`}
+                      />
+                      <span className="adv-slideImgLabel">СЛЕД</span>
+                    </div>
+                  </div>
+                  <div className="adv-slideBody">
+                    <div className="adv-slideStars">★★★★★</div>
+                    <p className="adv-slideQuote">{slide.quote}</p>
+                    <p className="adv-slideAuthor">— {slide.author}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            <button
-              type="button"
-              className="adv-carouselNav adv-carouselNav--next"
-              onClick={() => scrollCarousel(1)}
-              aria-label="Следващ отзив"
-            >
-              ›
-            </button>
+
+            <div className="adv-carouselNav">
+              <button
+                className="adv-navBtn"
+                onClick={() => scrollCarousel(-1)}
+                aria-label="Предишен слайд"
+                disabled={activeSlide === 0}
+              >
+                ←
+              </button>
+              <div className="adv-dots">
+                {slides.map((_, i) => (
+                  <span
+                    key={i}
+                    className={`adv-dot${activeSlide === i ? " adv-dot--active" : ""}`}
+                    onClick={() => {
+                      setActiveSlide(i);
+                      carouselRef.current?.scrollTo({
+                        left: i * (carouselRef.current.clientWidth * 0.88),
+                        behavior: "smooth",
+                      });
+                    }}
+                    role="button"
+                    aria-label={`Слайд ${i + 1}`}
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === "Enter" && (() => {
+                      setActiveSlide(i);
+                      carouselRef.current?.scrollTo({ left: i * (carouselRef.current.clientWidth * 0.88), behavior: "smooth" });
+                    })()}
+                  />
+                ))}
+              </div>
+              <button
+                className="adv-navBtn"
+                onClick={() => scrollCarousel(1)}
+                aria-label="Следващ слайд"
+                disabled={activeSlide === slides.length - 1}
+              >
+                →
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ───────────────── SECTION 7 — THE OFFER + CTA ───────────────── */}
+      {/* ════════════════════════════════════════════
+          SECTION 7 — OFFER + CTA
+      ════════════════════════════════════════════ */}
       <section className="adv-section adv-section--offer">
         <div className="adv-wrap adv-text">
-          <h2 className="adv-h2">Средният избор. За хората, които мислят.</h2>
-          <p className="adv-body">
-            €89 не работи. €349 е превишена.<br/>
-            €189? Това е точката.
+          <span className="adv-sectionPill">Секция 7 · Офертата</span>
+          <h2 className="adv-h2">Клинична ефективност. €189. Без компромиси.</h2>
+          <div className="adv-divider" />
+          <p className="adv-sub" style={{ margin: "0 auto 2rem" }}>
+            Не по-евтиното. Не по-скъпото. Правилното.
+            <br />
+            <strong>90 дни гаранция.</strong> Не виждаш резултат — пълна възвращане. 17 от 18 не го връщат.
           </p>
-          <p className="adv-body">
-            Охлаждане. Энергия. Гаранция. Издържане.<br/>
-            За един път. На правилната цена.
-          </p>
-        </div>
-
-        <div className="adv-wrap">
-          <Placeholder
-            id="visual-product"
-            minH={400}
-            maxW={300}
-            label="PRODUCT HERO SHOT — ~300x400px"
-            src="/delora-photos-clean/delora_studio_product_01.webp"
-          />
-        </div>
-
-        <div className="adv-wrap adv-ctaRow adv-ctaRow--stack">
-          <Button href={DEVICE_HREF} variant="primary" size="lg">
-            Виж Delora →
-          </Button>
-          <Button href="/shop" variant="outline" size="md">
-            Сравни с други модели
-          </Button>
         </div>
 
         <div className="adv-wrap adv-wrap--wide">
-          <ul id="visual-trust" className="adv-trust">
-            {trustBadges.map((b, i) => (
-              <li key={i} className="adv-trustBadge">
-                <span className="adv-trustIcon" aria-hidden="true">
-                  <b.Icon size={16} strokeWidth={2.5} />
-                </span>
-                <span>{b.label}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="adv-offerGrid">
+            {/* VB10 — Product Hero Shot */}
+            <Placeholder
+              id="visual-product-hero"
+              minH={420}
+              label="VISUAL BLOCK 10 — ПРОДУКТОВА СНИМКА · Delora устройство — сапфиреният накрайник е акцент · Чист, светъл фон · Показва качество и прецизност · ~300×400px"
+            />
+
+            <div>
+              <h3 className="adv-h3" style={{ marginBottom: "0.5rem" }}>
+                Delora Elite IPL
+              </h3>
+              <p className="adv-body" style={{ color: "var(--adv-muted)", marginBottom: "1.5rem" }}>
+                26 J/cm² · Сапфирено охлаждане 15°C · 1,000,000 импулса · CE маркирано
+              </p>
+
+              {/* Price comparison mini-table */}
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "0.5rem",
+                marginBottom: "1.5rem",
+                padding: "1rem",
+                background: "var(--adv-lavender-soft)",
+                borderRadius: "12px",
+                border: "1px solid var(--adv-lavender)",
+                textAlign: "center",
+                fontSize: "0.78rem",
+              }}>
+                <div>
+                  <div style={{ fontWeight: 700, color: "#DC2626" }}>€89</div>
+                  <div style={{ color: "var(--adv-muted)" }}>€45/год.</div>
+                  <div style={{ color: "var(--adv-muted)", fontSize: "0.68rem" }}>Евтин</div>
+                </div>
+                <div style={{ borderLeft: "1px solid var(--adv-lavender)", borderRight: "1px solid var(--adv-lavender)" }}>
+                  <div style={{ fontWeight: 700, color: "var(--adv-amethyst)", fontSize: "1.1rem" }}>€189</div>
+                  <div style={{ color: "var(--adv-amethyst)", fontWeight: 600 }}>€9/год. ✓</div>
+                  <div style={{ color: "var(--adv-amethyst)", fontSize: "0.68rem", fontWeight: 700 }}>Delora</div>
+                </div>
+                <div>
+                  <div style={{ fontWeight: 700, color: "#D97706" }}>€349</div>
+                  <div style={{ color: "var(--adv-muted)" }}>€17/год.</div>
+                  <div style={{ color: "var(--adv-muted)", fontSize: "0.68rem" }}>Надплатен</div>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", alignItems: "baseline", gap: "0.75rem", marginBottom: "1.5rem" }}>
+                <span style={{
+                  fontFamily: '"Cormorant Garamond", serif',
+                  fontSize: "2.5rem",
+                  fontWeight: 700,
+                  color: "var(--adv-amethyst)",
+                }}>€189</span>
+                <span style={{ fontSize: "1rem", color: "var(--adv-muted)", textDecoration: "line-through" }}>€399</span>
+                <span style={{
+                  background: "var(--adv-amethyst)",
+                  color: "#fff",
+                  fontSize: "0.72rem",
+                  fontWeight: 700,
+                  padding: "0.2rem 0.5rem",
+                  borderRadius: "20px",
+                }}>-53%</span>
+              </div>
+
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2rem" }}>
+                <a href={DEVICE_HREF} className="adv-btnPrimary" style={{ justifyContent: "center" }}>
+                  Виж устройството →
+                </a>
+                <a href={QUIZ_HREF} className="adv-btnSecondary" style={{ justifyContent: "center" }}>
+                  Не съм сигурна — направи теста (2 мин)
+                </a>
+              </div>
+
+              {/* VB11 — Trust Badges */}
+              <div className="adv-trustBadges">
+                {trustBadges.map(({ Icon, label }, i) => (
+                  <div key={i} className="adv-trustBadge">
+                    <Icon size={22} aria-hidden="true" />
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Footer */}
       <Footer />
     </div>
   );
-};
-
-export default AdvertorialDevices;
+}
