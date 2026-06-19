@@ -168,30 +168,35 @@ const slides = [
     stars: 5,
     quote: `„Преди имах евтин IPL от €65. Не виждах почти никакъв резултат след 3 месеца. С Delora — след 6 седмици разликата беше очевидна.“`,
     author: "Симона К., 26 г. — София",
+    image: "/Photoshoots/Before & After/hf_20260524_134252_d9bbaf12-a12b-4ffb-9d8e-f28ae978aafc.png", // Leg
   },
   {
     id: "s2",
     stars: 5,
     quote: `„Проучих Braun и Philips — наистина са добри. Но €350 за 1 J/cm² повече? Не. Delora е точно толкова ефективен.“`,
     author: "Радина М., 33 г. — Пловдив",
+    image: "/Photoshoots/Before & After/hf_20260524_132911_1a22dc83-68e9-4b5d-a8ff-b2f64e312ed5.png", // Underarm
   },
   {
     id: "s3",
     stars: 5,
     quote: `„Евтиният IPL изгори. Буквално. Delora е различно ниво — охлаждането е реално и резултатите са реални.“`,
     author: "Теодора В., 29 г. — Варна",
+    image: "/Photoshoots/Before & After/hf_20260524_132219_f92ef930-80cd-4a12-9274-45dc11d9a236.png", // Abdomen
   },
   {
     id: "s4",
     stars: 5,
     quote: `„€189 за нещо, което ще ми служи 20 години срещу €89 за нещо, което ще изхвърля след 2? Математиката е проста.“`,
     author: "Камелия Н., 37 г. — Бургас",
+    image: "/Photoshoots/Before & After/hf_20260524_132222_8f8715c8-6c0d-4b75-8d96-4a34ba142605.png", // Bikini Area
   },
   {
     id: "s5",
     stars: 5,
-    quote: `„Накрая спрях да се двоумя. 90-дневната гаранция ми даде сигурност. Не съжалявам нито за секунда.“`,
+    quote: `„Накрая спрях да се двоумя. 90-дневната гаранция ми даде сисурност. Не съжалявам нито за секунда.“`,
     author: "Гергана Л., 31 г. — Стара Загора",
+    image: "/Photoshoots/Before & After/hf_20260524_140502_69b5000a-e610-4a50-b8aa-a607c2706cb2.png", // Back/Neck
   },
 ];
 
@@ -573,25 +578,16 @@ export default function AdvertorialDevices() {
         <div className="adv-wrap adv-wrap--wide">
           <div className="adv-carouselWrap">
             <div className="adv-carousel" ref={carouselRef}>
-              {slides.map((slide, i) => (
+              {slides.map((slide) => (
                 <div key={slide.id} className="adv-slide">
-                  <div className="adv-slideBARow">
-                    <div className="adv-slideImg">
-                      <Placeholder
-                        id={`visual-before-${i + 1}`}
-                        minH={200}
-                        label={`ПРЕДИ — Слайд ${i + 1}/5`}
-                      />
-                      <span className="adv-slideImgLabel">ПРЕДИ</span>
-                    </div>
-                    <div className="adv-slideImg">
-                      <Placeholder
-                        id={`visual-after-${i + 1}`}
-                        minH={200}
-                        label={`СЛЕД — Слайд ${i + 1}/5`}
-                      />
-                      <span className="adv-slideImgLabel">СЛЕД</span>
-                    </div>
+                  <div className="adv-slideImg" style={{ position: "relative", width: "100%", height: "240px", overflow: "hidden" }}>
+                    <img 
+                      src={slide.image} 
+                      alt="Преди и След" 
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }} 
+                    />
+                    <span className="adv-slideImgLabel" style={{ left: "25%", transform: "translateX(-50%)" }}>ПРЕДИ</span>
+                    <span className="adv-slideImgLabel" style={{ left: "75%", transform: "translateX(-50%)" }}>СЛЕД</span>
                   </div>
                   <div className="adv-slideBody">
                     <div className="adv-slideStars">★★★★★</div>
