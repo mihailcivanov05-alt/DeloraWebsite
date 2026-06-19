@@ -1394,7 +1394,7 @@
   height: 140%; /* Scale height up to push edges out */
   object-fit: cover;
   object-position: center;
-  margin-top: -12%; /* Pull image up to crop out top tabs */
+  margin-top: -16%; /* Switched to -16% to pull the image higher and move follicles out of the text path */
 }
 
 /* Navigation Chevrons */
@@ -1442,17 +1442,16 @@
   max-width: 700px;
   text-align: center;
   margin-top: 0;
-  padding: 1.25rem 1rem;
+  padding: 0.5rem 1rem;
   position: absolute;
-  bottom: 1.25rem;
+  bottom: 0.75rem; /* Pushed slightly closer to the bottom */
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1.5px solid rgba(91, 58, 122, 0.15);
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--adv-shadow-md);
+  background: transparent; /* Made completely transparent to avoid block interference */
+  border: none;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .timeline-info-title {
@@ -1460,7 +1459,8 @@
   font-size: 1.45rem;
   font-weight: 700;
   color: var(--adv-amethyst);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); /* Added shadow for readability on light purple */
 }
 
 .timeline-info-desc {
@@ -1468,8 +1468,9 @@
   font-size: 0.9rem;
   line-height: 1.55;
   color: var(--adv-charcoal);
-  font-weight: 600;
+  font-weight: 700; /* Made slightly bolder for solid contrast */
   text-wrap: pretty;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); /* Added shadow for readability */
 }
 
 
