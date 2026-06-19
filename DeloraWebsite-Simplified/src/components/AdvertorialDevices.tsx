@@ -168,35 +168,35 @@ const slides = [
     stars: 5,
     quote: `„Преди имах евтин IPL от €65. Не виждах почти никакъв резултат след 3 месеца. С Delora — след 6 седмици разликата беше очевидна.“`,
     author: "Симона К., 26 г. — София",
-    image: "/Photoshoots/Before & After/hf_20260524_134252_d9bbaf12-a12b-4ffb-9d8e-f28ae978aafc.png", // Leg
+    image: "/Photoshoots/Before & After/leg_ba.png",
   },
   {
     id: "s2",
     stars: 5,
     quote: `„Проучих Braun и Philips — наистина са добри. Но €350 за 1 J/cm² повече? Не. Delora е точно толкова ефективен.“`,
     author: "Радина М., 33 г. — Пловдив",
-    image: "/Photoshoots/Before & After/hf_20260524_132911_1a22dc83-68e9-4b5d-a8ff-b2f64e312ed5.png", // Underarm
+    image: "/Photoshoots/Before & After/underarm_ba.png",
   },
   {
     id: "s3",
     stars: 5,
     quote: `„Евтиният IPL изгори. Буквално. Delora е различно ниво — охлаждането е реално и резултатите са реални.“`,
     author: "Теодора В., 29 г. — Варна",
-    image: "/Photoshoots/Before & After/hf_20260524_132219_f92ef930-80cd-4a12-9274-45dc11d9a236.png", // Abdomen
+    image: "/Photoshoots/Before & After/belly_ba.png",
   },
   {
     id: "s4",
     stars: 5,
     quote: `„€189 за нещо, което ще ми служи 20 години срещу €89 за нещо, което ще изхвърля след 2? Математиката е проста.“`,
     author: "Камелия Н., 37 г. — Бургас",
-    image: "/Photoshoots/Before & After/hf_20260524_132222_8f8715c8-6c0d-4b75-8d96-4a34ba142605.png", // Bikini Area
+    image: "/Photoshoots/Before & After/bikini_ba.png",
   },
   {
     id: "s5",
     stars: 5,
     quote: `„Накрая спрях да се двоумя. 90-дневната гаранция ми даде сисурност. Не съжалявам нито за секунда.“`,
     author: "Гергана Л., 31 г. — Стара Загора",
-    image: "/Photoshoots/Before & After/hf_20260524_140502_69b5000a-e610-4a50-b8aa-a607c2706cb2.png", // Back/Neck
+    image: "/Photoshoots/Before & After/back_ba.png",
   },
 ];
 

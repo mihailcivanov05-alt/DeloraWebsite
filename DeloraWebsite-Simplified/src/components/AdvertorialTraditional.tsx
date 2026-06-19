@@ -167,35 +167,35 @@ const slides = [
     stars: 5,
     quote: `„Спрях да ходя на салон след 6 седмици. Просто нямаше смисъл — кожата е гладка и без него.“`,
     author: "Мария К., 29 г. — София",
-    image: "/Photoshoots/Before & After/hf_20260524_134252_d9bbaf12-a12b-4ffb-9d8e-f28ae978aafc.png", // Leg
+    image: "/Photoshoots/Before & After/leg_ba.png",
   },
   {
     id: "s2",
     stars: 5,
     quote: `„Цял живот се боях от восъка. С Delora буквално не усещам нищо. Само топлина.“`,
     author: "Ивана Т., 34 г. — Пловдив",
-    image: "/Photoshoots/Before & After/hf_20260524_132911_1a22dc83-68e9-4b5d-a8ff-b2f64e312ed5.png", // Underarm
+    image: "/Photoshoots/Before & After/underarm_ba.png",
   },
   {
     id: "s3",
     stars: 5,
     quote: `„Пресметнах: за 5 години в салона бях платила над €4,000. Delora е €189. Не мога да повярвам, че чаках толкова.“`,
     author: "Надя Г., 31 г. — Варна",
-    image: "/Photoshoots/Before & After/hf_20260524_132219_f92ef930-80cd-4a12-9274-45dc11d9a236.png", // Abdomen
+    image: "/Photoshoots/Before & After/belly_ba.png",
   },
   {
     id: "s4",
     stars: 5,
     quote: `„Врастналите косми от бръснането изчезнаха напълно. Кожата ми е по-гладка, отколкото някога е била.“`,
     author: "Стела М., 27 г. — Бургас",
-    image: "/Photoshoots/Before & After/hf_20260524_132222_8f8715c8-6c0d-4b75-8d96-4a34ba142605.png", // Bikini Area
+    image: "/Photoshoots/Before & After/bikini_ba.png",
   },
   {
     id: "s5",
     stars: 5,
     quote: `„Смях се, когато ми казаха 12 седмици. На 8-та реших да не се връщам на салон. На 12-та — изобщо не мисля за депилация.“`,
     author: "Елена Д., 38 г. — Стара Загора",
-    image: "/Photoshoots/Before & After/hf_20260524_140502_69b5000a-e610-4a50-b8aa-a607c2706cb2.png", // Back/Neck
+    image: "/Photoshoots/Before & After/back_ba.png",
   },
 ];
 
