@@ -1077,7 +1077,7 @@
 .comp-wrapper {
   width: 100%;
   overflow-x: auto;
-  padding: 2.5rem 0.5rem 1.5rem;
+  padding: 4.5rem 0.5rem 2rem; /* Increased top padding to accommodate shifted headers */
   scrollbar-width: thin;
   scrollbar-color: var(--adv-amethyst) var(--adv-lavender-soft);
   position: relative;
@@ -1133,7 +1133,6 @@
   border: 1.5px solid rgba(31, 27, 36, 0.06);
   border-left: none;
   border-radius: 0 var(--adv-radius-card) var(--adv-radius-card) 0;
-  overflow: hidden;
   box-shadow: var(--adv-shadow-md);
   z-index: 1;
 }
@@ -1145,6 +1144,7 @@
 
 .comp-group .comp-col:last-child {
   border-right: none;
+  border-radius: 0 var(--adv-radius-card) var(--adv-radius-card) 0;
 }
 
 /* Header & Avatar Styling */
