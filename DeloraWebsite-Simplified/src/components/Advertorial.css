@@ -1070,3 +1070,253 @@
   .adv-calcCard--good { transform: none; }
   .adv-offerGrid { gap: 2rem; }
 }
+
+/* ─────────────────────────────────────────────
+   PREMIUM COMP-TABLE (Ulike-Style, Delora DNA)
+   ───────────────────────────────────────────── */
+.comp-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 2.5rem 0.5rem 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--adv-amethyst) var(--adv-lavender-soft);
+  position: relative;
+}
+
+.comp-table {
+  display: flex;
+  min-width: 800px;
+  position: relative;
+  gap: 0;
+  align-items: stretch;
+}
+
+.comp-col {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: var(--adv-white);
+  transition: transform 300ms var(--adv-ease);
+}
+
+/* Features/Labels Column */
+.comp-col--features {
+  width: 220px;
+  flex: 0 0 220px;
+  background: #F5EFFF;
+  border-radius: var(--adv-radius-card) 0 0 var(--adv-radius-card);
+  border-right: 1px solid rgba(91, 58, 122, 0.1);
+  text-align: left;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+/* Highlighted Delora Column */
+.comp-col--highlight {
+  width: 170px;
+  flex: 0 0 170px;
+  background: #FAF6FF;
+  border: 2.5px solid var(--adv-amethyst);
+  border-radius: var(--adv-radius-card);
+  box-shadow: 0 12px 36px rgba(91, 58, 122, 0.16);
+  z-index: 3;
+  margin: -1.25rem 0; /* Slightly taller/pops out */
+  position: relative;
+}
+
+/* Group of Competitors */
+.comp-group {
+  display: flex;
+  flex: 1;
+  background: var(--adv-white);
+  border: 1.5px solid rgba(31, 27, 36, 0.06);
+  border-left: none;
+  border-radius: 0 var(--adv-radius-card) var(--adv-radius-card) 0;
+  overflow: hidden;
+  box-shadow: var(--adv-shadow-md);
+  z-index: 1;
+}
+
+.comp-group .comp-col {
+  flex: 1;
+  border-right: 1px solid rgba(31, 27, 36, 0.06);
+}
+
+.comp-group .comp-col:last-child {
+  border-right: none;
+}
+
+/* Header & Avatar Styling */
+.comp-header {
+  padding: 1.5rem 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 120px;
+  position: relative;
+}
+
+.comp-col--features .comp-header {
+  align-items: flex-start;
+  padding-left: 1.25rem;
+}
+
+.comp-avatar-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--adv-white);
+  border: 2px solid var(--adv-lavender);
+  box-shadow: var(--adv-shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  position: absolute;
+  top: -32px;
+}
+
+.comp-col--highlight .comp-avatar-wrap {
+  width: 72px;
+  height: 72px;
+  top: -36px;
+  border-color: var(--adv-amethyst);
+  box-shadow: 0 4px 14px rgba(91, 58, 122, 0.25);
+}
+
+.comp-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comp-avatar-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1F1B24, #3E3747);
+  color: var(--adv-white);
+}
+
+.comp-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--adv-charcoal);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.comp-col--highlight .comp-title {
+  color: var(--adv-amethyst);
+  font-size: 1.05rem;
+}
+
+/* Rows/Cells */
+.comp-cell {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-top: 1px solid rgba(31, 27, 36, 0.05);
+  font-size: 0.85rem;
+  color: var(--adv-charcoal);
+}
+
+.comp-col--features .comp-cell {
+  justify-content: flex-start;
+  padding-left: 1.25rem;
+  font-family: "Nunito Sans", system-ui, sans-serif;
+  font-weight: 600;
+  color: var(--adv-amethyst);
+  border-top-color: rgba(91, 58, 122, 0.08);
+}
+
+.comp-col--highlight .comp-cell {
+  font-weight: 600;
+  background: rgba(91, 58, 122, 0.015);
+  border-top-color: rgba(91, 58, 122, 0.12);
+}
+
+/* Checkmarks and Crosses */
+.comp-icon-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(91, 58, 122, 0.08);
+  color: var(--adv-amethyst);
+}
+
+.comp-col--highlight .comp-icon-check {
+  background: var(--adv-amethyst);
+  color: var(--adv-white);
+  box-shadow: 0 3px 8px rgba(91, 58, 122, 0.25);
+}
+
+.comp-icon-empty {
+  width: 20px;
+  height: 2px;
+  background: rgba(31, 27, 36, 0.15);
+  border-radius: 1px;
+}
+
+/* Bottom Price / Cost Cell */
+.comp-cell--price {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  height: 80px;
+}
+
+.price-only {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--adv-amethyst);
+  color: var(--adv-white);
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.price-val {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--adv-charcoal);
+}
+
+.comp-col--highlight .price-val {
+  font-size: 1.65rem;
+  color: var(--adv-amethyst);
+}
+
+/* VS Badge */
+.comp-vs {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--adv-amethyst);
+  color: var(--adv-white);
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 372px; /* Positions perfectly between highlight and group */
+  top: 10px;
+  z-index: 10;
+  border: 3px solid var(--adv-white);
+  box-shadow: var(--adv-shadow-md);
+}
+

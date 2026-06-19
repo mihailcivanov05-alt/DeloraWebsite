@@ -407,48 +407,112 @@ export default function AdvertorialTraditional() {
 
         {/* VB6 — Comparison Table */}
         <div className="adv-wrap adv-wrap--wide mt-4">
-          <div className="adv-tableWrap">
-            <table className="adv-table">
-              <thead>
-                <tr>
-                  {comparisonData.headers.map((h, i) => (
-                    <th
-                      key={i}
-                      className={
-                        comparisonData.headerVariants[i] === "delora"
-                          ? "adv-th--delora"
-                          : comparisonData.headerVariants[i] === "budget"
-                          ? "adv-th--budget"
-                          : ""
-                      }
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonData.rows.map((row, ri) => (
-                  <tr key={ri}>
-                    <td>{row.label}</td>
-                    {row.cells.map((cell, ci) => (
-                      <td
-                        key={ci}
-                        className={
-                          row.variants[ci] === "delora"
-                            ? "adv-td--delora"
-                            : row.variants[ci] === "budget"
-                            ? "adv-td--budget"
-                            : ""
-                        }
-                      >
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="comp-wrapper">
+            <div className="comp-table">
+              {/* Features Column */}
+              <div className="comp-col comp-col--features">
+                <div className="comp-header">
+                  <span className="comp-title" style={{ textAlign: "left", margin: 0 }}>Параметри</span>
+                </div>
+                <div className="comp-cell">Цена / сесия</div>
+                <div className="comp-cell">Колко често</div>
+                <div className="comp-cell">Резултат трае</div>
+                <div className="comp-cell">Болка / комфорт</div>
+                <div className="comp-cell">Удобство</div>
+                <div className="comp-cell" style={{ height: "80px" }}>Цена за 10 години</div>
+              </div>
+
+              {/* Highlighted Delora Column */}
+              <div className="comp-col comp-col--highlight">
+                <div className="comp-header">
+                  <div className="comp-avatar-wrap">
+                    <img
+                      src="/Photoshoots/Studio/hf_20260526_185002_1591b783-28eb-4907-92c8-a7b34c29d495.png"
+                      alt="Delora"
+                      className="comp-avatar-img"
+                    />
+                  </div>
+                  <span className="comp-title">Delora Elite</span>
+                </div>
+                <div className="comp-cell">370 лв (еднократно)</div>
+                <div className="comp-cell">1–2х / седм. (12 седм.)</div>
+                <div className="comp-cell">Месеци (с поддръжка)</div>
+                <div className="comp-cell">
+                  <span className="comp-icon-check">✓</span>
+                </div>
+                <div className="comp-cell">У дома (10 мин)</div>
+                <div className="comp-cell comp-cell--price">
+                  <span className="price-only">Само</span>
+                  <span className="price-val">370 лв</span>
+                </div>
+              </div>
+
+              {/* VS Badge */}
+              <div className="comp-vs">VS</div>
+
+              {/* Group of Competitors */}
+              <div className="comp-group">
+                {/* Laser */}
+                <div className="comp-col">
+                  <div className="comp-header">
+                    <div className="comp-avatar-wrap">
+                      <div className="comp-avatar-icon" style={{ background: "linear-gradient(135deg, #FF6B6B, #C92A2A)" }}>
+                        <span style={{ fontSize: "1.25rem" }}>⚡</span>
+                      </div>
+                    </div>
+                    <span className="comp-title">Салон лазер</span>
+                  </div>
+                  <div className="comp-cell">150–300 лв</div>
+                  <div className="comp-cell">Всеки месец</div>
+                  <div className="comp-cell">4–6 седмици</div>
+                  <div className="comp-cell">Лека топлина</div>
+                  <div className="comp-cell">Час + пътуване</div>
+                  <div className="comp-cell comp-cell--price">
+                    <span className="price-val" style={{ color: "#C92A2A" }}>20,000+ лв</span>
+                  </div>
+                </div>
+
+                {/* Waxing */}
+                <div className="comp-col">
+                  <div className="comp-header">
+                    <div className="comp-avatar-wrap">
+                      <div className="comp-avatar-icon" style={{ background: "linear-gradient(135deg, #FCC419, #E67700)" }}>
+                        <span style={{ fontSize: "1.25rem" }}>🍯</span>
+                      </div>
+                    </div>
+                    <span className="comp-title">Восък</span>
+                  </div>
+                  <div className="comp-cell">100–200 лв</div>
+                  <div className="comp-cell">На 4–6 седм.</div>
+                  <div className="comp-cell">1–2 седмици</div>
+                  <div className="comp-cell">Силна болка</div>
+                  <div className="comp-cell">Час + пътуване</div>
+                  <div className="comp-cell comp-cell--price">
+                    <span className="price-val" style={{ color: "#E67700" }}>16,000+ лв</span>
+                  </div>
+                </div>
+
+                {/* Shaving */}
+                <div className="comp-col">
+                  <div className="comp-header">
+                    <div className="comp-avatar-wrap">
+                      <div className="comp-avatar-icon" style={{ background: "linear-gradient(135deg, #74C0FC, #1971C2)" }}>
+                        <span style={{ fontSize: "1.25rem" }}>🪒</span>
+                      </div>
+                    </div>
+                    <span className="comp-title">Бръснене</span>
+                  </div>
+                  <div className="comp-cell">5–10 лв</div>
+                  <div className="comp-cell">На 2–3 дни</div>
+                  <div className="comp-cell">1–3 дни</div>
+                  <div className="comp-cell">Порязвания</div>
+                  <div className="comp-cell">Всеки ден</div>
+                  <div className="comp-cell comp-cell--price">
+                    <span className="price-val" style={{ color: "#1971C2" }}>5,000+ лв</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

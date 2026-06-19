@@ -414,52 +414,102 @@ export default function AdvertorialDevices() {
 
         {/* VB6 — Comparison Table */}
         <div className="adv-wrap adv-wrap--wide mt-4">
-          <div className="adv-tableWrap">
-            <table className="adv-table">
-              <thead>
-                <tr>
-                  {comparisonData.headers.map((h, i) => (
-                    <th
-                      key={i}
-                      className={
-                        comparisonData.headerVariants[i] === "delora"
-                          ? "adv-th--delora"
-                          : comparisonData.headerVariants[i] === "budget"
-                          ? "adv-th--budget"
-                          : comparisonData.headerVariants[i] === "premium"
-                          ? "adv-th--premium"
-                          : ""
-                      }
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonData.rows.map((row, ri) => (
-                  <tr key={ri}>
-                    <td>{row.label}</td>
-                    {row.cells.map((cell, ci) => (
-                      <td
-                        key={ci}
-                        className={
-                          row.variants[ci] === "delora"
-                            ? "adv-td--delora"
-                            : row.variants[ci] === "budget"
-                            ? "adv-td--budget"
-                            : row.variants[ci] === "premium"
-                            ? "adv-td--premium"
-                            : ""
-                        }
-                      >
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="comp-wrapper">
+            <div className="comp-table">
+              {/* Features Column */}
+              <div className="comp-col comp-col--features">
+                <div className="comp-header">
+                  <span className="comp-title" style={{ textAlign: "left", margin: 0 }}>Спецификация</span>
+                </div>
+                <div className="comp-cell">Енергия (J/cm²)</div>
+                <div className="comp-cell">Охлаждане</div>
+                <div className="comp-cell">Импулси</div>
+                <div className="comp-cell">Гаранция</div>
+                <div className="comp-cell">Реален живот</div>
+                <div className="comp-cell">Цена на година</div>
+                <div className="comp-cell">Надценка за марка</div>
+                <div className="comp-cell" style={{ height: "80px" }}>Цена / Цена за 10 г.</div>
+              </div>
+
+              {/* Highlighted Delora Column */}
+              <div className="comp-col comp-col--highlight">
+                <div className="comp-header">
+                  <div className="comp-avatar-wrap">
+                    <img
+                      src="/Photoshoots/Studio/hf_20260526_185002_1591b783-28eb-4907-92c8-a7b34c29d495.png"
+                      alt="Delora"
+                      className="comp-avatar-img"
+                    />
+                  </div>
+                  <span className="comp-title">Delora Elite</span>
+                </div>
+                <div className="comp-cell">26 J/cm² (Клинично ✓)</div>
+                <div className="comp-cell">15°C (Сапфирено ✓)</div>
+                <div className="comp-cell">1,000,000 (20+ г. ✓)</div>
+                <div className="comp-cell">
+                  <span className="comp-icon-check">✓</span>
+                </div>
+                <div className="comp-cell">20+ години</div>
+                <div className="comp-cell">18 лв / година</div>
+                <div className="comp-cell">Няма</div>
+                <div className="comp-cell comp-cell--price">
+                  <span className="price-only">Само</span>
+                  <span className="price-val">370 лв</span>
+                </div>
+              </div>
+
+              {/* VS Badge */}
+              <div className="comp-vs">VS</div>
+
+              {/* Group of Competitors */}
+              <div className="comp-group">
+                {/* Cheap IPL */}
+                <div className="comp-col">
+                  <div className="comp-header">
+                    <div className="comp-avatar-wrap">
+                      <div className="comp-avatar-icon" style={{ background: "linear-gradient(135deg, #FF8787, #E03131)" }}>
+                        <span style={{ fontSize: "1.25rem" }}>🔌</span>
+                      </div>
+                    </div>
+                    <span className="comp-title">Евтин IPL</span>
+                  </div>
+                  <div className="comp-cell">15 J/cm² (Слабо)</div>
+                  <div className="comp-cell">25°C (Няма охлаждане)</div>
+                  <div className="comp-cell">50,000 (1–2 год.)</div>
+                  <div className="comp-cell">30 дни</div>
+                  <div className="comp-cell">Макс 2 години</div>
+                  <div className="comp-cell">90 лв / година</div>
+                  <div className="comp-cell">Няма</div>
+                  <div className="comp-cell comp-cell--price">
+                    <span className="price-val" style={{ color: "#E03131" }}>175 лв</span>
+                  </div>
+                </div>
+
+                {/* Premium Brand IPL */}
+                <div className="comp-col">
+                  <div className="comp-header">
+                    <div className="comp-avatar-wrap">
+                      <div className="comp-avatar-icon" style={{ background: "linear-gradient(135deg, #74C0FC, #1971C2)" }}>
+                        <span style={{ fontSize: "1.25rem" }}>💎</span>
+                      </div>
+                    </div>
+                    <span className="comp-title">Премиум Марка</span>
+                  </div>
+                  <div className="comp-cell">27 J/cm² (Клинично ✓)</div>
+                  <div className="comp-cell">15°C (Сапфирено ✓)</div>
+                  <div className="comp-cell">1,000,000 (20+ г. ✓)</div>
+                  <div className="comp-cell">
+                    <span className="comp-icon-check">✓</span>
+                  </div>
+                  <div className="comp-cell">20+ години</div>
+                  <div className="comp-cell">34 лв / година</div>
+                  <div className="comp-cell">310 лв надценка</div>
+                  <div className="comp-cell comp-cell--price">
+                    <span className="price-val" style={{ color: "#1971C2" }}>680+ лв</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
