@@ -1320,3 +1320,137 @@
   box-shadow: var(--adv-shadow-md);
 }
 
+/* ─────────────────────────────────────────────
+   INTERACTIVE TIMELINE (VB4)
+   ───────────────────────────────────────────── */
+.timeline-block {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #1F1B24;
+  border-radius: 16px;
+  box-shadow: var(--adv-shadow-lg);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+}
+
+.timeline-tabs-row {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 3px;
+  margin-bottom: 1.5rem;
+  z-index: 5;
+}
+
+.timeline-tab-btn {
+  font-family: "Nunito Sans", system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.timeline-tab-btn--active {
+  background: var(--adv-white);
+  color: var(--adv-charcoal);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Cropper (Hides baked-in text and tabs) */
+.timeline-crop-container {
+  position: relative;
+  width: 100%;
+  height: 280px; /* Base height for mobile */
+  overflow: hidden;
+  background: #000;
+}
+
+@media (min-width: 768px) {
+  .timeline-crop-container {
+    height: 420px; /* Taller on desktop */
+  }
+}
+
+.timeline-img {
+  width: 100%;
+  height: 140%; /* Scale height up to push edges out */
+  object-fit: cover;
+  object-position: center;
+  margin-top: -12%; /* Pull image up to crop out top tabs */
+}
+
+/* Navigation Chevrons */
+.timeline-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--adv-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all 200ms ease;
+  backdrop-filter: blur(4px);
+}
+
+.timeline-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.timeline-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.timeline-nav-btn--prev {
+  left: 1.5rem;
+}
+
+.timeline-nav-btn--next {
+  right: 1.5rem;
+}
+
+/* Info Box */
+.timeline-info-box {
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+.timeline-info-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--adv-white);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-info-desc {
+  font-family: "Nunito Sans", system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  text-wrap: pretty;
+}
+
+

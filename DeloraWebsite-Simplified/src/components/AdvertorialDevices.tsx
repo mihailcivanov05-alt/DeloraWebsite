@@ -213,10 +213,22 @@ export default function AdvertorialDevices() {
   const [activeSlide, setActiveSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [timelineStep, setTimelineStep] = useState(0);
-  const timelineImages = [
-    "/Photoshoots/timeline_1.png",
-    "/Photoshoots/timeline_2.png",
-    "/Photoshoots/timeline_3.jpeg"
+  const timelineSteps = [
+    {
+      title: "Седмица 1–4",
+      desc: "С 3 процедури седмично, косата ще расте по-тънка, по-мека и по-бавно.",
+      image: "/Photoshoots/timeline_1.png",
+    },
+    {
+      title: "Седмица 5–12",
+      desc: "За да гарантираме, че всеки косъм е третиран по време на фазата му на растеж, препоръчваме корекции на всеки две седмици или веднъж месечно.",
+      image: "/Photoshoots/timeline_2.png",
+    },
+    {
+      title: "Резултати",
+      desc: "След пълния цикъл, третираната зона трябва да е без окосмяване. Ефективността на IPL може да варира в зависимост от индивида; спазването на препоръчителния цикъл е ключово за постигане на желаните резултати.",
+      image: "/Photoshoots/timeline_3.jpeg",
+    }
   ];
 
   const toggleFaq = useCallback((i: number) => {
@@ -390,33 +402,53 @@ export default function AdvertorialDevices() {
         </div>
 
         {/* VB4 — Results Timeline */}
-        <div className="adv-wrap adv-wrap--wide mt-4" style={{ display: "flex", justifyContent: "center" }}>
-          <div style={{ position: "relative", width: "100%", maxWidth: "900px", overflow: "hidden", borderRadius: "12px", boxShadow: "var(--adv-shadow-md)" }}>
-            {/* Slide Image */}
-            <img 
-              src={timelineImages[timelineStep]} 
-              alt="Времева линия на резултатите" 
-              style={{ width: "100%", display: "block" }} 
-            />
-            
-            {/* Invisible clickable hot-spots for tabs at the top-center */}
-            <div style={{ position: "absolute", top: "2%", left: "50%", transform: "translateX(-50%)", display: "flex", width: "320px", height: "35px", cursor: "pointer", zIndex: 10 }}>
-              <div onClick={() => setTimelineStep(0)} style={{ flex: 1 }} title="Седмица 1-4" />
-              <div onClick={() => setTimelineStep(1)} style={{ flex: 1 }} title="Седмица 5-12" />
-              <div onClick={() => setTimelineStep(2)} style={{ flex: 1 }} title="Резултати" />
+        <div className="adv-wrap adv-wrap--wide mt-4">
+          <div className="timeline-block">
+            {/* Pill Tab Bar */}
+            <div className="timeline-tabs-row">
+              {timelineSteps.map((s, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setTimelineStep(idx)}
+                  className={`timeline-tab-btn${timelineStep === idx ? " timeline-tab-btn--active" : ""}`}
+                >
+                  {s.title}
+                </button>
+              ))}
             </div>
 
-            {/* Clickable arrows on left and right */}
-            <div 
-              onClick={() => setTimelineStep(prev => (prev === 0 ? 2 : prev - 1))}
-              style={{ position: "absolute", left: "0", top: "0", bottom: "0", width: "6%", cursor: "pointer", zIndex: 10 }}
-              title="Предишна"
-            />
-            <div 
-              onClick={() => setTimelineStep(prev => (prev === 2 ? 0 : prev + 1))}
-              style={{ position: "absolute", right: "0", top: "0", bottom: "0", width: "6%", cursor: "pointer", zIndex: 10 }}
-              title="Следваща"
-            />
+            {/* Cropped Graphic Container */}
+            <div className="timeline-crop-container">
+              <img 
+                src={timelineSteps[timelineStep].image} 
+                alt="Времева линия на резултатите" 
+                className="timeline-img"
+              />
+
+              {/* Navigation Chevrons */}
+              <button
+                className="timeline-nav-btn timeline-nav-btn--prev"
+                onClick={() => setTimelineStep(prev => (prev === 0 ? 2 : prev - 1))}
+                aria-label="Предишна стъпка"
+                style={{ fontSize: "2rem", display: "flex", alignItems: "center", justifyContent: "center" }}
+              >
+                ‹
+              </button>
+              <button
+                className="timeline-nav-btn timeline-nav-btn--next"
+                onClick={() => setTimelineStep(prev => (prev === 2 ? 0 : prev + 1))}
+                aria-label="Следваща стъпка"
+                style={{ fontSize: "2rem", display: "flex", alignItems: "center", justifyContent: "center" }}
+              >
+                ›
+              </button>
+            </div>
+
+            {/* Real scalable HTML text overlay box at the bottom */}
+            <div className="timeline-info-box">
+              <h3 className="timeline-info-title">{timelineSteps[timelineStep].title}</h3>
+              <p className="timeline-info-desc">{timelineSteps[timelineStep].desc}</p>
+            </div>
           </div>
         </div>
       </section>
