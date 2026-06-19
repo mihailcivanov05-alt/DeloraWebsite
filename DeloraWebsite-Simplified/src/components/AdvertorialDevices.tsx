@@ -467,9 +467,11 @@ export default function AdvertorialDevices() {
                 <div className="comp-col">
                   <div className="comp-header">
                     <div className="comp-avatar-wrap">
-                      <div className="comp-avatar-icon" style={{ background: "linear-gradient(135deg, #FF8787, #E03131)" }}>
-                        <span style={{ fontSize: "1.25rem" }}>🔌</span>
-                      </div>
+                      <img 
+                        src="/Photoshoots/cheap_device.png" 
+                        alt="Евтин IPL" 
+                        className="comp-avatar-img" 
+                      />
                     </div>
                     <span className="comp-title">Евтин IPL</span>
                   </div>
@@ -489,9 +491,11 @@ export default function AdvertorialDevices() {
                 <div className="comp-col">
                   <div className="comp-header">
                     <div className="comp-avatar-wrap">
-                      <div className="comp-avatar-icon" style={{ background: "linear-gradient(135deg, #74C0FC, #1971C2)" }}>
-                        <span style={{ fontSize: "1.25rem" }}>💎</span>
-                      </div>
+                      <img 
+                        src="/Photoshoots/premium_device.png" 
+                        alt="Премиум Марка" 
+                        className="comp-avatar-img" 
+                      />
                     </div>
                     <span className="comp-title">Премиум Марка</span>
                   </div>
