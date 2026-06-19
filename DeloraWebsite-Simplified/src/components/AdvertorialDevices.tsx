@@ -212,6 +212,12 @@ export default function AdvertorialDevices() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [timelineStep, setTimelineStep] = useState(0);
+  const timelineImages = [
+    "/Photoshoots/timeline_1.png",
+    "/Photoshoots/timeline_2.png",
+    "/Photoshoots/timeline_3.jpeg"
+  ];
 
   const toggleFaq = useCallback((i: number) => {
     setOpenFaq((prev) => (prev === i ? null : i));
@@ -384,12 +390,34 @@ export default function AdvertorialDevices() {
         </div>
 
         {/* VB4 — Results Timeline */}
-        <div className="adv-wrap adv-wrap--wide mt-4">
-          <Placeholder
-            id="visual-results-timeline"
-            minH={200}
-            label="VISUAL BLOCK 4 — ВРЕМЕВА ЛИНИЯ НА РЕЗУЛТАТИТЕ · Седм. 1–2: нищо видимо → Седм. 3–4: видимо намаляване → Седм. 5–8: 50–95% → Седм. 12: само поддръжка · Сравнение между евтин (бавен) и Delora (по-бърз)"
-          />
+        <div className="adv-wrap adv-wrap--wide mt-4" style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ position: "relative", width: "100%", maxWidth: "900px", overflow: "hidden", borderRadius: "12px", boxShadow: "var(--adv-shadow-md)" }}>
+            {/* Slide Image */}
+            <img 
+              src={timelineImages[timelineStep]} 
+              alt="Времева линия на резултатите" 
+              style={{ width: "100%", display: "block" }} 
+            />
+            
+            {/* Invisible clickable hot-spots for tabs at the top-center */}
+            <div style={{ position: "absolute", top: "2%", left: "50%", transform: "translateX(-50%)", display: "flex", width: "320px", height: "35px", cursor: "pointer", zIndex: 10 }}>
+              <div onClick={() => setTimelineStep(0)} style={{ flex: 1 }} title="Седмица 1-4" />
+              <div onClick={() => setTimelineStep(1)} style={{ flex: 1 }} title="Седмица 5-12" />
+              <div onClick={() => setTimelineStep(2)} style={{ flex: 1 }} title="Резултати" />
+            </div>
+
+            {/* Clickable arrows on left and right */}
+            <div 
+              onClick={() => setTimelineStep(prev => (prev === 0 ? 2 : prev - 1))}
+              style={{ position: "absolute", left: "0", top: "0", bottom: "0", width: "6%", cursor: "pointer", zIndex: 10 }}
+              title="Предишна"
+            />
+            <div 
+              onClick={() => setTimelineStep(prev => (prev === 2 ? 0 : prev + 1))}
+              style={{ position: "absolute", right: "0", top: "0", bottom: "0", width: "6%", cursor: "pointer", zIndex: 10 }}
+              title="Следваща"
+            />
+          </div>
         </div>
       </section>
 
