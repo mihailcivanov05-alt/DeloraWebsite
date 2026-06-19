@@ -217,7 +217,7 @@ export default function AdvertorialDevices() {
     {
       title: "Седмица 1–4",
       desc: "С 3 процедури седмично, косата ще расте по-тънка, по-мека и по-бавно.",
-      image: "/Photoshoots/timeline_1.png",
+      image: "/Photoshoots/timeline_3.jpeg",
     },
     {
       title: "Седмица 5–12",
@@ -227,7 +227,7 @@ export default function AdvertorialDevices() {
     {
       title: "Резултати",
       desc: "След пълния цикъл, третираната зона трябва да е без окосмяване. Ефективността на IPL може да варира в зависимост от индивида; спазването на препоръчителния цикъл е ключово за постигане на желаните резултати.",
-      image: "/Photoshoots/timeline_3.jpeg",
+      image: "/Photoshoots/timeline_1.png",
     }
   ];
 
