@@ -1,28 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Check,
-  Star,
-  Truck,
-  ShieldCheck,
-  BadgeCheck,
-  Headset,
-  Snowflake,
-  Sparkles,
-  Plug,
-  Glasses,
-  Scissors,
-  Package,
-  BookOpen,
-  Search,
-  Wallet,
-  Target,
-  CreditCard,
-  ShoppingCart,
-  ClipboardList,
-  Banknote,
-} from "lucide-react";
+import { Check, Star, Truck, ShieldCheck, BadgeCheck, CircleCheck, Sparkles, Plug, Glasses, Scissors, Package, BookOpen } from "lucide-react";
 import Button from "./Button";
 import "./ProductHero.css";
 
@@ -34,54 +13,19 @@ const productImages = [
   { src: "/Photoshoots/Other/hf_20260525_091820_21b9328b-85fb-4937-be10-4838412f1ec8.webp", alt: "Delora Elite IPL Устройство — третиране на бикини зона" },
 ];
 
-/* ── Outcome first, then comfort → ease → durability ── */
-const primaryBenefit = {
-  main: "До 95% намаляване на окосмяването за 12 седмици",
-  sub: "(При редовна употреба — реални резултати от нашите потребители)",
-};
-
-const secondaryBenefits = [
-  "Без болка — сапфирено охлаждане до 15°C при всеки импулс",
-  "Цяло тяло за 25 минути (лесно и удобно)",
-  "1,000,000 импулса — неограничена употреба за 30+ години",
+const benefits = [
+  "До 95% намаление на окосмяването за 8 седмици",
+  "Без изгаряне - сапфирено охлаждане до 15°C при всеки импулс",
+  "1,000,000 импулса за 30+ години употреба",
+  "Цяло тяло за 25 минути (2 импулса в секунда)",
+  "Дерматологично тествано и клинично одобрено",
 ];
 
-/* ── Cost comparison table ── */
-const costTable = {
-  heading: "Защо Delora, а не €89 IPL или салонен лазер?",
-  columns: ["", "Салонен лазер", "Евтини IPL уреди (€80–€90)", "Delora"],
-  rows: [
-    { label: "Цена", cells: ["€2,000–€3,000/година", "€80–€90", "€189 (еднократно)"] },
-    { label: "10 години", cells: ["€20,000–€30,000", "€800–€900", "€189"] },
-    { label: "Охлаждане", cells: ["Да", "Обикновено не", "Да — сапфирено"] },
-    { label: "Гарантирани резултати", cells: ["Да", "Непредсказуеми", "Да или възвращане"] },
-  ],
-  savings: "Спестяваш €19,811 – €29,811 за едно десетилетие",
-};
-
-/* ── Pricing & financing ── */
-const pricing = {
-  heading: "Цена и начин на плащане",
-  financingLabel: "Или в месечни вноски:",
-  options: ["3 × €63/месец (Klarna)", "Всички кредитни карти / PayPal", "Наложен платеж (COD)"],
-  save: "Спести 53%",
-};
-
-/* ── Risk reversal / guarantee ── */
-const guarantee = {
-  heading: "Пробвай без риск — 90 дни",
-  main: "Ние поемаме 100% от риска. Ако Delora не достави 95% намаляване на окосмяването, което виждаш от други потребители, ти НЕ плащаш. Точка. Пълно възстановяване в рамките на 90 дни. Без въпроси. Без скрити условия.",
-  emphasis: "Залагаме на устройството — не на теб.",
-  sub: "(Ще видиш резултати — 17 от 18 потребители съобщават видими резултати след 4–8 седмици редовна употреба. Ние знаем, че работи.)",
-};
-
-/* ── Expanded trust strip (5 signals) ── */
 const trustRows = [
   { icon: Truck, label: "Безплатна експресна доставка" },
   { icon: ShieldCheck, label: "90-дневна гаранция за връщане" },
-  { icon: BadgeCheck, label: "CE маркирано & дерматологично одобрено" },
-  { icon: Headset, label: "24/7 клиентска поддръжка (България)" },
-  { icon: Snowflake, label: "Сапфирено охлаждане верифицирано" },
+  { icon: BadgeCheck, label: "FDA одобрена технология" },
+  { icon: CircleCheck, label: "CE маркировка" },
 ];
 
 const accordionData = [
@@ -93,7 +37,7 @@ const accordionData = [
   {
     title: "Безопасни зони за третиране",
     content:
-      "Delora е създадена за увереност по цялото тяло и е напълно безопасна както за по-големи, така и за силно чувствителни зони. Насладете се на гладки резултати върху краката, ръцете, подмишниците, гърба, корема и бикини линията. Благодарение на вградения 10°C сапфирен прозорец за охлаждане, можете напълно комфортно да третирате и деликатните зони на лицето под скулите (като горна устна, брадичка и челюст). *Избягвайте употреба около очите, върху татуировки или много тъмни бенки.*",
+      "Delora е създадена за увереност по цялото тяло и е напълно безопасна както за по-големи, така и за силно чувствичени зони. Насладете се на гладки резултати върху краката, ръцете, подмишниците, гърба, корема и бикини линията. Благодарение на вградения 10°C сапфирен прозорец за охлаждане, можете напълно комфортно да третирате и деликатните зони на лицето под скулите (като горна устна, брадичка и челюст). *Избягвайте употреба около очите, върху татуировки или много тъмни бенки.*",
   },
   {
     title: "График за резултати и гладка кожа",
@@ -169,140 +113,39 @@ const ProductHero = () => {
               </a>
             </div>
 
-            {/* Headline */}
-            <h1 className="productHero-title">
-              Премиум IPL епилация у дома — без цената на големите марки
-            </h1>
+            {/* Title */}
+            <h1 className="productHero-title">Delora: Гладка кожа за минути</h1>
 
-            {/* Subheadline */}
+            {/* Subtitle */}
             <p className="productHero-subtitle">
-              За хора, които искат по-високо качество от евтините IPL уреди, но не искат да плащат надценката на Philips или Braun.
+              Delora IPL използва иновативна технология за перманентно намаляване на окосмяването.
             </p>
+
+            {/* Price */}
+            <div className="productHero-priceBlock">
+              <span className="productHero-price">€189,00</span>
+              <span className="productHero-originalPrice">€399,00</span>
+              <span className="productHero-saveBadge">Спести 53%</span>
+            </div>
 
             {/* Benefits */}
             <ul className="productHero-benefits">
-              <li className="productHero-benefitItem productHero-primaryBenefit">
-                <Check size={18} className="productHero-benefitIcon" />
-                <span>
-                  {primaryBenefit.main}
-                  <span className="productHero-benefitSub">{primaryBenefit.sub}</span>
-                </span>
-              </li>
-              {secondaryBenefits.map((benefit, i) => (
+              {benefits.map((benefit, i) => (
                 <li key={i} className="productHero-benefitItem">
                   <Check size={18} className="productHero-benefitIcon" />
-                  <span>{benefit}</span>
+                  {benefit}
                 </li>
               ))}
             </ul>
 
-            {/* Cost Comparison Table */}
-            <section className="productHero-costComparison">
-              <h3 className="productHero-sectionHeading">
-                <Search size={18} aria-hidden="true" /> {costTable.heading}
-              </h3>
-              <div className="productHero-tableWrap">
-                <table className="productHero-costTable">
-                  <thead>
-                    <tr>
-                      {costTable.columns.map((col, i) => (
-                        <th key={i} className={i === costTable.columns.length - 1 ? "is-delora" : ""}>
-                          {col}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {costTable.rows.map((row, r) => (
-                      <tr key={r}>
-                        <th scope="row">{row.label}</th>
-                        {row.cells.map((cell, c) => (
-                          <td key={c} className={c === row.cells.length - 1 ? "is-delora" : ""}>
-                            {cell}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <p className="productHero-savings">
-                <Wallet size={18} aria-hidden="true" /> {costTable.savings}
-              </p>
-            </section>
-
-            {/* Pricing & Financing */}
-            <section className="productHero-pricing">
-              <h3 className="productHero-sectionHeading">
-                <Target size={18} aria-hidden="true" /> {pricing.heading}
-              </h3>
-              <div className="productHero-priceBlock">
-                <span className="productHero-price">€189,00</span>
-                <span className="productHero-originalPrice">€399,00</span>
-                <span className="productHero-saveBadge">{pricing.save}</span>
-              </div>
-              <p className="productHero-financingLabel">{pricing.financingLabel}</p>
-              <ul className="productHero-financing">
-                {pricing.options.map((opt, i) => (
-                  <li key={i}>
-                    <CreditCard size={16} aria-hidden="true" /> {opt}
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            {/* Risk Reversal / Guarantee */}
-            <section className="productHero-guarantee">
-              <h3 className="productHero-guaranteeHeading">
-                <ShieldCheck size={18} aria-hidden="true" /> {guarantee.heading}
-              </h3>
-              <p className="productHero-guaranteeMain">{guarantee.main}</p>
-              <p className="productHero-guaranteeEmphasis">{guarantee.emphasis}</p>
-              <p className="productHero-guaranteeSub">{guarantee.sub}</p>
-            </section>
-
-            {/* Cash-on-Delivery reassurance */}
-            <div className="productHero-cod">
-              <Banknote size={20} className="productHero-codIcon" aria-hidden="true" />
-              <div>
-                <span className="productHero-codTitle">Плащане при доставка</span>
-                <span className="productHero-codText">
-                  Плащаш само когато пакетът пристигне. Без риск.
-                </span>
-              </div>
-            </div>
-
-            {/* Trust Strip (5 signals) */}
-            <div className="productHero-trustRows">
-              {trustRows.map((item, i) => (
-                <div key={i} className="productHero-trustItem">
-                  <item.icon size={16} className="productHero-trustIcon" />
-                  <span>{item.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Dual CTA */}
+            {/* CTA */}
             <div className="productHero-ctas">
               <Button variant="primary" size="lg" href="#">
-                <ShoppingCart
-                  size={18}
-                  aria-hidden="true"
-                  style={{ marginRight: "8px", verticalAlign: "text-bottom" }}
-                />
-                Добави в количката — получи 90-дневна пробна версия
-              </Button>
-              <Button variant="outline" size="lg" href="#consultation">
-                <ClipboardList
-                  size={18}
-                  aria-hidden="true"
-                  style={{ marginRight: "8px", verticalAlign: "text-bottom" }}
-                />
-                Не съм сигурна — начни с викторинката (2 мин)
+                Добави в количката
               </Button>
             </div>
 
-            {/* Stateful Falling Menus (Accordions — kept below fold) */}
+            {/* Stateful Falling Menus (Accordions) */}
             <div className="productHero-accordions">
               {accordionData.map((item, idx) => {
                 const isOpen = openAccordion === idx;
@@ -343,6 +186,16 @@ const ProductHero = () => {
                   </div>
                 );
               })}
+            </div>
+
+            {/* Trust Rows */}
+            <div className="productHero-trustRows">
+              {trustRows.map((item, i) => (
+                <div key={i} className="productHero-trustItem">
+                  <item.icon size={16} className="productHero-trustIcon" />
+                  <span>{item.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
