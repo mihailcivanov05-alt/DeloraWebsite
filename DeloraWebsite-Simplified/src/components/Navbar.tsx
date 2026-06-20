@@ -22,8 +22,16 @@ const Navbar = () => {
           <img src="/logo.png" alt="Delora Logo" className="logo-img" />
         </a>
 
-        {/* Single nav item */}
         <ul className="navLinks">
+          <li>
+            <a href="/results" className="navLink">Резултати</a>
+          </li>
+          <li>
+            <a href="/getting-started" className="navLink">Как да започна</a>
+          </li>
+          <li>
+            <a href="/science" className="navLink">Науката</a>
+          </li>
           <li>
             <a href="/shop" className="navLink">Магазин</a>
           </li>

@@ -80,15 +80,22 @@
 }
 
 .adv-section--hero {
-  padding-top: 3rem;
-  padding-bottom: 0;
-  background: linear-gradient(175deg, #EFE6F8 0%, var(--adv-white) 60%);
+  padding-top: 8.8rem;
+  padding-bottom: 8.8rem;
+  background-color: #f7f3fb;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%), url("/Photoshoots/Other/hf_20260620_084419_fabb1008-d97b-4c2b-8a72-967fb4c0e838.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  .adv-section--hero { padding-top: 4.5rem; }
+  .adv-section--hero {
+    padding-top: 13.2rem;
+    padding-bottom: 13.2rem;
+  }
 }
 
 .adv-section--tint {
@@ -314,7 +321,15 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-bottom: 3rem;
+  padding: 3rem 2rem;
+  background: rgba(255, 251, 247, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(91, 58, 122, 0.12);
+  border-radius: 24px;
+  max-width: 660px;
+  margin: 0 auto;
+  box-shadow: 0 10px 40px rgba(91, 58, 122, 0.05);
 }
 
 .adv-heroMedia {

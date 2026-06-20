@@ -6,10 +6,10 @@
   --color-charcoal: #1F1B24;
   
   /* UI Colors */
-  --background: #FFFFFF;
+  --background: #FFFBF7;
   --foreground: var(--color-charcoal);
   --color-white: #FFFFFF;
-  --color-soft-white: #F8F9FA;
+  --color-soft-white: #FFFBF7;
   --color-muted: #6B7280;
   
   /* Typography */

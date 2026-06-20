@@ -27,7 +27,7 @@ import Button from "./Button";
 import "./ProductHero.css";
 
 const productImages = [
-  { src: "/Photoshoots/Other/hf_20260524_121655_0eadf972-f9fc-443d-9bc9-029db7b2993c.webp", alt: "Delora Elite IPL Устройство — изглед отпред" },
+  { src: "/Photoshoots/Other/hf_20260524_124514_a03f97aa-f0d5-43b8-b0f5-0df9a7f7dd6f.png", alt: "Delora Elite IPL Устройство — изглед отпред" },
   { src: "/Photoshoots/Arm/hf_20260524_124008_fc1ae104-e9e0-467b-8d6b-d6142ef20ae3.webp", alt: "Delora Elite IPL Устройство — третиране на ръка" },
   { src: "/Photoshoots/Leg/hf_20260524_110654_0630dd29-3ad6-454b-b3f1-3051b2aef3f6.webp", alt: "Delora Elite IPL Устройство — третиране на крак" },
   { src: "/Photoshoots/Face/hf_20260524_111557_bfe75d02-6a6a-403b-93b5-5c2056a063f1.webp", alt: "Delora Elite IPL Устройство — третиране на лице" },

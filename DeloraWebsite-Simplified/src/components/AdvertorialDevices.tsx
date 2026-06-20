@@ -290,17 +290,6 @@ export default function AdvertorialDevices() {
             </div>
           </div>
         </div>
-
-        {/* VB1 — Hero video/GIF */}
-        <div className="adv-wrap adv-wrap--wide" style={{ paddingBottom: 0 }}>
-          <div className="adv-heroMedia">
-            <Placeholder
-              id="visual-hero"
-              minH={460}
-              label="VISUAL BLOCK 1 — HERO VIDEO/GIF · Пълна ширина, ~460px · Три устройства едно до друго: €89 (евтин), €189 (Delora), €349 (премиум) · Сравнение: спецификации, охлаждане, резултати"
-            />
-          </div>
-        </div>
       </section>
 
       {/* ════════════════════════════════════════════
