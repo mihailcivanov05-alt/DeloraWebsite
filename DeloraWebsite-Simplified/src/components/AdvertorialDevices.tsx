@@ -762,11 +762,20 @@ export default function AdvertorialDevices() {
         <div className="adv-wrap adv-wrap--wide">
           <div className="adv-offerGrid">
             {/* VB10 — Product Hero Shot */}
-            <Placeholder
-              id="visual-product-hero"
-              minH={420}
-              label="VISUAL BLOCK 10 — ПРОДУКТОВА СНИМКА · Delora устройство — сапфиреният накрайник е акцент · Чист, светъл фон · Показва качество и прецизност · ~300×400px"
-            />
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <img
+                src="/Photoshoots/Other/product_hero_offer.png"
+                alt="Delora Elite IPL Уред"
+                style={{
+                  width: "100%",
+                  maxWidth: "360px",
+                  height: "auto",
+                  borderRadius: "16px",
+                  objectFit: "cover",
+                  boxShadow: "0 8px 30px rgba(91, 58, 122, 0.06)",
+                }}
+              />
+            </div>
 
             <div>
               <h3 className="adv-h3" style={{ marginBottom: "0.5rem" }}>
